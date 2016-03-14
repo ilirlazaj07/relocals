@@ -334,7 +334,7 @@
                        <asan-submit nome="Registra"></asan-submit>                                               
                     -->
 
-                    <div id="tabs">
+                    <div id="tabs" style="border: 3px solid #D7EAD5;">
                         <ul data-ng-show="processoSelezionato.visibilita">
                             <li><a href="#processo-do">Processo DO</a></li>
                             <li><a class="datiStruttura" href="#dati-struttura">Dati Struttura</a></li>
@@ -343,7 +343,7 @@
 
 
 
-                        <div style="border: 2px solid #D7EAD5;" id="processo-do" data-ng-show="processoSelezionato.visibilita">
+                        <div id="processo-do" data-ng-show="processoSelezionato.visibilita">
 
                             <form class="form-ricerca" role="form" >
                                 <div class="form-group">
@@ -412,10 +412,7 @@
 
                             </form>
 
-                            <div style="height: 197px"></div>
-
                         </div>
-
 
 
                         <div id="dati-struttura" data-ng-show="showDatiStruttura" style="border: 2px solid #D7EAD5">       
@@ -469,119 +466,155 @@
 
 
 
-                        <div id="unita-org" data-ng-show="true" style="border: 2px solid #D7EAD5">
-                            <form class="form-ricerca" role="form" data-ng-show="false">
-                                <div class="form-group" data-ng-show="true">
-                                    <div>
-                                        <table id="unita" style="width: 65%; float: left"><br>
-                                            <tr>
-                                                <th></th>
-                                                <th>Codice UO</th>
-                                                <th>Nome</th>
-                                                <th>N.Seq</th>
-                                                <th>Descrizione</th>
-                                            </tr>
-                                            <tr data-ng-repeat="unita in processoSelezionato.unitaOrganizzative" data-ng-click="getUnitaSelezionata(unita);" ng-class="{unitaSelezionataClass: unita === processoSelezionato.listaStruttureDDO.unitaSelezionata}">
-                                                <td ng-class="{unitaSelezionataClass: unita === processoSelezionato.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><asan-stato stato="{{unita.numSequenza}}"></asan-stato></td>
-                                            <td ng-class="{unitaSelezionataClass: unita === processoSelezionato.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><span>{{unita.codice}}</span></td>
-                                            <td ng-class="{unitaSelezionataClass: unita === processoSelezionato.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><span>{{unita.cdStatoCompilazione}}</span></td>
-                                            <td ng-class="{unitaSelezionataClass: unita === processoSelezionato.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><span>{{unita.id}}</span></td>
-                                            <td ng-class="{unitaSelezionataClass: unita === processoSelezionato.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><span>{{unita.descrizione}}</span></td>
-                                            </tr>
-                                        </table> 
-                                        <div style="width: 35%;float: left">
-                                            <button  id="unita_dettaglio"  data-ng-click="getDettaglioPerSingolaUnita();" style="width: 90px;margin-left: 2px" >
-                                                Dettaglio
-                                            </button> 
-                                        </div>
-                                    </div>
-
-                                    <div data-ng-show="processoSelezionato.listaStruttureDDO.unitaSelezionata">
-                                        <div data-ng-show="processoSelezionato.listaStruttureDDO.unitaSelezionata"><span style="border: 1px solid #D7EAD5;background: #c2ddc0">Macroattività</span></div>
-                                        <table id="macro" style="width: 65%; float: left"><br>
-                                            <tr>
-                                                <th></th>
-                                                <th>Nome</th>
-                                                <th>N.Seq</th>
-                                                <th>Descrizione</th>
-                                            </tr>
-                                            <tr data-ng-repeat="macro in processoSelezionato.macroAttivita" data-ng-click="getMacroSelezionata(macro);" ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}">
-                                                <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><asan-stato stato="{{2}}"></asan-stato></td>
-                                            <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><span>{{macro.nome}}</span></td>  
-                                            <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><span>{{macro.nome}}</span></td>  
-                                            <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><span>{{macro.nome}}</span></td>  
-                                            </tr>
-                                        </table>
-                                        <div style="width: 35%;float: left">
-                                            <button  id="macro_dettaglio" data-ng-click="getDettaglioMacroSelezionata();" style="width: 90px;margin-left: 2px" >
-                                                Dettaglio
-                                            </button> 
-                                        </div>
-                                    </div>
-                                </div>   
-
-                                <div class="bottoni_form">
-                                    <asan-submit nome="Modifica"></asan-submit>           
-                                    <asan-submit nome="Calcolo dot."></asan-submit>  
-                                    <asan-submit nome="Report"></asan-submit>  
-                                    <asan-submit nome="Consolida"></asan-submit>  
-                                </div>
-                            </form>
-
-                            <!-- Parte dei dettagli Unita -->    
-                            <form class="form-ricerca" role="form" >
-                                <div class="form-group">
-
-                                    <div class="left-label">
-                                        <label>Codice UO</label>
-                                    </div>
-                                    <div>
-                                        <p>Il codice qua</p>
-                                        <p style="font-weight: bold;">Nome </p>
-                                        <p> Il nome </p>
-                                    </div><br><br>
-
-                                    <div class="left-label">
-                                        <label>N.Seq</label>
-                                    </div>
-                                    <div>
-                                        <p> </p>
-                                        <p style="font-weight: bold;">Descrizione </p>
-                                        <p></p>
-                                    </div> <br><br>
-
-                                    <div id="tabs_unita">
-                                        <ul>
-                                            <li><a href="#classi_d_profili">Classi di profili</a></li>
-                                            <li><a href="#ragruppamento_uo">Ragruppamento UO</a></li>
-                                        </ul>
-                                        <div id="classi_d_profili">
-                                            Da completare con classi di profili
-                                        </div>
-                                        <div id="ragruppamento_uo">
-                                            <table id="strutture" style="width: 70%; float: left">
+                        <div id="unita-org">
+                            <div>
+                                <!-- style="border: 2px solid #D7EAD5" -->
+                                <form class="form-ricerca" role="form" data-ng-show="showUnitaOrganizzative">
+                                    <div class="form-group" data-ng-show="true">
+                                        <div>
+                                            <table id="unita" style="width: 65%; float: left"><br>
                                                 <tr>
-                                                    <th>Classe di profilo</th>
-                                                    <th>Numero ore lavorate</th>
+                                                    <th></th>
+                                                    <th>Codice UO</th>
+                                                    <th>Nome</th>
+                                                    <th>N.Seq</th>
+                                                    <th>Descrizione</th>
                                                 </tr>
-                                                <tr data-ng-repeat="classe in processoSelezionato.classiProfili">
-                                                    <td><span>{{classe.descrizione}}</span></td>  
-                                                    <td><span>{{classe.numeroOre}}</span></td>  
+                                                <tr data-ng-repeat="unita in processoSelezionato.unitaOrganizzative" data-ng-click="getUnitaSelezionata(unita);" ng-class="{unitaSelezionataClass: unita === processoSelezionato.listaStruttureDDO.unitaSelezionata}">
+                                                    <td ng-class="{unitaSelezionataClass: unita === processoSelezionato.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><asan-stato stato="{{unita.numSequenza}}"></asan-stato></td>
+                                                <td ng-class="{unitaSelezionataClass: unita === processoSelezionato.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><span>{{unita.codice}}</span></td>
+                                                <td ng-class="{unitaSelezionataClass: unita === processoSelezionato.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><span>{{unita.cdStatoCompilazione}}</span></td>
+                                                <td ng-class="{unitaSelezionataClass: unita === processoSelezionato.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><span>{{unita.id}}</span></td>
+                                                <td ng-class="{unitaSelezionataClass: unita === processoSelezionato.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><span>{{unita.descrizione}}</span></td>
+                                                </tr>
+                                            </table> 
+                                            <div style="width: 35%;float: left">
+                                                <button  id="unita_dettaglio"  data-ng-click="getDettaglioPerSingolaUnita();" style="width: 90px;margin-left: 2px" >
+                                                    Dettaglio
+                                                </button> 
+                                            </div>
+                                        </div>
+
+                                        <div data-ng-show="processoSelezionato.listaStruttureDDO.unitaSelezionata"><br>
+                                            <div data-ng-show="processoSelezionato.listaStruttureDDO.unitaSelezionata"><span style="border: 1px solid #D7EAD5;background: #c2ddc0">Macroattività</span></div>
+                                            <table id="macro" style="width: 65%; float: left"><br>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Nome</th>
+                                                    <th>N.Seq</th>
+                                                    <th>Descrizione</th>
+                                                </tr>
+                                                <tr data-ng-repeat="macro in processoSelezionato.macroAttivita" data-ng-click="getMacroSelezionata(macro);" ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}">
+                                                    <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><asan-stato stato="{{2}}"></asan-stato></td>
+                                                <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><span>{{macro.nome}}</span></td>  
+                                                <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><span>{{macro.nome}}</span></td>  
+                                                <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><span>{{macro.nome}}</span></td>  
                                                 </tr>
                                             </table>
+                                            <div style="width: 35%;float: left">
+                                                <button  id="macro_dettaglio" data-ng-click="getDettaglioMacroSelezionata();" style="width: 90px;margin-left: 2px" >
+                                                    Dettaglio
+                                                </button> 
+                                            </div>
                                         </div>
-                                    </div><br> 
-                                </div>   
-                                <div class="bottoni_form">
-                                    <asan-submit nome="Modifica"></asan-submit>           
-                                    <asan-submit nome="Calcolo dot."></asan-submit>  
-                                    <asan-submit nome="Report"></asan-submit>  
-                                    <asan-submit nome="Consolida"></asan-submit>  
-                                </div>
+                                    </div>   
 
-                            </form>
+                                    <div class="bottoni_form">
+                                        <asan-submit nome="Modifica"></asan-submit>           
+                                        <asan-submit nome="Calcolo dot."></asan-submit>  
+                                        <asan-submit nome="Report"></asan-submit>  
+                                        <asan-submit nome="Consolida"></asan-submit>  
+                                    </div>
+                                </form>
 
-                            <div style="height: 197px"></div>
+                                <!-- Parte per i dettagli singola Unita -->    
+                                <form class="form-ricerca" role="form" data-ng-show="showDettaglioUnitaOrganizzative.visibilita" >
+                                    <div class="form-group">
+
+                                        <div class="left-label">
+                                            <label>Codice UO</label>
+                                        </div>
+                                        <div style="float: left">
+                                            <p>Il codice qua</p>
+                                            <p style="font-weight: bold;">Nome </p>
+                                            <p> Il nome </p>
+                                        </div><br><br>
+
+                                        <div class="left-label">
+                                            <label>N.Seq</label>
+                                        </div>
+                                        <div>
+                                            <p> </p>
+                                            <p style="font-weight: bold;">Descrizione </p>
+                                            <p></p>
+                                        </div> <br><br>
+                                        <div class="left-label">
+                                            <label>Situazione Inserimento dati</label>
+                                        </div>
+                                        <div>
+                                            <span></span>
+                                        </div><br><br>
+
+                                        <div id="tabs_unita">
+                                            <ul>
+                                                <li><a href="#classi_d_profili">Classi di profili</a></li>
+                                                <li><a href="#ragruppamento_uo">Ragruppamento UO</a></li>
+                                            </ul>
+                                            <div id="classi_d_profili">
+                                                Da completare con classi di profili
+                                            </div>
+                                            <div id="ragruppamento_uo">
+                                                <div>
+                                                    <table id="strutture" style="width: 70%; float: left">
+                                                        <tr>
+                                                            <th>Classe di profilo</th>
+                                                            <th>Numero ore lavorate</th>
+                                                        </tr>
+                                                        <tr data-ng-repeat="classe in processoSelezionato.classiProfili">
+                                                            <td><span>{{classe.classeProfilo.descrizione}}</span></td>  
+                                                            <td><span>{{classe.numeroOre}}</span></td>  
+                                                        </tr>
+                                                    </table>
+                                                    <button  id="ok" data-ng-click="backToUnita();" style="width: 90px;margin-left: 2px" >
+                                                        OK
+                                                    </button> 
+                                                </div>
+                                            </div>
+                                        </div><br> 
+                                    </div>   
+                                    <div class="bottoni_form">
+                                        <asan-submit nome="Modifica"></asan-submit>           
+                                        <asan-submit nome="Calcolo dot."></asan-submit>  
+                                        <asan-submit nome="Report"></asan-submit>  
+                                        <asan-submit nome="Consolida"></asan-submit>  
+                                    </div>
+
+                                </form> 
+
+
+
+                                <!-- Parte per i dettagli singola MacroAttività -->    
+                                <form class="form-ricerca" role="form" data-ng-show="showDettaglioMacroAttivita.visibilita" >
+                                    <div class="form-group">
+
+                                        Da scrivere...
+                                        <button  id="ok2" data-ng-click="backToUnita();" style="width: 90px;margin-left: 2px" >
+                                            OK
+                                        </button> 
+
+
+                                    </div>   
+                                    <div class="bottoni_form">
+                                        <asan-submit nome="Modifica"></asan-submit>           
+                                        <asan-submit nome="Calcolo dot."></asan-submit>  
+                                        <asan-submit nome="Report"></asan-submit>  
+                                        <asan-submit nome="Consolida"></asan-submit>  
+                                    </div>
+
+                                </form> 
+
+                            </div>
+                            <div id="compensatore"></div>
                         </div>
                     </div> <!-- Fine del main tabs -->
 

@@ -1,488 +1,1439 @@
 [{
-    "id": 1,
-    "anno": 2010,
-    "quadrimestre": 3,
-    "dataApertura": "Mar 9, 2016 5:01:10 PM",
-    "listaStruttureDDO": [
-        {
-            "flagObbligatoria": true,
-            "cdStatoCompilazione": "3",
-            "listaUnitaOrganizzativeDDO": [
-                {
-                    "cdStatoCompilazione": "Prima unita",
-                    "listaMacroAttivitaDDO": [
-                        {
-                            "cdStatoCompilazione": "test",
-                            "listaParametriDDO": [
-                                {
-                                    "id": 29429,
-                                    "tipo": {
-                                        "id": 0,
-                                        "codice": "CAPSE01",
-                                        "descrizione": "Indicare, tra i seguenti profili, il personale psico-socio-educativo presente nella struttura per almeno due ore al giorno",
-                                        "map": {
-                                            "DS_PARAMETRO_MA": "descrizione",
-                                            "CD_PARAMETRO_MA": "codice",
-                                            "TPPRMA_KEY_ID": "id",
-                                            "DT_INIZIO_VALIDITA": "dataInizioValidita"
+        "id": 1,
+        "anno": 2010,
+        "quadrimestre": 3,
+        "dataApertura": "Mar 9, 2016 5:01:10 PM",
+        "listaStruttureDDO": [
+            {
+                "flagObbligatoria": true,
+                "cdStatoCompilazione": "3",
+                "listaUnitaOrganizzativeDDO": [
+                    {
+                        "cdStatoCompilazione": "Prima unita",
+                        "listaMacroAttivitaDDO": [
+                            {
+                                "cdStatoCompilazione": "test",
+                                "listaParametriDDO": [
+                                    {
+                                        "id": 29429,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "CAPSE01",
+                                            "descrizione": "Indicare, tra i seguenti profili, il personale psico-socio-educativo presente nella struttura per almeno due ore al giorno",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
                                         },
+                                        "classeProfilo": {
+                                            "id": 1,
+                                            "descrizione": "CHIRURGO",
+                                            "map": {
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                                "CSLPRO_KEY_ID": "id",
+                                                "DS_CLASSE_PROFILO": "descrizione"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 19,
                                         "propertyToCrypt": [],
                                         "propertyToNotClean": []
                                     },
-                                    "classeProfilo": {
-                                        "id": 1,
-                                        "descrizione": "CHIRURGO",
-                                        "map": {
-                                            "DT_INIZIO_VALIDITA": "dataInizioValidita",
-                                            "CSLPRO_KEY_ID": "id",
-                                            "DS_CLASSE_PROFILO": "descrizione"
+                                    {
+                                        "id": 294295,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "DMGIN01",
+                                            "descrizione": "Indicare la durata media (ore) di un gruppo di intervento (vedere Requisito Accreditamento OSCNP03",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
                                         },
+                                        "valore": 159,
                                         "propertyToCrypt": [],
                                         "propertyToNotClean": []
-                                    },
-                                    "valore": 19,
-                                    "propertyToCrypt": [],
-                                    "propertyToNotClean": []
-                                },
-                                {
-                                    "id": 294295,
-                                    "tipo": {
-                                        "id": 0,
-                                        "codice": "DMGIN01",
-                                        "descrizione": "Indicare la durata media (ore) di un gruppo di intervento (vedere Requisito Accreditamento OSCNP03",
-                                        "map": {
-                                            "DS_PARAMETRO_MA": "descrizione",
-                                            "CD_PARAMETRO_MA": "codice",
-                                            "TPPRMA_KEY_ID": "id",
-                                            "DT_INIZIO_VALIDITA": "dataInizioValidita"
-                                        },
-                                        "propertyToCrypt": [],
-                                        "propertyToNotClean": []
-                                    },
-                                    "valore": 159,
-                                    "propertyToCrypt": [],
-                                    "propertyToNotClean": []
-                                }
-                            ],
-                            "nome": "Test UO",
-                            "numSequenza": 1,
-                            "descrizione": "prova",
-                            "propertyToCrypt": [],
-                            "propertyToNotClean": []
-                        },
-                        {
-                            "cdStatoCompilazione": "test2",
-                            "nome": "Test UO 2",
-                            "numSequenza": 2929,
-                            "descrizione": "prova2",
-                            "propertyToCrypt": [],
-                            "propertyToNotClean": []
-                        }
-                    ],
-                    "listaOreLavorateDDO": [
-                        {
-                            "id": 92090,
-                            "classeProfilo": {
-                                "id": 92049049,
-                                "descrizione": "Profilo 1",
-                                "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
-                                "map": {
-                                    "DT_INIZIO_VALIDITA": "dataInizioValidita",
-                                    "CSLPRO_KEY_ID": "id",
-                                    "DS_CLASSE_PROFILO": "descrizione"
-                                },
+                                    }
+                                ],
+                                "nome": "Test UO",
+                                "numSequenza": 1,
+                                "descrizione": "prova",
                                 "propertyToCrypt": [],
                                 "propertyToNotClean": []
                             },
-                            "numeroOre": 15,
-                            "propertyToCrypt": [],
-                            "propertyToNotClean": []
-                        },
-                        {
-                            "id": 0,
-                            "numeroOre": 0,
-                            "propertyToCrypt": [],
-                            "propertyToNotClean": []
-                        },
-                         {
-                            "id": 920920,
-                            "classeProfilo": {
-                                "id": 920490249,
-                                "descrizione": "Profilo 2",
-                                "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
-                                "map": {
-                                    "DT_INIZIO_VALIDITA": "dataInizioValidita",
-                                    "CSLPRO_KEY_ID": "id",
-                                    "DS_CLASSE_PROFILO": "descrizione"
+                            {
+                                "cdStatoCompilazione": "test2",
+                                "nome": "Test UO ttttt",
+                                "numSequenza": 2929,
+                                "descrizione": "prova2",
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            }
+                        ],
+                        "listaOreLavorateDDO": [
+                            {
+                                "id": 92090,
+                                "classeProfilo": {
+                                    "id": 92049049,
+                                    "descrizione": "medici",
+                                    "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                                    "map": {
+                                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                        "CSLPRO_KEY_ID": "id",
+                                        "DS_CLASSE_PROFILO": "descrizione"
+                                    },
+                                    "propertyToCrypt": [],
+                                    "propertyToNotClean": []
                                 },
+                                "numeroOre": 10,
                                 "propertyToCrypt": [],
                                 "propertyToNotClean": []
                             },
-                            "numeroOre": 30,
-                            "propertyToCrypt": [],
-                            "propertyToNotClean": []
-                        }
-                        
-                    ],
-                    "id": 1904,
-                    "codice": "BFDDKD",
-                    "descrizione": "prova descrizione",
-                    "numSequenza": 2,
+                            {
+                                "id": 92090,
+                                "classeProfilo": {
+                                    "id": 92049049,
+                                    "descrizione": "infermieri",
+                                    "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                                    "map": {
+                                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                        "CSLPRO_KEY_ID": "id",
+                                        "DS_CLASSE_PROFILO": "descrizione"
+                                    },
+                                    "propertyToCrypt": [],
+                                    "propertyToNotClean": []
+                                },
+                                "numeroOre": 16,
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "id": 0,
+                                "numeroOre": 0,
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            }
+                        ],
+                        "id": 1904,
+                        "codice": "BFDDKD",
+                        "descrizione": "prova descrizione",
+                        "numSequenza": 2,
+                        "propertyToCrypt": [],
+                        "propertyToNotClean": []
+                    },
+                    {
+                        "cdStatoCompilazione": "codice stato compilaz",
+                        "listaMacroAttivitaDDO": [
+                            {
+                                "cdStatoCompilazione": "test",
+                                "listaParametriDDO": [
+                                    {
+                                        "id": 29429,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "CAPSE01",
+                                            "descrizione": "Indicare, tra i seguenti profili, il personale psico-socio-educativo presente nella struttura per almeno due ore al giorno",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "classeProfilo": {
+                                            "id": 1,
+                                            "descrizione": "CHIRURGO",
+                                            "map": {
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                                "CSLPRO_KEY_ID": "id",
+                                                "DS_CLASSE_PROFILO": "descrizione"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 19,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    },
+                                    {
+                                        "id": 294295,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "DMGIN01",
+                                            "descrizione": "Indicare la durata media (ore) di un gruppo di intervento (vedere Requisito Accreditamento OSCNP03",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 159,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    }
+                                ],
+                                "nome": "Test Uopppp",
+                                "numSequenza": 2,
+                                "descrizione": "prova",
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "cdStatoCompilazione": "test",
+                                "listaParametriDDO": [
+                                    {
+                                        "id": 29429,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "CAPSE01",
+                                            "descrizione": "Indicare, tra i seguenti profili, il personale psico-socio-educativo presente nella struttura per almeno due ore al giorno",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "classeProfilo": {
+                                            "id": 1,
+                                            "descrizione": "CHIRURGO",
+                                            "map": {
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                                "CSLPRO_KEY_ID": "id",
+                                                "DS_CLASSE_PROFILO": "descrizione"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 19,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    },
+                                    {
+                                        "id": 294295,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "DMGIN01",
+                                            "descrizione": "Indicare la durata media (ore) di un gruppo di intervento (vedere Requisito Accreditamento OSCNP03",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 159,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    }
+                                ],
+                                "nome": "Test",
+                                "numSequenza": 2,
+                                "descrizione": "prova",
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "cdStatoCompilazione": "test",
+                                "listaParametriDDO": [
+                                    {
+                                        "id": 29429,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "CAPSE01",
+                                            "descrizione": "Indicare, tra i seguenti profili, il personale psico-socio-educativo presente nella struttura per almeno due ore al giorno",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "classeProfilo": {
+                                            "id": 1,
+                                            "descrizione": "CHIRURGO",
+                                            "map": {
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                                "CSLPRO_KEY_ID": "id",
+                                                "DS_CLASSE_PROFILO": "descrizione"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 19,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    },
+                                    {
+                                        "id": 294295,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "DMGIN01",
+                                            "descrizione": "Indicare la durata media (ore) di un gruppo di intervento (vedere Requisito Accreditamento OSCNP03",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 159,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    }
+                                ],
+                                "nome": "Test Uopppp 2",
+                                "numSequenza": 2,
+                                "descrizione": "prova",
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "cdStatoCompilazione": "test2",
+                                "nome": "Test UO altro",
+                                "numSequenza": 2929,
+                                "descrizione": "prova2",
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            }
+                        ],
+                        "listaOreLavorateDDO": [
+                            {
+                                "id": 92090,
+                                "classeProfilo": {
+                                    "id": 92049049,
+                                    "descrizione": "desc classe profilo",
+                                    "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                                    "map": {
+                                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                        "CSLPRO_KEY_ID": "id",
+                                        "DS_CLASSE_PROFILO": "descrizione"
+                                    },
+                                    "propertyToCrypt": [],
+                                    "propertyToNotClean": []
+                                },
+                                "numeroOre": 15,
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "id": 0,
+                                "numeroOre": 0,
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            }
+                        ],
+                        "id": 1904,
+                        "codice": "BFDDKD",
+                        "descrizione": "prova descrizione",
+                        "numSequenza": 3,
+                        "propertyToCrypt": [],
+                        "propertyToNotClean": []
+                    }
+                ],
+                "id": 101000,
+                "ente": {
+                    "id": 0,
+                    "codice": "3094030",
+                    "codiceTipo": "G",
+                    "codiceFiscale": "MGGTFDKFDKFDK",
+                    "nome": "nome ente",
+                    "flagAnnulla": false,
+                    "flagModifica": true,
+                    "flagPMEG": true,
                     "propertyToCrypt": [],
                     "propertyToNotClean": []
                 },
-                 {
-                    "cdStatoCompilazione": "codice stato compilaz",
-                    "listaMacroAttivitaDDO": [
-                        {
-                            "cdStatoCompilazione": "test",
-                            "listaParametriDDO": [
-                                {
-                                    "id": 29429,
-                                    "tipo": {
-                                        "id": 0,
-                                        "codice": "CAPSE01",
-                                        "descrizione": "Indicare, tra i seguenti profili, il personale psico-socio-educativo presente nella struttura per almeno due ore al giorno",
-                                        "map": {
-                                            "DS_PARAMETRO_MA": "descrizione",
-                                            "CD_PARAMETRO_MA": "codice",
-                                            "TPPRMA_KEY_ID": "id",
-                                            "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                "asl": {
+                    "id": 10000,
+                    "codice": "321",
+                    "descrizione": "ATS BERGAMO",
+                    "IDRegione": 0,
+                    "map": {
+                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                        "DS_ESATTORIA": "descrizioneEsattoria",
+                        "REG_KEY_ID": "IDRegione",
+                        "DS_NOMINATIVO_RESPONSABILE": "descrizioneNominativoResponsabile",
+                        "ASL_KEY_ID": "id",
+                        "DS_ASL": "descrizione",
+                        "CD_ASL": "codice",
+                        "NR_PARTITA_IVA": "numeroPartitaIva",
+                        "DS_QUALIFICA_RESPONSABILE": "descrizioneQualificaResponsabile"
+                    },
+                    "propertyToCrypt": [],
+                    "propertyToNotClean": []
+                },
+                "tipoStruttura": {
+                    "id": 39393939,
+                    "codice": "29292",
+                    "descrizione": "descrizione test tipo struttura",
+                    "flagUsabile": "S",
+                    "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                    "map": {
+                        "DS_TIPO_STRUTTURA": "descrizione",
+                        "CD_TIPO_STRUTTURA": "codice",
+                        "TIPSTR_KEY_ID": "id",
+                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                        "FL_USABILE": "flagUsabile"
+                    },
+                    "propertyToCrypt": [],
+                    "propertyToNotClean": []
+                },
+                "tipoOspedale": {
+                    "id": 2929292,
+                    "codice": 849829,
+                    "descrizione": "descrizione test - tipo ospedale",
+                    "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                    "map": {
+                        "DS_TIPO_OSPEDALE": "descrizione",
+                        "TIPOSP_KEY_ID": "id",
+                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                        "CD_TIPO_OSPEDALE": "codice"
+                    },
+                    "propertyToCrypt": [],
+                    "propertyToNotClean": []
+                },
+                "codiceNoVincolo": "fksjskf354545",
+                "nome": "TEST STRUTTURA DDO 1",
+                "propertyToCrypt": [],
+                "propertyToNotClean": []
+            }
+            ,
+            {
+                "flagObbligatoria": true,
+                "cdStatoCompilazione": "3",
+                "listaUnitaOrganizzativeDDO": [
+                    {
+                        "cdStatoCompilazione": "Prima unita",
+                        "listaMacroAttivitaDDO": [
+                            {
+                                "cdStatoCompilazione": "test",
+                                "listaParametriDDO": [
+                                    {
+                                        "id": 29429,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "CAPSE01",
+                                            "descrizione": "Indicare, tra i seguenti profili, il personale psico-socio-educativo presente nella struttura per almeno due ore al giorno",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
                                         },
+                                        "classeProfilo": {
+                                            "id": 1,
+                                            "descrizione": "CHIRURGO",
+                                            "map": {
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                                "CSLPRO_KEY_ID": "id",
+                                                "DS_CLASSE_PROFILO": "descrizione"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 19,
                                         "propertyToCrypt": [],
                                         "propertyToNotClean": []
                                     },
-                                    "classeProfilo": {
-                                        "id": 1,
-                                        "descrizione": "CHIRURGO",
-                                        "map": {
-                                            "DT_INIZIO_VALIDITA": "dataInizioValidita",
-                                            "CSLPRO_KEY_ID": "id",
-                                            "DS_CLASSE_PROFILO": "descrizione"
+                                    {
+                                        "id": 294295,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "DMGIN01",
+                                            "descrizione": "Indicare la durata media (ore) di un gruppo di intervento (vedere Requisito Accreditamento OSCNP03",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
                                         },
+                                        "valore": 159,
                                         "propertyToCrypt": [],
                                         "propertyToNotClean": []
-                                    },
-                                    "valore": 19,
-                                    "propertyToCrypt": [],
-                                    "propertyToNotClean": []
-                                },
-                                {
-                                    "id": 294295,
-                                    "tipo": {
-                                        "id": 0,
-                                        "codice": "DMGIN01",
-                                        "descrizione": "Indicare la durata media (ore) di un gruppo di intervento (vedere Requisito Accreditamento OSCNP03",
-                                        "map": {
-                                            "DS_PARAMETRO_MA": "descrizione",
-                                            "CD_PARAMETRO_MA": "codice",
-                                            "TPPRMA_KEY_ID": "id",
-                                            "DT_INIZIO_VALIDITA": "dataInizioValidita"
-                                        },
-                                        "propertyToCrypt": [],
-                                        "propertyToNotClean": []
-                                    },
-                                    "valore": 159,
-                                    "propertyToCrypt": [],
-                                    "propertyToNotClean": []
-                                }
-                            ],
-                            "nome": "Test UO",
-                            "numSequenza": 2,
-                            "descrizione": "prova",
-                            "propertyToCrypt": [],
-                            "propertyToNotClean": []
-                        },
-                        {
-                            "cdStatoCompilazione": "test2",
-                            "nome": "Test UO 2",
-                            "numSequenza": 2929,
-                            "descrizione": "prova2",
-                            "propertyToCrypt": [],
-                            "propertyToNotClean": []
-                        }
-                    ],
-                    "listaOreLavorateDDO": [
-                        {
-                            "id": 92090,
-                            "classeProfilo": {
-                                "id": 92049049,
-                                "descrizione": "desc classe profilo",
-                                "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
-                                "map": {
-                                    "DT_INIZIO_VALIDITA": "dataInizioValidita",
-                                    "CSLPRO_KEY_ID": "id",
-                                    "DS_CLASSE_PROFILO": "descrizione"
-                                },
+                                    }
+                                ],
+                                "nome": "Test UO",
+                                "numSequenza": 1,
+                                "descrizione": "prova",
                                 "propertyToCrypt": [],
                                 "propertyToNotClean": []
                             },
-                            "numeroOre": 15,
-                            "propertyToCrypt": [],
-                            "propertyToNotClean": []
-                        },
-                        {
-                            "id": 0,
-                            "numeroOre": 0,
-                            "propertyToCrypt": [],
-                            "propertyToNotClean": []
-                        }
-                    ],
-                    "id": 1904,
-                    "codice": "BFDDKD",
-                    "descrizione": "prova descrizione",
-                    "numSequenza": 3,
-                    "propertyToCrypt": [],
-                    "propertyToNotClean": []
-                }
-            ],
-            "id": 101000,
-            "ente": {
-                "id": 0,
-                "codice": "3094030",
-                "codiceTipo": "G",
-                "codiceFiscale": "MGGTFDKFDKFDK",
-                "nome": "nome ente",
-                "flagAnnulla": false,
-                "flagModifica": true,
-                "flagPMEG": true,
-                "propertyToCrypt": [],
-                "propertyToNotClean": []
-            },
-            "asl": {
-                "id": 10000,
-                "codice": "321",
-                "descrizione": "ATS BERGAMO",
-                "IDRegione": 0,
-                "map": {
-                    "DT_INIZIO_VALIDITA": "dataInizioValidita",
-                    "DS_ESATTORIA": "descrizioneEsattoria",
-                    "REG_KEY_ID": "IDRegione",
-                    "DS_NOMINATIVO_RESPONSABILE": "descrizioneNominativoResponsabile",
-                    "ASL_KEY_ID": "id",
-                    "DS_ASL": "descrizione",
-                    "CD_ASL": "codice",
-                    "NR_PARTITA_IVA": "numeroPartitaIva",
-                    "DS_QUALIFICA_RESPONSABILE": "descrizioneQualificaResponsabile"
-                },
-                "propertyToCrypt": [],
-                "propertyToNotClean": []
-            },
-            "tipoStruttura": {
-                "id": 39393939,
-                "codice": "29292",
-                "descrizione": "descrizione test tipo struttura",
-                "flagUsabile": "S",
-                "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
-                "map": {
-                    "DS_TIPO_STRUTTURA": "descrizione",
-                    "CD_TIPO_STRUTTURA": "codice",
-                    "TIPSTR_KEY_ID": "id",
-                    "DT_INIZIO_VALIDITA": "dataInizioValidita",
-                    "FL_USABILE": "flagUsabile"
-                },
-                "propertyToCrypt": [],
-                "propertyToNotClean": []
-            },
-            "tipoOspedale": {
-                "id": 2929292,
-                "codice": 849829,
-                "descrizione": "descrizione test - tipo ospedale",
-                "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
-                "map": {
-                    "DS_TIPO_OSPEDALE": "descrizione",
-                    "TIPOSP_KEY_ID": "id",
-                    "DT_INIZIO_VALIDITA": "dataInizioValidita",
-                    "CD_TIPO_OSPEDALE": "codice"
-                },
-                "propertyToCrypt": [],
-                "propertyToNotClean": []
-            },
-            "codiceNoVincolo": "fksjskf354545",
-            "nome": "TEST STRUTTURA DDO 1",
-            "propertyToCrypt": [], 
-            "propertyToNotClean": []
-        }
-        ,
-        {
-            "flagObbligatoria": true,
-            "cdStatoCompilazione": "1",
-            "listaUnitaOrganizzativeDDO": [
-                {
-                    "cdStatoCompilazione": "primo elemento",
-                    "listaMacroAttivitaDDO": [
-                        {
-                            "cdStatoCompilazione": "test",
-                            "listaParametriDDO": [
-                                {
-                                    "id": 29429,
-                                    "tipo": {
-                                        "id": 0,
-                                        "codice": "CAPSE01",
-                                        "descrizione": "Indicare, tra i seguenti profili, il personale psico-socio-educativo presente nella struttura per almeno due ore al giorno",
-                                        "map": {
-                                            "DS_PARAMETRO_MA": "descrizione",
-                                            "CD_PARAMETRO_MA": "codice",
-                                            "TPPRMA_KEY_ID": "id",
-                                            "DT_INIZIO_VALIDITA": "dataInizioValidita"
-                                        },
-                                        "propertyToCrypt": [],
-                                        "propertyToNotClean": []
+                            {
+                                "cdStatoCompilazione": "test2",
+                                "nome": "Test UO ttttt",
+                                "numSequenza": 2929,
+                                "descrizione": "prova2",
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            }
+                        ],
+                        "listaOreLavorateDDO": [
+                            {
+                                "id": 92090,
+                                "classeProfilo": {
+                                    "id": 92049049,
+                                    "descrizione": "medici",
+                                    "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                                    "map": {
+                                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                        "CSLPRO_KEY_ID": "id",
+                                        "DS_CLASSE_PROFILO": "descrizione"
                                     },
-                                    "classeProfilo": {
-                                        "id": 1,
-                                        "descrizione": "CHIRURGO",
-                                        "map": {
-                                            "DT_INIZIO_VALIDITA": "dataInizioValidita",
-                                            "CSLPRO_KEY_ID": "id",
-                                            "DS_CLASSE_PROFILO": "descrizione"
-                                        },
-                                        "propertyToCrypt": [],
-                                        "propertyToNotClean": []
-                                    },
-                                    "valore": 19,
                                     "propertyToCrypt": [],
                                     "propertyToNotClean": []
                                 },
-                                {
-                                    "id": 294295,
-                                    "tipo": {
-                                        "id": 0,
-                                        "codice": "DMGIN01",
-                                        "descrizione": "Indicare la durata media (ore) di un gruppo di intervento (vedere Requisito Accreditamento OSCNP03",
-                                        "map": {
-                                            "DS_PARAMETRO_MA": "descrizione",
-                                            "CD_PARAMETRO_MA": "codice",
-                                            "TPPRMA_KEY_ID": "id",
-                                            "DT_INIZIO_VALIDITA": "dataInizioValidita"
-                                        },
-                                        "propertyToCrypt": [],
-                                        "propertyToNotClean": []
-                                    },
-                                    "valore": 159,
-                                    "propertyToCrypt": [],
-                                    "propertyToNotClean": []
-                                }
-                            ],
-                            "nome": "Test UO",
-                            "numSequenza": 1,
-                            "descrizione": "prova",
-                            "propertyToCrypt": [],
-                            "propertyToNotClean": []
-                        },
-                        {
-                            "cdStatoCompilazione": "test2",
-                            "nome": "Test UO 2",
-                            "numSequenza": 2929,
-                            "descrizione": "prova2",
-                            "propertyToCrypt": [],
-                            "propertyToNotClean": []
-                        }
-                    ],
-                    "listaOreLavorateDDO": [
-                        {
-                            "id": 92090,
-                            "classeProfilo": {
-                                "id": 92049049,
-                                "descrizione": "desc classe profilo",
-                                "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
-                                "map": {
-                                    "DT_INIZIO_VALIDITA": "dataInizioValidita",
-                                    "CSLPRO_KEY_ID": "id",
-                                    "DS_CLASSE_PROFILO": "descrizione"
-                                },
+                                "numeroOre": 10,
                                 "propertyToCrypt": [],
                                 "propertyToNotClean": []
                             },
-                            "numeroOre": 15,
-                            "propertyToCrypt": [],
-                            "propertyToNotClean": []
-                        },
-                        {
-                            "id": 0,
-                            "numeroOre": 0,
-                            "propertyToCrypt": [],
-                            "propertyToNotClean": []
-                        }
-                    ],
-                    "id": 1904,
-                    "codice": "BFDDKD",
-                    "descrizione": "prova descrizione",
-                    "numSequenza": 1,
+                            {
+                                "id": 92090,
+                                "classeProfilo": {
+                                    "id": 92049049,
+                                    "descrizione": "infermieri",
+                                    "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                                    "map": {
+                                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                        "CSLPRO_KEY_ID": "id",
+                                        "DS_CLASSE_PROFILO": "descrizione"
+                                    },
+                                    "propertyToCrypt": [],
+                                    "propertyToNotClean": []
+                                },
+                                "numeroOre": 16,
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "id": 0,
+                                "numeroOre": 0,
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            }
+                        ],
+                        "id": 1904,
+                        "codice": "BFDDKD",
+                        "descrizione": "prova descrizione",
+                        "numSequenza": 2,
+                        "propertyToCrypt": [],
+                        "propertyToNotClean": []
+                    },
+                    {
+                        "cdStatoCompilazione": "codice stato compilaz",
+                        "listaMacroAttivitaDDO": [
+                            {
+                                "cdStatoCompilazione": "test",
+                                "listaParametriDDO": [
+                                    {
+                                        "id": 29429,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "CAPSE01",
+                                            "descrizione": "Indicare, tra i seguenti profili, il personale psico-socio-educativo presente nella struttura per almeno due ore al giorno",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "classeProfilo": {
+                                            "id": 1,
+                                            "descrizione": "CHIRURGO",
+                                            "map": {
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                                "CSLPRO_KEY_ID": "id",
+                                                "DS_CLASSE_PROFILO": "descrizione"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 19,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    },
+                                    {
+                                        "id": 294295,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "DMGIN01",
+                                            "descrizione": "Indicare la durata media (ore) di un gruppo di intervento (vedere Requisito Accreditamento OSCNP03",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 159,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    }
+                                ],
+                                "nome": "Test Uopppp",
+                                "numSequenza": 2,
+                                "descrizione": "prova",
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "cdStatoCompilazione": "test",
+                                "listaParametriDDO": [
+                                    {
+                                        "id": 29429,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "CAPSE01",
+                                            "descrizione": "Indicare, tra i seguenti profili, il personale psico-socio-educativo presente nella struttura per almeno due ore al giorno",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "classeProfilo": {
+                                            "id": 1,
+                                            "descrizione": "CHIRURGO",
+                                            "map": {
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                                "CSLPRO_KEY_ID": "id",
+                                                "DS_CLASSE_PROFILO": "descrizione"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 19,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    },
+                                    {
+                                        "id": 294295,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "DMGIN01",
+                                            "descrizione": "Indicare la durata media (ore) di un gruppo di intervento (vedere Requisito Accreditamento OSCNP03",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 159,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    }
+                                ],
+                                "nome": "Test",
+                                "numSequenza": 2,
+                                "descrizione": "prova",
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "cdStatoCompilazione": "test",
+                                "listaParametriDDO": [
+                                    {
+                                        "id": 29429,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "CAPSE01",
+                                            "descrizione": "Indicare, tra i seguenti profili, il personale psico-socio-educativo presente nella struttura per almeno due ore al giorno",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "classeProfilo": {
+                                            "id": 1,
+                                            "descrizione": "CHIRURGO",
+                                            "map": {
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                                "CSLPRO_KEY_ID": "id",
+                                                "DS_CLASSE_PROFILO": "descrizione"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 19,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    },
+                                    {
+                                        "id": 294295,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "DMGIN01",
+                                            "descrizione": "Indicare la durata media (ore) di un gruppo di intervento (vedere Requisito Accreditamento OSCNP03",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 159,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    }
+                                ],
+                                "nome": "Test Uopppp 2",
+                                "numSequenza": 2,
+                                "descrizione": "prova",
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "cdStatoCompilazione": "test2",
+                                "nome": "Test UO altro",
+                                "numSequenza": 2929,
+                                "descrizione": "prova2",
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            }
+                        ],
+                        "listaOreLavorateDDO": [
+                            {
+                                "id": 92090,
+                                "classeProfilo": {
+                                    "id": 92049049,
+                                    "descrizione": "desc classe profilo",
+                                    "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                                    "map": {
+                                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                        "CSLPRO_KEY_ID": "id",
+                                        "DS_CLASSE_PROFILO": "descrizione"
+                                    },
+                                    "propertyToCrypt": [],
+                                    "propertyToNotClean": []
+                                },
+                                "numeroOre": 15,
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "id": 0,
+                                "numeroOre": 0,
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            }
+                        ],
+                        "id": 1904,
+                        "codice": "BFDDKD",
+                        "descrizione": "prova descrizione",
+                        "numSequenza": 3,
+                        "propertyToCrypt": [],
+                        "propertyToNotClean": []
+                    }
+                ],
+                "id": 101000,
+                "ente": {
+                    "id": 0,
+                    "codice": "3094030",
+                    "codiceTipo": "G",
+                    "codiceFiscale": "MGGTFDKFDKFDK",
+                    "nome": "nome ente",
+                    "flagAnnulla": false,
+                    "flagModifica": true,
+                    "flagPMEG": true,
                     "propertyToCrypt": [],
                     "propertyToNotClean": []
-                }
-            ],
-            "id": 101000,
-            "ente": {
-                "id": 0,
-                "codice": "3094030",
-                "codiceTipo": "G",
-                "codiceFiscale": "MGGTFDKFDKFDK",
-                "nome": "nome ente",
-                "flagAnnulla": false,
-                "flagModifica": true,
-                "flagPMEG": true,
-                "propertyToCrypt": [],
-                "propertyToNotClean": []
-            },
-            "asl": {
-                "id": 10000,
-                "codice": "321",
-                "descrizione": "ATS BERGAMO",
-                "IDRegione": 0,
-                "map": {
-                    "DT_INIZIO_VALIDITA": "dataInizioValidita",
-                    "DS_ESATTORIA": "descrizioneEsattoria",
-                    "REG_KEY_ID": "IDRegione",
-                    "DS_NOMINATIVO_RESPONSABILE": "descrizioneNominativoResponsabile",
-                    "ASL_KEY_ID": "id",
-                    "DS_ASL": "descrizione",
-                    "CD_ASL": "codice",
-                    "NR_PARTITA_IVA": "numeroPartitaIva",
-                    "DS_QUALIFICA_RESPONSABILE": "descrizioneQualificaResponsabile"
                 },
-                "propertyToCrypt": [],
-                "propertyToNotClean": []
-            },
-            "tipoStruttura": {
-                "id": 39393939,
-                "codice": "29292",
-                "descrizione": "descrizione test tipo struttura",
-                "flagUsabile": "S",
-                "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
-                "map": {
-                    "DS_TIPO_STRUTTURA": "descrizione",
-                    "CD_TIPO_STRUTTURA": "codice",
-                    "TIPSTR_KEY_ID": "id",
-                    "DT_INIZIO_VALIDITA": "dataInizioValidita",
-                    "FL_USABILE": "flagUsabile"
+                "asl": {
+                    "id": 10000,
+                    "codice": "321",
+                    "descrizione": "ATS BERGAMO",
+                    "IDRegione": 0,
+                    "map": {
+                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                        "DS_ESATTORIA": "descrizioneEsattoria",
+                        "REG_KEY_ID": "IDRegione",
+                        "DS_NOMINATIVO_RESPONSABILE": "descrizioneNominativoResponsabile",
+                        "ASL_KEY_ID": "id",
+                        "DS_ASL": "descrizione",
+                        "CD_ASL": "codice",
+                        "NR_PARTITA_IVA": "numeroPartitaIva",
+                        "DS_QUALIFICA_RESPONSABILE": "descrizioneQualificaResponsabile"
+                    },
+                    "propertyToCrypt": [],
+                    "propertyToNotClean": []
                 },
-                "propertyToCrypt": [],
-                "propertyToNotClean": []
-            },
-            "tipoOspedale": {
-                "id": 2929292,
-                "codice": 849829,
-                "descrizione": "descrizione test - tipo ospedale",
-                "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
-                "map": {
-                    "DS_TIPO_OSPEDALE": "descrizione",
-                    "TIPOSP_KEY_ID": "id",
-                    "DT_INIZIO_VALIDITA": "dataInizioValidita",
-                    "CD_TIPO_OSPEDALE": "codice"
+                "tipoStruttura": {
+                    "id": 39393939,
+                    "codice": "29292",
+                    "descrizione": "descrizione test tipo struttura",
+                    "flagUsabile": "S",
+                    "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                    "map": {
+                        "DS_TIPO_STRUTTURA": "descrizione",
+                        "CD_TIPO_STRUTTURA": "codice",
+                        "TIPSTR_KEY_ID": "id",
+                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                        "FL_USABILE": "flagUsabile"
+                    },
+                    "propertyToCrypt": [],
+                    "propertyToNotClean": []
                 },
+                "tipoOspedale": {
+                    "id": 2929292,
+                    "codice": 849829,
+                    "descrizione": "descrizione test - tipo ospedale",
+                    "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                    "map": {
+                        "DS_TIPO_OSPEDALE": "descrizione",
+                        "TIPOSP_KEY_ID": "id",
+                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                        "CD_TIPO_OSPEDALE": "codice"
+                    },
+                    "propertyToCrypt": [],
+                    "propertyToNotClean": []
+                },
+                "codiceNoVincolo": "fksjskf354545",
+                "nome": "TEST STRUTTURA DDO 1",
                 "propertyToCrypt": [],
                 "propertyToNotClean": []
-            },
-            "codiceNoVincolo": "fksjskf354545",
-            "nome": "TEST STRUTTURA DDO 2",
-            "propertyToCrypt": [], 
-            "propertyToNotClean": []
-        }
-    ],
-    "flagWkfTerminato": false,
-    "codiceProcesso": "873895789",
-    "propertyToCrypt": [],
-    "propertyToNotClean": []
-}]
+            }
+            ,
+            {
+                "flagObbligatoria": true,
+                "cdStatoCompilazione": "3",
+                "listaUnitaOrganizzativeDDO": [
+                    {
+                        "cdStatoCompilazione": "Prima unita",
+                        "listaMacroAttivitaDDO": [
+                            {
+                                "cdStatoCompilazione": "test",
+                                "listaParametriDDO": [
+                                    {
+                                        "id": 29429,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "CAPSE01",
+                                            "descrizione": "Indicare, tra i seguenti profili, il personale psico-socio-educativo presente nella struttura per almeno due ore al giorno",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "classeProfilo": {
+                                            "id": 1,
+                                            "descrizione": "CHIRURGO",
+                                            "map": {
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                                "CSLPRO_KEY_ID": "id",
+                                                "DS_CLASSE_PROFILO": "descrizione"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 19,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    },
+                                    {
+                                        "id": 294295,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "DMGIN01",
+                                            "descrizione": "Indicare la durata media (ore) di un gruppo di intervento (vedere Requisito Accreditamento OSCNP03",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 159,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    }
+                                ],
+                                "nome": "Test UO",
+                                "numSequenza": 1,
+                                "descrizione": "prova",
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "cdStatoCompilazione": "test2",
+                                "nome": "Test UO ttttt",
+                                "numSequenza": 2929,
+                                "descrizione": "prova2",
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            }
+                        ],
+                        "listaOreLavorateDDO": [
+                            {
+                                "id": 92090,
+                                "classeProfilo": {
+                                    "id": 92049049,
+                                    "descrizione": "medici",
+                                    "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                                    "map": {
+                                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                        "CSLPRO_KEY_ID": "id",
+                                        "DS_CLASSE_PROFILO": "descrizione"
+                                    },
+                                    "propertyToCrypt": [],
+                                    "propertyToNotClean": []
+                                },
+                                "numeroOre": 10,
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "id": 92090,
+                                "classeProfilo": {
+                                    "id": 92049049,
+                                    "descrizione": "infermieri",
+                                    "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                                    "map": {
+                                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                        "CSLPRO_KEY_ID": "id",
+                                        "DS_CLASSE_PROFILO": "descrizione"
+                                    },
+                                    "propertyToCrypt": [],
+                                    "propertyToNotClean": []
+                                },
+                                "numeroOre": 16,
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "id": 0,
+                                "numeroOre": 0,
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            }
+                        ],
+                        "id": 1904,
+                        "codice": "BFDDKD",
+                        "descrizione": "prova descrizione",
+                        "numSequenza": 2,
+                        "propertyToCrypt": [],
+                        "propertyToNotClean": []
+                    },
+                    {
+                        "cdStatoCompilazione": "codice stato compilaz",
+                        "listaMacroAttivitaDDO": [
+                            {
+                                "cdStatoCompilazione": "test",
+                                "listaParametriDDO": [
+                                    {
+                                        "id": 29429,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "CAPSE01",
+                                            "descrizione": "Indicare, tra i seguenti profili, il personale psico-socio-educativo presente nella struttura per almeno due ore al giorno",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "classeProfilo": {
+                                            "id": 1,
+                                            "descrizione": "CHIRURGO",
+                                            "map": {
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                                "CSLPRO_KEY_ID": "id",
+                                                "DS_CLASSE_PROFILO": "descrizione"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 19,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    },
+                                    {
+                                        "id": 294295,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "DMGIN01",
+                                            "descrizione": "Indicare la durata media (ore) di un gruppo di intervento (vedere Requisito Accreditamento OSCNP03",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 159,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    }
+                                ],
+                                "nome": "Test Uopppp",
+                                "numSequenza": 2,
+                                "descrizione": "prova",
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "cdStatoCompilazione": "test",
+                                "listaParametriDDO": [
+                                    {
+                                        "id": 29429,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "CAPSE01",
+                                            "descrizione": "Indicare, tra i seguenti profili, il personale psico-socio-educativo presente nella struttura per almeno due ore al giorno",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "classeProfilo": {
+                                            "id": 1,
+                                            "descrizione": "CHIRURGO",
+                                            "map": {
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                                "CSLPRO_KEY_ID": "id",
+                                                "DS_CLASSE_PROFILO": "descrizione"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 19,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    },
+                                    {
+                                        "id": 294295,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "DMGIN01",
+                                            "descrizione": "Indicare la durata media (ore) di un gruppo di intervento (vedere Requisito Accreditamento OSCNP03",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 159,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    }
+                                ],
+                                "nome": "Test",
+                                "numSequenza": 2,
+                                "descrizione": "prova",
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "cdStatoCompilazione": "test",
+                                "listaParametriDDO": [
+                                    {
+                                        "id": 29429,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "CAPSE01",
+                                            "descrizione": "Indicare, tra i seguenti profili, il personale psico-socio-educativo presente nella struttura per almeno due ore al giorno",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "classeProfilo": {
+                                            "id": 1,
+                                            "descrizione": "CHIRURGO",
+                                            "map": {
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                                "CSLPRO_KEY_ID": "id",
+                                                "DS_CLASSE_PROFILO": "descrizione"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 19,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    },
+                                    {
+                                        "id": 294295,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "DMGIN01",
+                                            "descrizione": "Indicare la durata media (ore) di un gruppo di intervento (vedere Requisito Accreditamento OSCNP03",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 159,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    }
+                                ],
+                                "nome": "Test Uopppp 2",
+                                "numSequenza": 2,
+                                "descrizione": "prova",
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "cdStatoCompilazione": "test2",
+                                "nome": "Test UO altro",
+                                "numSequenza": 2929,
+                                "descrizione": "prova2",
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            }
+                        ],
+                        "listaOreLavorateDDO": [
+                            {
+                                "id": 92090,
+                                "classeProfilo": {
+                                    "id": 92049049,
+                                    "descrizione": "desc classe profilo",
+                                    "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                                    "map": {
+                                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                        "CSLPRO_KEY_ID": "id",
+                                        "DS_CLASSE_PROFILO": "descrizione"
+                                    },
+                                    "propertyToCrypt": [],
+                                    "propertyToNotClean": []
+                                },
+                                "numeroOre": 15,
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "id": 0,
+                                "numeroOre": 0,
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            }
+                        ],
+                        "id": 1904,
+                        "codice": "BFDDKD",
+                        "descrizione": "prova descrizione",
+                        "numSequenza": 3,
+                        "propertyToCrypt": [],
+                        "propertyToNotClean": []
+                    }
+                ],
+                "id": 101000,
+                "ente": {
+                    "id": 0,
+                    "codice": "3094030",
+                    "codiceTipo": "G",
+                    "codiceFiscale": "MGGTFDKFDKFDK",
+                    "nome": "nome ente",
+                    "flagAnnulla": false,
+                    "flagModifica": true,
+                    "flagPMEG": true,
+                    "propertyToCrypt": [],
+                    "propertyToNotClean": []
+                },
+                "asl": {
+                    "id": 10000,
+                    "codice": "321",
+                    "descrizione": "ATS BERGAMO",
+                    "IDRegione": 0,
+                    "map": {
+                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                        "DS_ESATTORIA": "descrizioneEsattoria",
+                        "REG_KEY_ID": "IDRegione",
+                        "DS_NOMINATIVO_RESPONSABILE": "descrizioneNominativoResponsabile",
+                        "ASL_KEY_ID": "id",
+                        "DS_ASL": "descrizione",
+                        "CD_ASL": "codice",
+                        "NR_PARTITA_IVA": "numeroPartitaIva",
+                        "DS_QUALIFICA_RESPONSABILE": "descrizioneQualificaResponsabile"
+                    },
+                    "propertyToCrypt": [],
+                    "propertyToNotClean": []
+                },
+                "tipoStruttura": {
+                    "id": 39393939,
+                    "codice": "29292",
+                    "descrizione": "descrizione test tipo struttura",
+                    "flagUsabile": "S",
+                    "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                    "map": {
+                        "DS_TIPO_STRUTTURA": "descrizione",
+                        "CD_TIPO_STRUTTURA": "codice",
+                        "TIPSTR_KEY_ID": "id",
+                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                        "FL_USABILE": "flagUsabile"
+                    },
+                    "propertyToCrypt": [],
+                    "propertyToNotClean": []
+                },
+                "tipoOspedale": {
+                    "id": 2929292,
+                    "codice": 849829,
+                    "descrizione": "descrizione test - tipo ospedale",
+                    "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                    "map": {
+                        "DS_TIPO_OSPEDALE": "descrizione",
+                        "TIPOSP_KEY_ID": "id",
+                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                        "CD_TIPO_OSPEDALE": "codice"
+                    },
+                    "propertyToCrypt": [],
+                    "propertyToNotClean": []
+                },
+                "codiceNoVincolo": "fksjskf354545",
+                "nome": "TEST STRUTTURA DDO 1",
+                "propertyToCrypt": [],
+                "propertyToNotClean": []
+            }
+            ,
+            {
+                "flagObbligatoria": true,
+                "cdStatoCompilazione": "1",
+                "listaUnitaOrganizzativeDDO": [
+                    {
+                        "cdStatoCompilazione": "primo elemento",
+                        "listaMacroAttivitaDDO": [
+                            {
+                                "cdStatoCompilazione": "test",
+                                "listaParametriDDO": [
+                                    {
+                                        "id": 29429,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "CAPSE01",
+                                            "descrizione": "Indicare, tra i seguenti profili, il personale psico-socio-educativo presente nella struttura per almeno due ore al giorno",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "classeProfilo": {
+                                            "id": 1,
+                                            "descrizione": "CHIRURGO",
+                                            "map": {
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                                "CSLPRO_KEY_ID": "id",
+                                                "DS_CLASSE_PROFILO": "descrizione"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 19,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    },
+                                    {
+                                        "id": 294295,
+                                        "tipo": {
+                                            "id": 0,
+                                            "codice": "DMGIN01",
+                                            "descrizione": "Indicare la durata media (ore) di un gruppo di intervento (vedere Requisito Accreditamento OSCNP03",
+                                            "map": {
+                                                "DS_PARAMETRO_MA": "descrizione",
+                                                "CD_PARAMETRO_MA": "codice",
+                                                "TPPRMA_KEY_ID": "id",
+                                                "DT_INIZIO_VALIDITA": "dataInizioValidita"
+                                            },
+                                            "propertyToCrypt": [],
+                                            "propertyToNotClean": []
+                                        },
+                                        "valore": 159,
+                                        "propertyToCrypt": [],
+                                        "propertyToNotClean": []
+                                    }
+                                ],
+                                "nome": "Test UOlp",
+                                "numSequenza": 1,
+                                "descrizione": "prova",
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "cdStatoCompilazione": "test2",
+                                "nome": "Test UOooo 2",
+                                "numSequenza": 2929,
+                                "descrizione": "prova2",
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            }
+                        ],
+                        "listaOreLavorateDDO": [
+                            {
+                                "id": 92090,
+                                "classeProfilo": {
+                                    "id": 92049049,
+                                    "descrizione": "desc classe profilo",
+                                    "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                                    "map": {
+                                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                        "CSLPRO_KEY_ID": "id",
+                                        "DS_CLASSE_PROFILO": "descrizione"
+                                    },
+                                    "propertyToCrypt": [],
+                                    "propertyToNotClean": []
+                                },
+                                "numeroOre": 15,
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            {
+                                "id": 0,
+                                "numeroOre": 0,
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            }
+                        ],
+                        "id": 1904,
+                        "codice": "BFDDKD",
+                        "descrizione": "prova descrizione",
+                        "numSequenza": 1,
+                        "propertyToCrypt": [],
+                        "propertyToNotClean": []
+                    }
+                ],
+                "id": 101000,
+                "ente": {
+                    "id": 0,
+                    "codice": "3094030",
+                    "codiceTipo": "G",
+                    "codiceFiscale": "MGGTFDKFDKFDK",
+                    "nome": "nome ente",
+                    "flagAnnulla": false,
+                    "flagModifica": true,
+                    "flagPMEG": true,
+                    "propertyToCrypt": [],
+                    "propertyToNotClean": []
+                },
+                "asl": {
+                    "id": 10000,
+                    "codice": "321",
+                    "descrizione": "ATS BERGAMO",
+                    "IDRegione": 0,
+                    "map": {
+                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                        "DS_ESATTORIA": "descrizioneEsattoria",
+                        "REG_KEY_ID": "IDRegione",
+                        "DS_NOMINATIVO_RESPONSABILE": "descrizioneNominativoResponsabile",
+                        "ASL_KEY_ID": "id",
+                        "DS_ASL": "descrizione",
+                        "CD_ASL": "codice",
+                        "NR_PARTITA_IVA": "numeroPartitaIva",
+                        "DS_QUALIFICA_RESPONSABILE": "descrizioneQualificaResponsabile"
+                    },
+                    "propertyToCrypt": [],
+                    "propertyToNotClean": []
+                },
+                "tipoStruttura": {
+                    "id": 39393939,
+                    "codice": "29292",
+                    "descrizione": "descrizione test tipo struttura",
+                    "flagUsabile": "S",
+                    "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                    "map": {
+                        "DS_TIPO_STRUTTURA": "descrizione",
+                        "CD_TIPO_STRUTTURA": "codice",
+                        "TIPSTR_KEY_ID": "id",
+                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                        "FL_USABILE": "flagUsabile"
+                    },
+                    "propertyToCrypt": [],
+                    "propertyToNotClean": []
+                },
+                "tipoOspedale": {
+                    "id": 2929292,
+                    "codice": 849829,
+                    "descrizione": "descrizione test - tipo ospedale",
+                    "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                    "map": {
+                        "DS_TIPO_OSPEDALE": "descrizione",
+                        "TIPOSP_KEY_ID": "id",
+                        "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                        "CD_TIPO_OSPEDALE": "codice"
+                    },
+                    "propertyToCrypt": [],
+                    "propertyToNotClean": []
+                },
+                "codiceNoVincolo": "fksjskf354545",
+                "nome": "TEST STRUTTURA DDO 2",
+                "propertyToCrypt": [],
+                "propertyToNotClean": []
+            }
+        ],
+        "flagWkfTerminato": false,
+        "codiceProcesso": "873895789",
+        "propertyToCrypt": [],
+        "propertyToNotClean": []
+    }]

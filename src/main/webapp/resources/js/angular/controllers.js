@@ -8,6 +8,13 @@ asanControllers.controller('RelocalsController', function($scope, Persone, Promi
     $scope.anni_ricerca = GestioneAnniService.getAnni();
     $scope.showDatiStruttura = false;
     $scope.showUnitaOrganizzative = false;
+    $scope.showDettaglioUnitaOrganizzative = {
+        "visibilita": false
+    };
+    $scope.showDettaglioMacroAttivita = {
+        "visibilita": false
+    };
+
     $scope.dettaglio = [];
 
     //dopo aver  selezionato un processo DDO dai risultati
@@ -25,6 +32,7 @@ asanControllers.controller('RelocalsController', function($scope, Persone, Promi
 
     $scope.f = function() {
         $scope.showDatiStruttura = true;
+        $scope.showUnitaOrganizzative = true;
         PromisedService.disattiva_md_datiStruttura();
     };
 
@@ -62,14 +70,14 @@ asanControllers.controller('RelocalsController', function($scope, Persone, Promi
         $scope.processoSelezionato.listaStruttureDDO.macroSelezionata = null;
         $scope.processoSelezionato.listaStruttureDDO.unitaSelezionata = unita;
         $scope.processoSelezionato.macroAttivita = [];
-
+        $scope.processoSelezionato.classiProfili = [];
         for (var k = 0; k < unita.listaOreLavorateDDO.length; k++) {
             var unita_lavoro_ore = unita.listaOreLavorateDDO[k];
             if (unita_lavoro_ore.classeProfilo) {
                 $scope.processoSelezionato.classiProfili.push(unita.listaOreLavorateDDO[k]);
             }
         }
-        alert('Lunghezza dell array: ' + $scope.processoSelezionato.classiProfili.length);
+        //alert('Lunghezza dell array: ' + $scope.processoSelezionato.classiProfili.length);
         for (var j = 0; j < unita.listaMacroAttivitaDDO.length; j++) {
             $scope.processoSelezionato.macroAttivita.push(unita.listaMacroAttivitaDDO[j]);
         }
@@ -82,6 +90,9 @@ asanControllers.controller('RelocalsController', function($scope, Persone, Promi
         $scope.processoSelezionato.listaStruttureDDO.strutturaSelezionata = struttura;
         $("#but").prop("disabled", false);
         $scope.showDatiStruttura = false;
+        $scope.showUnitaOrganizzative = false;
+        $scope.showDettaglioUnitaOrganizzative.visibilita = false;
+        $scope.showDettaglioMacroAttivita.visibilita = false;
         for (var i = 0; i < struttura.listaUnitaOrganizzativeDDO.length; i++) {
             var unita = struttura.listaUnitaOrganizzativeDDO[i];
             $scope.processoSelezionato.unitaOrganizzative.push(unita);
@@ -92,6 +103,9 @@ asanControllers.controller('RelocalsController', function($scope, Persone, Promi
     $scope.getDettagliSingoloProcesso = function(processo) {
         $scope.processoSelezionato.visibilita = true;
         $scope.showDatiStruttura = false;
+        $scope.showUnitaOrganizzative = false;
+        $scope.showDettaglioUnitaOrganizzative.visibilita = false;
+        $scope.showDettaglioMacroAttivita.visibilita = false;
         $("#but").prop("disabled", true);
         $scope.processoSelezionato.listaStruttureDDO.strutturaSelezionata = null;
         $scope.processoSelezionato.listaStruttureDDO = processo.listaStruttureDDO;
@@ -103,9 +117,10 @@ asanControllers.controller('RelocalsController', function($scope, Persone, Promi
             "unitaSelezionata": $scope.processoSelezionato.listaStruttureDDO.unitaSelezionata,
             "classi_di_profili": ''
         };
-        $("#macro_dettaglio").prop("disabled", true);
+        $scope.showUnitaOrganizzative = false;
+        $scope.showDettaglioUnitaOrganizzative.visibilita = true;
         $("#unita_dettaglio").prop("disabled", false);
-        alert('Unità: ' + dati_unita.unitaSelezionata.codice);
+        //alert('Unità: ' + dati_unita.unitaSelezionata.codice);
     };
 
 
@@ -118,9 +133,17 @@ asanControllers.controller('RelocalsController', function($scope, Persone, Promi
         var dati_macro = {
             "macroSelezionata": $scope.processoSelezionato.listaStruttureDDO.macroSelezionata
         };
-        alert('Macro: ' + dati_macro.macroSelezionata.nome);
+        $scope.showUnitaOrganizzative = false;
+        $scope.showDettaglioUnitaOrganizzative.visibilita = false;
+        $scope.showDettaglioMacroAttivita.visibilita = true;
     };
 
+
+    $scope.backToUnita = function() {
+        $scope.showUnitaOrganizzative = true;
+        $scope.showDettaglioMacroAttivita.visibilita = false;
+        $scope.showDettaglioUnitaOrganizzative.visibilita = false;
+    };
 
 
     $scope.$watch('processoSelezionato', function(prima, dopo) {
