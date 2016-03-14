@@ -18,7 +18,8 @@ asanControllers.controller('RelocalsController', function($scope, Persone, Promi
         "listaStruttureDDO": {
             "strutturaSelezionata": null,
             "unitaSelezionata": null,
-            "macroSelezionata": null
+            "macroSelezionata": null,
+            "classiProfili": []
         }
     };
 
@@ -91,7 +92,8 @@ asanControllers.controller('RelocalsController', function($scope, Persone, Promi
 
     $scope.getDettaglioPerSingolaUnita = function() {
         var dati_unita = {
-            "unitaSelezionata": $scope.processoSelezionato.listaStruttureDDO.unitaSelezionata
+            "unitaSelezionata": $scope.processoSelezionato.listaStruttureDDO.unitaSelezionata,
+            "classi_di_profili": ''
         };
         $("#macro_dettaglio").prop("disabled", true);
         $("#unita_dettaglio").prop("disabled", false);
@@ -105,7 +107,6 @@ asanControllers.controller('RelocalsController', function($scope, Persone, Promi
     };
 
     $scope.getDettaglioMacroSelezionata = function() {
-
         var dati_macro = {
             "macroSelezionata": $scope.processoSelezionato.listaStruttureDDO.macroSelezionata
         };

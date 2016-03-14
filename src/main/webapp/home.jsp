@@ -469,9 +469,9 @@
 
 
 
-                        <div id="unita-org" data-ng-show="showDatiStruttura" style="border: 2px solid #D7EAD5">
-                            <form class="form-ricerca" role="form" >
-                                <div class="form-group">
+                        <div id="unita-org" data-ng-show="true" style="border: 2px solid #D7EAD5">
+                            <form class="form-ricerca" role="form" data-ng-show="false">
+                                <div class="form-group" data-ng-show="true">
                                     <div>
                                         <table id="unita" style="width: 65%; float: left"><br>
                                             <tr>
@@ -526,7 +526,62 @@
                                     <asan-submit nome="Report"></asan-submit>  
                                     <asan-submit nome="Consolida"></asan-submit>  
                                 </div>
-                            </form><div style="height: 197px"></div>
+                            </form>
+
+                            <!-- Parte dei dettagli Unita -->    
+                            <form class="form-ricerca" role="form" >
+                                <div class="form-group">
+
+                                    <div class="left-label">
+                                        <label>Codice UO</label>
+                                    </div>
+                                    <div>
+                                        <p>Il codice qua</p>
+                                        <p style="font-weight: bold;">Nome </p>
+                                        <p> Il nome </p>
+                                    </div><br><br>
+
+                                    <div class="left-label">
+                                        <label>N.Seq</label>
+                                    </div>
+                                    <div>
+                                        <p> </p>
+                                        <p style="font-weight: bold;">Descrizione </p>
+                                        <p></p>
+                                    </div> <br><br>
+
+                                    <div id="tabs_unita">
+                                        <ul>
+                                            <li><a href="#classi_d_profili">Classi di profili</a></li>
+                                            <li><a href="#ragruppamento_uo">Ragruppamento UO</a></li>
+                                        </ul>
+                                        <div id="classi_d_profili">
+                                            Da completare con classi di profili
+                                        </div>
+                                        <div id="ragruppamento_uo">
+                                            <table id="strutture" style="width: 70%; float: left">
+                                                <tr>
+                                                    <th>Classe di profilo</th>
+                                                    <th>Numero ore lav.</th>
+                                                </tr>
+                                                <tr data-ng-repeat="" ng-click="" ng-class="">
+                                                    <td ng-class=""><span></span></td>  
+                                                    <td ng-class=""><span></span></td>  
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div><br> 
+                                </div>   
+                                <div class="bottoni_form">
+                                    <asan-submit nome="Modifica"></asan-submit>           
+                                    <asan-submit nome="Calcolo dot."></asan-submit>  
+                                    <asan-submit nome="Report"></asan-submit>  
+                                    <asan-submit nome="Consolida"></asan-submit>  
+                                </div>
+
+                            </form>
+
+                            <div style="height: 197px"></div>
                         </div>
                     </div> <!-- Fine del main tabs -->
 

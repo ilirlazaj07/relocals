@@ -25,6 +25,7 @@ $(function() {
 
     $("#tabs2").tabs();
 
+    $("#tabs_unita").tabs();
 
     $("#nav-accordion").accordion({
         collapsible: true, active: false
