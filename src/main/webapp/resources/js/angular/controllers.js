@@ -15,11 +15,11 @@ asanControllers.controller('RelocalsController', function($scope, Persone, Promi
         "visibilita": false,
         "unitaOrganizzative": [],
         "macroAttivita": [],
+        "classiProfili": [],
         "listaStruttureDDO": {
             "strutturaSelezionata": null,
             "unitaSelezionata": null,
-            "macroSelezionata": null,
-            "classiProfili": []
+            "macroSelezionata": null
         }
     };
 
@@ -62,6 +62,14 @@ asanControllers.controller('RelocalsController', function($scope, Persone, Promi
         $scope.processoSelezionato.listaStruttureDDO.macroSelezionata = null;
         $scope.processoSelezionato.listaStruttureDDO.unitaSelezionata = unita;
         $scope.processoSelezionato.macroAttivita = [];
+
+        for (var k = 0; k < unita.listaOreLavorateDDO.length; k++) {
+            var unita_lavoro_ore = unita.listaOreLavorateDDO[k];
+            if (unita_lavoro_ore.classeProfilo) {
+                $scope.processoSelezionato.classiProfili.push(unita.listaOreLavorateDDO[k]);
+            }
+        }
+        alert('Lunghezza dell array: ' + $scope.processoSelezionato.classiProfili.length);
         for (var j = 0; j < unita.listaMacroAttivitaDDO.length; j++) {
             $scope.processoSelezionato.macroAttivita.push(unita.listaMacroAttivitaDDO[j]);
         }

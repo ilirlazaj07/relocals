@@ -562,11 +562,11 @@
                                             <table id="strutture" style="width: 70%; float: left">
                                                 <tr>
                                                     <th>Classe di profilo</th>
-                                                    <th>Numero ore lav.</th>
+                                                    <th>Numero ore lavorate</th>
                                                 </tr>
-                                                <tr data-ng-repeat="" ng-click="" ng-class="">
-                                                    <td ng-class=""><span></span></td>  
-                                                    <td ng-class=""><span></span></td>  
+                                                <tr data-ng-repeat="classe in processoSelezionato.classiProfili">
+                                                    <td><span>{{classe.descrizione}}</span></td>  
+                                                    <td><span>{{classe.numeroOre}}</span></td>  
                                                 </tr>
                                             </table>
                                         </div>

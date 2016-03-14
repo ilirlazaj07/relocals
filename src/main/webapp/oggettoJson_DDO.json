@@ -72,7 +72,7 @@
                         },
                         {
                             "cdStatoCompilazione": "test2",
-                            "nome": "Test UO ttttt",
+                            "nome": "Test UO 2",
                             "numSequenza": 2929,
                             "descrizione": "prova2",
                             "propertyToCrypt": [],
@@ -84,7 +84,7 @@
                             "id": 92090,
                             "classeProfilo": {
                                 "id": 92049049,
-                                "descrizione": "desc classe profilo",
+                                "descrizione": "Profilo 1",
                                 "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
                                 "map": {
                                     "DT_INIZIO_VALIDITA": "dataInizioValidita",
@@ -103,7 +103,26 @@
                             "numeroOre": 0,
                             "propertyToCrypt": [],
                             "propertyToNotClean": []
+                        },
+                         {
+                            "id": 920920,
+                            "classeProfilo": {
+                                "id": 920490249,
+                                "descrizione": "Profilo 2",
+                                "dataInizioValidita": "Mar 9, 2016 5:01:10 PM",
+                                "map": {
+                                    "DT_INIZIO_VALIDITA": "dataInizioValidita",
+                                    "CSLPRO_KEY_ID": "id",
+                                    "DS_CLASSE_PROFILO": "descrizione"
+                                },
+                                "propertyToCrypt": [],
+                                "propertyToNotClean": []
+                            },
+                            "numeroOre": 30,
+                            "propertyToCrypt": [],
+                            "propertyToNotClean": []
                         }
+                        
                     ],
                     "id": 1904,
                     "codice": "BFDDKD",
@@ -168,7 +187,7 @@
                                     "propertyToNotClean": []
                                 }
                             ],
-                            "nome": "Test Uopppp",
+                            "nome": "Test UO",
                             "numSequenza": 2,
                             "descrizione": "prova",
                             "propertyToCrypt": [],
@@ -176,7 +195,7 @@
                         },
                         {
                             "cdStatoCompilazione": "test2",
-                            "nome": "Test UO altro",
+                            "nome": "Test UO 2",
                             "numSequenza": 2929,
                             "descrizione": "prova2",
                             "propertyToCrypt": [],
@@ -345,7 +364,7 @@
                                     "propertyToNotClean": []
                                 }
                             ],
-                            "nome": "Test UOlp",
+                            "nome": "Test UO",
                             "numSequenza": 1,
                             "descrizione": "prova",
                             "propertyToCrypt": [],
@@ -353,7 +372,7 @@
                         },
                         {
                             "cdStatoCompilazione": "test2",
-                            "nome": "Test UOooo 2",
+                            "nome": "Test UO 2",
                             "numSequenza": 2929,
                             "descrizione": "prova2",
                             "propertyToCrypt": [],
