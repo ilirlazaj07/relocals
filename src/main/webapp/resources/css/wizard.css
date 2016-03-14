@@ -1,0 +1,41 @@
+/**************/
+/*** Wizard ***/
+/**************/
+
+ul.wizard {
+	float: left;
+	list-style-type: none;
+	margin: 0 0 20px 0;
+}
+ul.wizard li {
+	color: #0b8800;
+	background: transparent;
+	text-transform: uppercase;
+	font-size: .91em;
+	font-weight: bold;
+	float: left;
+	width: 120px;
+	text-align: center;
+	list-style:none;
+	margin-left: 0;
+}
+ul.wizard li div.numero {
+	width: 100%;
+	font-size: 1.5em;
+	height: 30px;
+	line-height: 30px;
+	background: url(../images/tagli_html/wizard_background.gif) no-repeat transparent;
+	background-position: 50% 0;
+
+}
+ul.wizard li.on div.numero {
+	background: url(../images/tagli_html/wizard_background.gif) no-repeat transparent;
+	background-position: 50% -30px;
+	color: #ffffff;
+}
+ul.wizard li.past div.numero {
+	background: url(../images/tagli_html/wizard_background.gif) no-repeat transparent;
+	background-position: 50% -60px;
+	color: #0b8800;
+}
+

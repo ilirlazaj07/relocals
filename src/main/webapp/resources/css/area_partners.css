@@ -1,0 +1,36 @@
+/*********************/
+/*** Area Partners ***/
+/*********************/
+
+div#area_partners {
+	padding-top:20px;
+}
+div.dicitura_area_partners {
+	float: right;
+   border:0;
+	padding-right:20px;
+	text-transform:uppercase;
+}
+div.area_loghi {
+	clear:right;
+   background-color: #ffffff;
+   border-top:1px dotted #b6b6b6;
+	float: right;
+   margin: 0;
+}
+div.area_loghi div {
+	float:left;
+	height: 75px;
+   width: 125px;
+	padding: 0;
+	margin: 10px 0;
+	text-align:center;
+}
+div.area_loghi div.bordato {
+   border-left:1px dotted #b6b6b6;
+}
+div.area_loghi img {
+	vertical-align: middle;
+	margin: 5px;
+}
+

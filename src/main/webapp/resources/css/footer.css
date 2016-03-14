@@ -1,0 +1,56 @@
+/**************/
+/*** Footer ***/
+/**************/
+
+div#footer {
+	clear:both;
+	height: 30px;
+	width: 100%;
+	border-top: 2px solid #0b8800;
+	color: #0b8800;
+	font-size: .91em;
+	padding-top: 8px;
+}
+
+div#footer div.titolo_e_copyright {
+	float: left;
+	margin-left: 25px;
+}
+
+div#footer div.titolo_e_copyright span.titolo {
+	color: #313131;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+div#footer div.titolo_e_copyright span.nome_gamma_servizi {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+div#footer ul.voci_navigazione {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	float: right;
+	margin-right: 25px;
+}
+div#footer ul.voci_navigazione li {
+	display: inline;
+	border-right:1px solid #0b8800;
+	margin: 0 5px 0 0;
+	padding: 0 7px 0 0;
+}
+div#footer ul.voci_navigazione li.last {
+	border-right: none;
+	margin: 0;
+	padding: 0;
+}
+div#footer ul.voci_navigazione li a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #0b8800;
+}
+div#footer ul.voci_navigazione li a:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+

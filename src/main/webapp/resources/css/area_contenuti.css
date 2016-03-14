@@ -1,0 +1,26 @@
+/**********************/
+/*** Area contenuti ***/
+/**********************/
+
+div#area_contenuti {
+	background-color: #ecf5ec !important;
+	padding: 15px 10px 20px 10px;
+}
+div#area_contenuti .tab_area_contenuti {
+	border-style: solid;
+	border-width: 0px 1px 1px 1px;
+	border-color: #cccccc;
+	margin: 0px 10px 0px 10px;
+}
+div#area_contenuti div.area_testo {
+	padding: 15px 10px 20px 10px;
+}
+div.content_closer {
+	height: 20px;
+	clear: both;
+}
+
+div#layout_190_left div#area_contenuti {
+	background: url(../images/tagli_html/sfondo_menu_grigio.png) repeat-y;
+	padding: 0px 0px 0px 190px;
+}

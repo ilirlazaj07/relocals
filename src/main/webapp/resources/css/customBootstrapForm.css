@@ -1,0 +1,29 @@
+/* 
+    Document   : customBootstrapForm
+    Created on : 16-feb-2016, 15.33.38
+    Author     : Ilir Lazaj
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+.form-group label {
+    margin-right: 2em;
+}
+
+.form-group select {
+    display: inline-block;
+    width: 100px;
+    vertical-align: middle;
+    margin-right: 1em;
+}
+
+.form-group select#slave-popolabile {
+    width: 25%;
+}
+
+.form-group input{
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}

@@ -1,0 +1,41 @@
+/*******************/
+/*** Tabber alto ***/
+/*******************/
+
+ul.tabber_alto {
+	font-size: 1.16em;
+	font-weight: bold;
+	color: #000000;
+	text-transform: uppercase;
+	margin: 2px 0;
+	height: 30px;
+	background-color: #ecf5ec;
+	background: url(../images/tagli_html/menu_tilebgtitolo.gif) repeat-x;
+	list-style-type: none;
+	padding: 0;
+}
+ul.tabber_alto li.tab {
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: url(../images/tagli_html/menu_tilebgtitolo.gif) repeat-x;
+	height: 30px;
+}
+ul.tabber_alto li.tab_separator {
+	display: table-cell;
+	width: 2px;
+	height: 30px;
+	background-color: #ffffff;
+}
+ul.tabber_alto li.tab#active {
+	border-bottom-width: 0px;
+	background: none;
+	background-color: #dada45;
+	margin: 0;
+	height: 32px;
+}
+ul.tabber_alto li.tab a {
+	text-decoration: none;
+	color: #000000;
+}

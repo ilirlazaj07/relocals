@@ -1,0 +1,125 @@
+/*** Barra istituzionale ***/
+div#barra_istituzionale {
+	background: url(../images/tagli_html/top_tile0.gif) repeat-x;
+}
+h2.sottotitolo_applicativo {
+	padding-left: 208px;
+}
+
+/*** Titolo pagina ***/
+div#titolo_pagina ul.tool_utility {
+	display: inline;
+}
+div#titolo_pagina ul.tool_utility img {
+	margin-top: 5px;
+}
+
+/*** Area utente ***/
+div#area_utente ul.links img {
+	margin: 6px 0;
+}
+
+/*** Area contenuti ***/
+div#area_contenuti div.area_testo {
+	float:left;
+}
+
+/*** Tabber ***/
+ul.tabber {
+	margin-left: 7px;
+}
+ul.tabber li.tab {
+	line-height: 30px;
+	float: left;
+	margin-left: 0;
+}
+ul.tabber li.tab_separator {
+	float: left;
+	margin-left: 0;
+}
+
+/*** Form ***/
+form {
+	margin: 0;
+}
+form img {
+	vertical-align: top;
+}
+form hr {
+	margin: 0;
+	height:1px;
+}
+
+/*** Menu verticale espandibile **/
+div#colonna_sx {
+	height: 450px;
+}
+div#menu_verticale ul {
+	margin: 0;
+}
+div#menu_verticale li {
+	display: inline;
+}
+div#menu_verticale div.filetto {
+	width: 170px;
+}
+div#menu_verticale div.menu {
+	line-height: 20px;
+	height: 20px;
+}
+
+
+/*** Menu orizzontale ***/
+ul#menu_orizzontale {
+	height: 24px;
+	padding-top: 6px;
+}
+
+/*** Tabella ***/
+div.tab_area_contenuti {
+	float:right;
+}
+table.tabella_ridotta ul.pager {
+	float: none;
+}
+
+/*** Footer ***/
+div#footer div.titolo_e_copyright {
+	margin-left: 13px;
+}
+div#footer div.voci_navigazione {
+	margin-right: 10px;
+}
+
+/*** Accoglienza ***/
+div#accoglienza div#area_foto {
+	position: relative;
+	float:left;
+}
+div#accoglienza div#area_login {
+	margin-right: 5px;
+}
+div#accoglienza div#area_contenuti div#cards_accoglienza div#box_sx {
+	margin-left: 5px;
+}
+div#accoglienza h3 {
+	margin: 0;
+}
+div#accoglienza hr {
+	margin: 0;
+	height:1px;
+}
+
+/*** Calendario ***/
+div.calendar {
+   height:187px;
+   width:226px;
+}
+
+/* debug
+* {
+	border: 1px solid #ff0000;
+}
+*/
+
+

@@ -1,0 +1,31 @@
+/************************/
+/*** Menu orizzontale ***/
+/************************/
+
+ul#menu_orizzontale {
+	font-size: 1.00em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000000;
+	background-color: #cad5ca;
+	height: 30px;
+	padding: 0 10px;
+	list-style-type: none;
+	margin: 0;
+}
+ul#menu_orizzontale li {
+	display: inline;
+	border-right:1px solid #b6b6b6;
+	margin: 0 5px 0 0;
+	padding: 0 7px 0 0;
+}
+ul#menu_orizzontale img {
+	vertical-align: middle;
+	margin: 0 5px;
+	border: 0;
+}
+ul#menu_orizzontale a {
+	text-decoration: none;
+	color: #000000;
+	line-height: 30px;
+}

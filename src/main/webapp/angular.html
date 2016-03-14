@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+    <head>
+        <script src = "resources/js/angular.min.js"></script>
+        <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+
+        <div ng-app="invoice1" ng-controller="InvoiceController as invoice">
+            <b>Invoice:</b>
+            <div>
+                Quantity: <input type="number" min="0" ng-model="invoice.qty" required >
+            </div>
+            <div>
+                Costs: <input type="number" min="0" ng-model="invoice.cost" required >
+                <select ng-model="invoice.inCurr">
+                    <option ng-repeat="c in invoice.currencies">{{c}}</option>
+                </select>
+            </div>
+            <div>
+                <b>Total:</b>
+                <span ng-repeat="c in invoice.currencies">
+                    {{invoice.total(c) | currency:c}}
+                </span>
+                <button class="btn" ng-click="invoice.allerta()">Pay</button>
+            </div>
+        </div>    
+
+
+        <div ng-app="docsSimpleDirective" ng-controller="Controller">
+            <div my-customer></div>
+        </div>
+
+
+        <script>
+            angular.module('invoice1', [])
+                    .controller('InvoiceController', function() {
+                this.qty = 1;
+                this.cost = 2;
+                this.inCurr = 'EUR';
+                this.currencies = ['USD', 'EUR', 'CNY'];
+                this.usdToForeignRates = {
+                    USD: 1,
+                    EUR: 0.74,
+                    CNY: 6.09
+                };
+
+                this.total = function total(outCurr) {
+                    return this.convertCurrency(this.qty * this.cost, this.inCurr, outCurr);
+                };
+                this.convertCurrency = function convertCurrency(amount, inCurr, outCurr) {
+                    return amount * this.usdToForeignRates[outCurr] / this.usdToForeignRates[inCurr];
+                };
+                this.pay = function pay() {
+                    window.alert("Thanks!");
+                };
+
+                this.allerta = function pay() {
+                    window.alert("Allerta!");
+                };
+            });
+
+
+            angular.module('docsSimpleDirective', [])
+                    .controller('Controller', ['$scope', function($scope) {
+                    $scope.customer = {
+                        name: 'Naomi',
+                        address: '1600 Amphitheatre'
+                    };
+                }])
+                    .directive('myCustomer', function() {
+                return {
+                    template: 'Name: {{customer.name}} Address: {{customer.address}}'
+                };
+            });
+
+
+
+        </script>
+
+    </body>
+</html>

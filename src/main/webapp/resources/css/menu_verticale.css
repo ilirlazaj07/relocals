@@ -1,0 +1,99 @@
+/**********************/
+/*** Menu verticale ***/
+/**********************/
+div.jsenable div{
+	cursor: pointer
+}
+div#menu_verticale ul.show, div#menu_verticale ul {
+	display:block
+}
+div#menu_verticale ul.hide {
+	display:none
+}
+
+div#colonna_sx {
+	background: url(../images/tagli_html/sfondo_menu_grigio.png) repeat-y;
+	float:left;
+	width:190px;
+	font-size: 1.00em;
+}
+
+div#menu_verticale{
+	width:190px;
+	background: #e8eee8;
+	color: #313131;
+	float: left;
+}
+div#menu_verticale a{
+	display: block;
+	text-decoration: none;
+	color: #313131;
+	padding-right: 5px;
+}
+div#menu_verticale ul, div#menu_verticale li{
+	list-style-image: none;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+div.filetto {
+	list-style-image: none;
+	position: relative;
+	left: -12px;
+	width:190px;
+	height: 11px;
+	background: url(../images/tagli_html/menu_tilebgpuntini.gif) repeat-x center;
+}
+div#menu_verticale ul ul {
+	padding-left: 12px;
+}
+div#menu_verticale div.pannello {
+	display:block;
+	line-height: 30px;
+	margin: 0;
+	padding-left:5px;
+	background: url(../images/tagli_html/menu_tilebgtitolo.gif) repeat-x;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000000;
+}
+div#menu_verticale div.pannello span.aperto, div#menu_verticale div.pannello span.chiuso {
+	float: right;
+	height: 30px;
+	width: 20px;
+}
+div#menu_verticale div.menu span.aperto, div#menu_verticale div.menu span.chiuso {
+	float: left;
+	height: 12px;
+	width: 12px;
+}
+div#menu_verticale div.pannello span.aperto {
+	background: url(../images/tagli_html/menu_freccia_on.gif) no-repeat center center;
+}
+div#menu_verticale div.pannello span.chiuso {
+	background: url(../images/tagli_html/menu_freccia_off.gif) no-repeat center center;
+}
+div#menu_verticale div.menu span.aperto {
+	background: url(../images/tagli_html/menu_freccia_on.gif) no-repeat center center;
+}
+div#menu_verticale div.menu span.chiuso {
+	background: url(../images/tagli_html/menu_freccia_off.gif) no-repeat center center;
+}
+div#menu_verticale li, div#menu_verticale li.off {
+	font-weight: normal;
+	color: #313131;
+}
+div#menu_verticale li.on {
+	font-weight: bold;
+	color: #000000;
+}
+div#menu_verticale div.menu {
+	line-height: 15px;
+	background: none;
+}
+div#menu_verticale div:hover {
+	font-weight: bold;
+}
+div#menu_verticale a:hover {
+	font-weight: bold;
+}

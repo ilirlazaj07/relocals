@@ -1,0 +1,114 @@
+/***************/
+/*** Tabella ***/
+/***************/
+
+table {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #cccccc;
+	border-collapse:collapse;
+	color: #000000;
+	width: 100%;
+	background-color: #ecf5ec;
+}
+table.tabella_ridotta {
+	border-width: 0;
+	width: auto;
+}
+th {
+	background-color: #c2ddc0;
+	border-style: solid;
+	border-width: 0px 1px 0px 1px;
+	border-color: #cccccc;
+	padding: 5px;
+	text-transform: uppercase;
+	text-align: left;
+	vertical-align:top;
+	font-weight: bold;
+}
+tr.riga_alternata {
+	background-color: #e6e4e0;
+}
+tr:hover {
+	background-color: #e6e4e0;
+}
+td {
+	border-style: solid;
+	border-width: 0px 1px 0px 1px;
+	border-color: #cccccc;
+	padding: 5px;
+	text-align: left;
+}
+td.numero {
+	text-align: right;
+}
+td.centrato {
+	text-align: center;
+}
+
+tr a {
+	text-decoration: none;
+	color: #0b8800;
+}
+tr a:hover {
+	text-decoration: underline;
+}
+
+div.toolbar_tabella {
+	height: 30px;
+	background-color: #ecf5ec;
+}
+div.toolbar_tabella img, td img, th img {
+	vertical-align: middle;
+	border: 0;
+	margin: 0 5px;
+}
+ul.tool_utility {
+	float: left;
+	padding: 0 10px;
+	margin: 5px 0 0 0;
+}
+ul.tool_utility a {
+	text-decoration: none;
+	color: #0b8800;
+}
+ul.tool_utility li {
+	display: inline;
+	padding: 0 5px;
+	margin-left: 0;
+}
+ul.pager {
+	float: right;
+	padding: 0 5px;
+	margin: 5px 0 0 0;
+}
+ul.pager li {
+	display: inline;
+	padding: 0 1px;
+	margin-left: 0;
+}
+ul.pager li.avanti {
+	border-left:1px solid #b6b6b6;
+}
+ul.pager li.indietro {
+	border-right:1px solid #b6b6b6;
+}
+ul.pager li.inizio, ul.pager li.fine {
+	border-right:1px solid #b6b6b6;
+	border-left:1px solid #b6b6b6;
+}
+ul.pager a {
+	text-decoration: none;
+	color: #0b8800;
+	padding: 0 5px 0 5px;
+}
+ul.pager a:hover {
+	text-decoration: underline;
+}
+tr.pager td {
+	border-width: 1px 0px 0px 0px;
+	text-align: center;
+}
+tr.pager:hover {
+	background-color: inherit;
+}

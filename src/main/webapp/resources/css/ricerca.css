@@ -1,0 +1,21 @@
+/***************/
+/*** Ricerca ***/
+/***************/
+
+div#ricerca {
+	background-color: #d3e7d2;
+	color: #000000;
+}
+div#ricerca h4.titolo {
+	padding: 0 0 0 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.16em;
+	line-height: 25px;
+	display: inline;
+	margin: 0;
+}
+div#ricerca div.campo {
+	float: left;
+	padding-right: 10px;
+}

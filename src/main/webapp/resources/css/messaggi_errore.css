@@ -1,0 +1,45 @@
+/**********************/
+/* Messaggi di errore */
+/**********************/
+
+label.fatal_error {
+	display: block;
+	font-size: .91em;
+	color: #cc0000;
+	font-weight: bold;
+}
+label.normal_error {
+	display: block;
+	font-size: .91em;
+	color: #cc0000;
+}
+label.info_message {
+	display: block;
+	font-size: .91em;
+	color: #000000;
+}
+label.confirm_message {
+	display: block;
+	font-size: .91em;
+	color: #0b8800;
+}
+label.campi_obbligatori {
+	color: #cc0000;
+	font-weight: bold;
+}
+
+
+input.fatal_error {
+	border: 2px solid #CC0000;
+}
+input.normal_error {
+	border: 2px solid #CC0000;
+}
+div.alert_box {
+	background-color: #f9e5e5;
+	border: 2px solid #cc0000;
+	margin: 10px;
+	padding: 5px;
+	color: #cc0000;
+	font-weight: bold;
+}

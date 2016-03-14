@@ -1,0 +1,50 @@
+/*******************/
+/*** Area utente ***/
+/*******************/
+
+div#area_utente {
+	font-size: 1.00em;
+	color: #000000;
+	padding-left: 10px;
+	padding-right: 20px;
+	background-color: #b6c5b5;
+	height: 30px;
+	font-weight: bold;
+}
+div#area_utente span.dati_utente span.ico_utente {
+	background: url(../images/icone/18/ico_utente_18.gif) no-repeat center;
+	width: 18px;
+	height: 30px;
+	float: left;
+	margin-right:5px;
+}
+div#area_utente span.dati_utente {
+	height: 30px;
+	float:left;
+	line-height: 30px;
+}
+div#area_utente ul.links {
+	text-align: right;
+	margin:0;
+}
+div#area_utente ul.links li {
+	display: inline;
+	list-style-image: none;
+	border-left:1px solid #000000;
+	padding: 0 0 0 10px;
+	margin-left: 5px;
+}
+div#area_utente ul.links li.first {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+div#area_utente ul.links a {
+	line-height: 30px;
+	text-decoration: none;
+	color: #000000;
+}
+div#area_utente ul.links a img {
+	vertical-align: middle;
+	margin-right:5px;
+}

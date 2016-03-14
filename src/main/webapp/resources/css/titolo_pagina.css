@@ -1,0 +1,35 @@
+/*********************/
+/*** Titolo pagina ***/
+/*********************/
+
+div#titolo_pagina {
+   font-size: 1.33em;
+   font-weight: bold;
+   color: #000000;
+   padding: 0 10px;
+   background-color: #c2ddc0;
+   line-height: 30px;
+   text-transform: uppercase;
+}
+/*
+div#layout_190_left div#titolo_pagina {
+   padding-left: 200px;
+}
+*/
+div#titolo_pagina ul.tool_utility {
+   float: right;
+   list-style-type: none;
+   margin: 0;
+}
+div#titolo_pagina ul.tool_utility li {
+	display: inline;
+   width: 18px;
+   border-left:1px solid #b6b6b6;
+   padding: 0 0 0 4px;
+	margin: 0;
+}
+div#titolo_pagina ul.tool_utility img {
+	vertical-align: middle;
+	border: 0;
+}
+

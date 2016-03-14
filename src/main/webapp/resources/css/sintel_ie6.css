@@ -1,0 +1,16 @@
+/*** Tabber alto ***/
+ul.tabber_alto {
+	margin: 0;
+}
+ul.tabber_alto li.tab {
+	line-height: 30px;
+	float: left;
+	margin: 0;
+}
+ul.tabber_alto li.tab#active {
+	line-height: 32px;
+}
+ul.tabber_alto li.tab_separator {
+	float: left;
+	margin: 0;
+}

@@ -1,0 +1,80 @@
+/********/
+/* Form */
+/********/
+
+form {
+	padding: 0 10px;
+}
+
+form div.col_33 {
+	width: 33%;
+	float:left;
+	height: 40px;
+}
+form div.col_66 {
+	width: 66%;
+	float:left;
+	height: 40px;
+}
+form div.col_100 {
+	width: 100%;
+	float:left;
+	height: 40px;
+}
+form div.col_25 {
+	width: 25%;
+	float:left;
+	height: 40px;
+}
+form div.col_50 {
+	width: 50%;
+	float:left;
+	height: 40px;
+}
+form div.col_75 {
+	width: 75%;
+	float:left;
+	height: 40px;
+}
+
+form div.riga {
+	margin: 5px;
+	height: 55px;
+}
+form div.riga_25 {
+	margin: 5px;
+	height: 25px;
+}
+form div.riga_110 {
+	margin: 5px;
+	height: 110px;
+}
+form div.riga_165 {
+	margin: 5px;
+	height: 110px;
+}
+form div.riga_220 {
+	margin: 5px;
+	height: 220px;
+}
+
+form div.campo {
+	float: left;
+	margin-right: 5px;
+}
+
+label.orizz_sx {
+	padding-right: 10px;
+}
+label.verticale {
+	display: block;
+}
+
+form img {
+	vertical-align: middle;
+	cursor: pointer;
+}
+form hr {
+	margin: 10px 0;
+	color: #e0eee8;
+}

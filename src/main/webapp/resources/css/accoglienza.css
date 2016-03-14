@@ -1,0 +1,58 @@
+/*******************/
+/*** Accoglienza ***/
+/*******************/
+div#accoglienza {
+	background-color: #ecf5ec;
+}
+div#accoglienza hr {
+	color: #e8eee8;
+}
+
+/*** Area foto ***/
+div#accoglienza div#area_foto {
+	position: absolute;
+	width:190px;
+	height: 450px; 
+}
+
+/*** Area contenuti ***/
+div#accoglienza div#area_contenuti {
+	height: 450px;
+	padding: 0;
+	margin-left: 190px;
+}
+div#accoglienza div#area_contenuti div#cards_accoglienza {
+	width: 70%;
+}
+div#accoglienza div#area_contenuti div#cards_accoglienza div#box_sx {
+	background-color: #d3e7d2;
+	height: 350px;
+	width: 48%;
+	float: left;
+	margin-top: 35px;
+	margin-left: 10px;
+}
+div#accoglienza div#area_contenuti div#cards_accoglienza div#box_dx {
+	background-color: #c2ddc0;
+	height: 350px;
+	width: 48%;
+	float: right;
+	margin-top: 35px;
+	margin-left: 5px;
+}
+div#accoglienza div#area_contenuti div#cards_accoglienza div.area_testo {
+	padding: 5px 15px;
+}
+
+/*** Area login ***/
+div#accoglienza div#area_login {
+	background-color: #b5c5b5;
+	height: 350px;
+	width: 26%; 
+	float: right;
+	margin-top: 35px;
+	margin-right: 20px;
+}
+div#accoglienza div#area_login form {
+	padding: 5px 15px;
+}

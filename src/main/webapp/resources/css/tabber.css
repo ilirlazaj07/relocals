@@ -1,0 +1,47 @@
+/**************/
+/*** Tabber ***/
+/**************/
+
+div.sovra_tabber {
+	height: 15px;
+}
+
+ul.tabber {
+	font-size: 1.16em;
+	font-weight: bold;
+	color: #000000;
+	text-transform: uppercase;
+	margin: 0 10px;
+	height: 30px;
+	background-color: #ecf5ec;
+	background: url(../images/tagli_html/sfondo_tabber_origin.gif) repeat-x;
+	list-style-type: none;
+	padding: 0;
+}
+ul.tabber li.tab {
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-style: solid;
+	border-width: 1px 1px 0px 1px;
+	border-color: #cccccc;
+	background: url(../images/tagli_html/sfondo_tab_origin.gif) repeat-x;
+	height: 30px;
+}
+ul.tabber li.tab_separator {
+	display: table-cell;
+	width: 3px;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+	border-color: #cccccc;
+	height: 30px;
+}
+ul.tabber li.tab#active {
+	border-bottom-width: 0px;
+	background: url(../images/tagli_html/pixel_origin.gif) repeat;
+}
+ul.tabber li.tab a {
+	text-decoration: none;
+	color: #000000;
+}

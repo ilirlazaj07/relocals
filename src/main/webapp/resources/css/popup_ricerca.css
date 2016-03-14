@@ -1,0 +1,16 @@
+div#popup h1 {
+	font-size:1.8em;
+	background: #daebd9;
+	color: #0b8800;
+	border-bottom: 2px solid #0b8800;
+	height: 38px;
+	line-height: 44px;
+	font-weight: bold;
+	padding: 0 0 0 20px;
+	margin:0;
+}
+
+div#popup form {
+	padding: 0 20px;
+}
+

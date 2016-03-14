@@ -1,0 +1,56 @@
+/*** Area Utente ***/
+div#area_utente {
+	background-color: #939dc5;
+}
+
+/*** Area contenuti **/
+div#area_contenuti {
+	background-color: #ffffff !important;
+}
+
+/*** Titolo Pagina ***/
+div#titolo_pagina {
+	background-color: #b8bfd9
+}
+
+/*** Tabber ***/
+ul.tabber {
+	background-color: #ffffff;
+	background: url(../images/tagli_html/sfondo_tabber_bianco.gif) repeat-x;
+}
+ul.tabber li.tab {
+	background: url(../images/tagli_html/sfondo_tab_bianco.gif) repeat-x;
+}
+ul.tabber li.tab#active {
+	background: url(../images/tagli_html/pixel_bianco.gif) repeat;
+}
+
+/*** Tabella ***/
+table {
+	background-color: #ffffff;
+}
+th {
+	background-color: #b8bfd9;
+}
+div.toolbar_tabella {
+	background-color: #ffffff;
+}
+
+/*** Ricerca ***/
+div#ricerca {
+	background-color: #d1d5e6;
+}
+
+/*** Accoglienza ***/
+div#accoglienza {
+	background-color: #ffffff;
+}
+div#accoglienza div#area_contenuti div#cards_accoglienza div#box_sx {
+	background-color: #d1d5e6;
+}
+div#accoglienza div#area_contenuti div#cards_accoglienza div#box_dx {
+	background-color: #b8bfd9;
+}
+div#accoglienza div#area_login {
+	background-color: #939dc5;
+}

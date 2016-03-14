@@ -1,0 +1,60 @@
+/*** Barra istituzionale ***/
+div#barra_istituzionale {
+	background: url(../images/tagli_html/top_tile0.gif) repeat-x;
+}
+
+/*** Tabber ***/
+ul.tabber li.tab {
+	line-height: 29px;
+	height: 29px;
+	float: left;
+	margin-left: 0;
+}
+ul.tabber li.tab_separator {
+	height: 29px;
+	float: left;
+	margin-left: 0;
+}
+
+/*** Form ***/
+form hr {
+   margin: 0;
+   height:1px;
+}
+
+/*** Ricerca ***/
+div#ricerca {
+	float: left;
+}
+
+/*** Accoglienza ***/
+div#accoglienza div#area_foto {
+	position: relative;
+	float:left;
+}
+div#accoglienza div#area_login {
+	margin-right: 5px;
+}
+div#accoglienza div#area_contenuti div#cards_accoglienza div#box_sx {
+	margin-left: 5px;
+}
+div#accoglienza h3 {
+	margin: 0;
+}
+div#accoglienza hr {
+	margin: 0;
+	height:1px;
+}
+
+/*** Calendario ***/
+div.calendar {
+	height:187px;
+	width:226px;
+}
+
+/* debug
+div.sovra_tabber {
+	border: 1px solid #ff0000;
+}
+*/
+

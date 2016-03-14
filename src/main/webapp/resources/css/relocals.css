@@ -1,0 +1,213 @@
+.ui-button {
+    width: 110%;
+    margin-bottom: 0.1em;
+}
+
+#contenuto{
+    background: #ecf5ec;
+}
+
+#parte_nav{
+    width: 12%;
+    float: left;
+    background: lightgrey;
+}
+
+#nav-accordion h3{
+    background: grey;
+}
+
+#parte_contenuto{
+    width: 88%; 
+    float: left;
+
+}
+
+.form-ricerca .form-group{
+    width: 95%;
+    float: left;
+}
+
+.form-ricerca .form-group div{
+    float: left;
+    width: 80%;
+}
+
+.form-ricerca .form-group div #div-inserimento{
+    float: left;
+    width: 85%;
+}
+
+.form-ricerca .form-group div p{
+    float: left;
+    margin-right: 5%;
+}
+
+
+.form-ricerca .form-group div input{
+    width: 30%;
+    height: 2.5em;
+    float: left;
+}
+
+.form-ricerca .form-group div p{
+    margin-top: 0.4em;
+}
+
+.form-ricerca .form-group div select{
+    width: 30%;
+    height: 2.5em;
+}
+
+.form-ricerca .form-group div #quadrimestre{
+    width: 15%;
+    height: 2.5em;
+}
+
+.form-ricerca .form-group div #anno{
+    width: 10%;
+    height: 2.5em;
+}
+
+.form-ricerca .form-group .left-label{
+    float: left;
+    width: 20%;
+    padding-right: 10px;
+}
+
+.form-ricerca .form-group .left-label label{
+    float: left;
+    margin-top: 0.4em;
+}
+
+
+.bottoni_form{
+    width: 5%;
+    float: right;
+}
+
+#result{
+    float: left;
+    width: 80%;
+}
+
+#bottonidiv{
+    float: left;
+    width: 20%;
+}
+
+.modal-dialog {
+    position:absolute;
+    top:50% !important;
+    transform: translate(0, -50%) !important;
+    -ms-transform: translate(0, -50%) !important;
+    -webkit-transform: translate(0, -50%) !important;
+    margin:auto 50%;
+
+}
+.modal-content {
+    min-height:100%;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0; 
+}
+.modal-body {
+    position:absolute;
+    top:45px;
+    bottom:45px;
+    left:0;
+    right:0;
+    overflow-y:auto;
+}
+.modal-footer {
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+
+}
+
+#circle1 {
+    background: red;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+
+#circle2 {
+    background: green;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+
+#circle3 {
+    background: yellow;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+
+.strutturaSelezionataClass {
+    background-color: #999999;
+    color: #FFF;
+
+}
+
+.strutturaSelezionataClass :hover{
+    background-color: #999999;
+    color: #FFF;
+
+}
+
+.unitaSelezionataClass {
+    background-color: #999999;
+    color: #FFF;
+
+}
+
+.unitaSelezionataClass :hover{
+    background-color: #999999;
+    color: #FFF;
+
+}
+
+.macroSelezionataClass {
+    background-color: #999999;
+    color: #FFF;
+
+}
+
+.macroSelezionataClass :hover{
+    background-color: #999999;
+    color: #FFF;
+
+}
+
+td { cursor: pointer;}
+
+
+.cls{
+    border-style: solid;
+    border-color: red;
+}
+
+.bordo #bordo_div{
+    text-align: left;
+    margin-top: -10px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.bordo #bordo_div span{
+    background-color: #ecf5ec;
+    border: 1px solid #D7EAD5;
+    background: #c2ddc0;
+    margin-left: 4px;
+}
+
+
+

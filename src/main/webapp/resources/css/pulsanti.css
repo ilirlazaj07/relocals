@@ -1,0 +1,28 @@
+/************/
+/* Pulsanti */
+/************/
+
+input.pulsante {
+	cursor: pointer;
+	height:25px;
+	font-size: 1.00em;
+	font-family: "Trebuchet MS", Garuda, FreeSans, arial, sans-serif;
+	text-transform: uppercase;
+	background: transparent url(../images/tagli_html/bottone_tilebg_off.gif);
+	font-weight: bold;
+	margin: 0 5px;
+}
+
+input.pulsante_dx {
+	float: right;
+}
+
+input.pulsante:hover {
+	background: transparent url(../images/tagli_html/bottone_tilebg_on.gif);
+}
+
+div.area_rispetto {
+	float: right;
+	padding: 10px 10px 20px 10px;
+}
+
