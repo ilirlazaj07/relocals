@@ -43,7 +43,7 @@
 
         <title>Relocals</title>
     </head>
-    <body data-ng-app="relocalsApp" data-ng-controller="RelocalsController">
+    <body data-ng-app="relocalsApp" data-ng-controller="RelocalsController" style="background: lightgrey">
         <!-- BARRA ISTITUZIONALE 
         Per la customizzazione del TEMA ricordarsi di usare i file già forniti dopo il download
         -->
@@ -334,7 +334,7 @@
                        <asan-submit nome="Registra"></asan-submit>                                               
                     -->
 
-                    <div id="tabs" style="border: 3px solid #D7EAD5;">
+                    <div id="tabs">
                         <ul data-ng-show="processoSelezionato.visibilita">
                             <li><a href="#processo-do">Processo DO</a></li>
                             <li><a class="datiStruttura" href="#dati-struttura">Dati Struttura</a></li>

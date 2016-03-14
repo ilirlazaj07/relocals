@@ -12,8 +12,8 @@ $(function() {
     $("#macro_dettaglio").button();
 
     $("#ok").button();
-    
-     $("#ok2").button();
+
+    $("#ok2").button();
 
     $(".but").prop("disabled", true);
 
@@ -22,7 +22,7 @@ $(function() {
     $("#macro_dettaglio").prop("disabled", true);
 
     $("#accordion").accordion({
-      
+        heightStyle: "content",
         collapsible: true,
         active: false
     });
