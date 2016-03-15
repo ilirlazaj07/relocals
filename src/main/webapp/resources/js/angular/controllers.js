@@ -23,6 +23,7 @@ asanControllers.controller('RelocalsController', function($scope, Persone, Promi
         "unitaOrganizzative": [],
         "macroAttivita": [],
         "classiProfili": [],
+        "listaUOAssociate": [],
         "listaStruttureDDO": {
             "strutturaSelezionata": null,
             "unitaSelezionata": null,
@@ -61,7 +62,6 @@ asanControllers.controller('RelocalsController', function($scope, Persone, Promi
     $scope.$watch('data_select_ats.selectedOption', function(prima, dopo) {
         if (prima === dopo)
             return;
-
     });
 
     $scope.getUnitaSelezionata = function(unita) {
@@ -71,16 +71,25 @@ asanControllers.controller('RelocalsController', function($scope, Persone, Promi
         $scope.processoSelezionato.listaStruttureDDO.unitaSelezionata = unita;
         $scope.processoSelezionato.macroAttivita = [];
         $scope.processoSelezionato.classiProfili = [];
+        $scope.processoSelezionato.listaUOAssociate = [];
+
         for (var k = 0; k < unita.listaOreLavorateDDO.length; k++) {
             var unita_lavoro_ore = unita.listaOreLavorateDDO[k];
+            var uo_associata = unita.listaUOAssociateDDO[k];
             if (unita_lavoro_ore.classeProfilo) {
                 $scope.processoSelezionato.classiProfili.push(unita.listaOreLavorateDDO[k]);
             }
+            if (uo_associata) {
+                $scope.processoSelezionato.listaUOAssociate.push(uo_associata);
+            }
         }
         //alert('Lunghezza dell array: ' + $scope.processoSelezionato.classiProfili.length);
+
+
         for (var j = 0; j < unita.listaMacroAttivitaDDO.length; j++) {
             $scope.processoSelezionato.macroAttivita.push(unita.listaMacroAttivitaDDO[j]);
         }
+        //alert('UO Assiciate: ' + $scope.processoSelezionato.listaUOAssociate.length);
     };
 
     $scope.getStrutturaSelezionata = function(struttura) {

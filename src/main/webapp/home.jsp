@@ -82,8 +82,8 @@
                     </div>
                 </div>
             </div>
-            <h2 id="sottoTitolo" class="sottotitolo_applicativo">Sistema Intermediazione Telematica</h2>
-            <div id="separatore"   class="content_separator">&nbsp;</div>
+            <h2 id="sottoTitolo" class="sottotitolo_applicativo" style="background: white">Sistema Intermediazione Telematica</h2>
+            <div id="separatore"   class="content_separator" style="background: white">&nbsp;</div>
 
             <!-- AREA UTENTE  -->
 
@@ -557,15 +557,34 @@
 
                                         <div id="tabs_unita">
                                             <ul>
-                                                <li><a href="#classi_d_profili">Classi di profili</a></li>
                                                 <li><a href="#ragruppamento_uo">Ragruppamento UO</a></li>
+                                                <li><a href="#classi_d_profili">Classi di profili</a></li>
                                             </ul>
-                                            <div id="classi_d_profili">
-                                                Da completare con classi di profili
-                                            </div>
                                             <div id="ragruppamento_uo">
                                                 <div>
-                                                    <table id="strutture" style="width: 70%; float: left">
+                                                    <table id="strutture_classi_d_profili" style="float: left">
+                                                        <tr>
+                                                            <th>Codice UO</th>
+                                                            <th>Nome</th>
+                                                            <th>N.SEQ</th>
+                                                            <th>Descrizione</th>
+                                                        </tr>
+                                                        <tr data-ng-repeat="unita_assiociata in processoSelezionato.listaUOAssociate">
+                                                            <td><span>{{unita_assiociata.codice}}</span></td>  
+                                                            <td><span>{{unita_assiociata.nome}}</span></td>  
+                                                            <td><span>{{unita_assiociata.numSequenza}}</span></td>  
+                                                            <td><span>{{unita_assiociata.descrizione}}</span></td>  
+
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <button  id="ok" data-ng-click="backToUnita();" style="width: 90px;margin-left: 2px; float: left" >
+                                                    OK
+                                                </button> 
+                                            </div>
+                                            <div id="classi_d_profili">
+                                                <div>
+                                                    <table id="strutture_ragruppamento_uo" style="float: left">
                                                         <tr>
                                                             <th>Classe di profilo</th>
                                                             <th>Numero ore lavorate</th>
@@ -575,10 +594,10 @@
                                                             <td><span>{{classe.numeroOre}}</span></td>  
                                                         </tr>
                                                     </table>
-                                                    <button  id="ok" data-ng-click="backToUnita();" style="width: 90px;margin-left: 2px" >
-                                                        OK
-                                                    </button> 
                                                 </div>
+                                                <button  id="ok3" data-ng-click="backToUnita();" style="width: 90px;margin-left: 2px" >
+                                                    OK
+                                                </button> 
                                             </div>
                                         </div><br> 
                                     </div>   
@@ -597,7 +616,41 @@
                                 <form class="form-ricerca" role="form" data-ng-show="showDettaglioMacroAttivita.visibilita" >
                                     <div class="form-group">
 
-                                        Da scrivere...
+                                        <div class="left-label">
+                                            <label>Nome</label>
+                                        </div>
+                                        <div>
+                                            <span>Dl nome</span>
+                                        </div><br><br>
+
+                                        <div class="left-label">
+                                            <label>N.Seq</label>
+                                        </div>
+                                        <div>
+                                            <p> </p>
+                                            <p style="font-weight: bold;">Descrizione </p>
+                                            <p></p>
+                                        </div> <br><br>
+
+
+                                        <div class="left-label">
+                                            <label>Situazione definizione valori</label>
+                                        </div>
+                                        <div>
+                                            <span></span>
+                                        </div><br><br>
+
+                                        <table id="strutture_ragruppamento_uo" style="width: 50%; float: left">
+                                            <tr>
+                                                <th>Classe di profilo</th>
+                                                <th>Numero ore lavorate</th>
+                                            </tr>
+                                            <tr data-ng-repeat="classe in processoSelezionato.classiProfili">
+                                                <td><span>{{classe.classeProfilo.descrizione}}</span></td>  
+                                                <td><span>{{classe.numeroOre}}</span></td>  
+                                            </tr>
+                                        </table>
+
                                         <button  id="ok2" data-ng-click="backToUnita();" style="width: 90px;margin-left: 2px" >
                                             OK
                                         </button> 
