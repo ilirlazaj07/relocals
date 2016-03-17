@@ -395,7 +395,7 @@
                                                     <td style="border: 1px solid lightgray;"><asan-stato stato="{{struttura.cdStatoCompilazione}}"></asan-stato> <span>{{struttura.nome}}</span></td >
                                                 </tr>
                                             </table>
-                                            <button  id="but" data-toggle="modal" data-target="#caricamento" data-ng-click="f();" style="width: 90px;margin-left: 2px" >
+                                            <button  id="but" data-toggle="modal" data-target="#caricamento" data-ng-click="getDettagliStrutturaSelezionata();" style="width: 90px;margin-left: 2px" >
                                                 Visualizza
                                             </button>  
                                         </div>
@@ -559,6 +559,7 @@
                                             <ul>
                                                 <li><a href="#ragruppamento_uo">Ragruppamento UO</a></li>
                                                 <li><a href="#classi_d_profili">Classi di profili</a></li>
+                                                <li><a href="#update_test">Update Test</a></li>
                                             </ul>
                                             <div id="ragruppamento_uo">
                                                 <div>
@@ -598,6 +599,18 @@
                                                 <button  id="ok3" data-ng-click="backToUnita();" style="width: 90px;margin-left: 2px" >
                                                     OK
                                                 </button> 
+                                            </div>
+
+                                            <!-- Update TEST -->
+                                            <div id="update_test">
+                                                <table data-ng-show="persone.length">
+                                                    <tr>
+                                                        <th>ID</th>
+                                                    </tr>
+                                                    <tr data-ng-repeat="persona in persone" >
+                                                        <td><span>{{persona.id}}</span></td>
+                                                    </tr>
+                                                </table>  
                                             </div>
                                         </div><br> 
                                     </div>   
@@ -674,7 +687,73 @@
 
 
                     <h3 id="hResults">Processo DO- Modifica</h3>
-                    <div></div>
+                    <div>
+                        <table>
+                            <tr>
+
+                                <th>ID</th>
+                                <th>Nome</th>
+                            </tr>
+                            <tr data-ng-repeat="processo in testProcessi" data-ng-click="defineProcesso(processo);">
+                                <td><span>{{processo.id}}</span></td>
+                                <td><span>{{processo.nome}}</span></td>
+
+                            </tr>
+                        </table> <br><br><br>
+                        <form class="form-ricerca" role="form" data-ng-submit="update();">
+                            <div class="form-group">
+                                <div class="left-label">
+                                    <label>ID</label>
+                                </div>
+                                <div>
+                                    <span>{{prc.id}}</span>
+                                </div><br><br>
+
+                                <div class="left-label">
+                                    <label>Nome</label>
+                                </div>
+                                <div>
+                                    <span><input type="text" data-ng-model="prc.nome" /></span>
+                                </div><br><br>
+
+                                <div class="left-label">
+                                    <label>Cognome</label>
+                                </div>
+                                <div>
+                                    <span><input type="text" data-ng-model="prc.cognome" /></span>
+                                </div><br><br>
+
+                            </div>
+                            <input type="submit" value="Update" />
+                            Modifica cognome:  <span>{{restTest.cognome}}</span>
+                        </form>
+
+                        ---------------------------------------------------------
+                        Parte di Inserimento ---------------------------------------------------------<br>
+
+                        <form class="form-ricerca" role="form" data-ng-submit="insert();">
+                            <div class="form-group">
+
+                                <div class="left-label">
+                                    <label>Cognome</label>
+                                </div>
+                                <div>
+                                    <span><input type="text" data-ng-model="nuovo.cognome" /></span>
+                                </div><br><br>
+
+                                <div class="left-label">
+                                    <label>Nome</label>
+                                </div>
+                                <div>
+                                    <span><input type="text" data-ng-model="nuovo.nome" /></span>
+                                </div><br><br>
+
+
+
+                            </div>
+                            <input type="submit" value="Insert" />
+                        </form>
+                    </div>
 
                     <!-- 
                                             ------- Parte: Form di TEST -------

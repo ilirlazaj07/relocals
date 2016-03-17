@@ -16,6 +16,8 @@ $(function() {
     $("#ok2").button();
 
     $("#ok3").button();
+    
+    $(".buttonsM").button;
 
     $(".but").prop("disabled", true);
 

@@ -1,6 +1,11 @@
 var asanControllers = angular.module('relocalsApp.controllers', []);
 
-asanControllers.controller('RelocalsController', function($scope, Persone, PromisedService, AsanService, GestioneAnniService, Entry, Processi) {
+asanControllers.controller('RelocalsController', function($scope, $resource, Persone, ProcessiService, PromisedService, AsanService, GestioneAnniService, Entry, Processi, ProcessiTest) {
+
+
+    // **** Parte RESTful
+    $scope.testProcessi = ProcessiService.query();
+// **** 
 
     $scope.persone = Persone.caricaPersone();
     $scope.ats = AsanService.caricaAts();
@@ -31,19 +36,44 @@ asanControllers.controller('RelocalsController', function($scope, Persone, Promi
         }
     };
 
-    $scope.f = function() {
+    $scope.getDettagliStrutturaSelezionata = function() {
         $scope.showDatiStruttura = true;
         $scope.showUnitaOrganizzative = true;
         PromisedService.disattiva_md_datiStruttura();
     };
 
+
+    $scope.defineProcesso = function(processo) {
+        var p = ProcessiService.get({id: processo.id});
+        console.log('Hai selezionato: ' + p.data);
+        $scope.prc = p;
+    };
+
+    $scope.update = function() {
+        $scope.entry = new ProcessiService();
+        var input = $scope.prc;
+        ProcessiService.update(input);
+        $scope.restTest = ProcessiService.update(input);
+    };
+
+    $scope.nuovo = {};
+    $scope.insert = function() {
+        if (!angular.equals($scope.nuovo, {})) {
+            var a = ProcessiService.save($scope.nuovo, function() {
+                console.log(a);
+                $scope.testProcessi.push(a);
+            });
+            $scope.nuovo = {};
+        }
+        //  $scope.nuovo = new ProcessiService();
+    };
+
     var entry = Entry.get({id: 1}, function() {
-        console.log(entry);
-        $scope.t = entry.nome + ' ' + entry.id;
+        console.log('La persona selezionata è: ' + entry.nome);
     }); // get() singlo elemento
 
     var entries = Entry.query(function() {
-        console.log(entries);
+        console.log('La lista delle persona ha ' + entries.length + ' dipendenti.');
     }); //query() tutti gli elementi
 
     $scope.orderByValue = function(value) {

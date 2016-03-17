@@ -37,6 +37,31 @@ services.factory('Processi', function($resource) {
     };
 });
 
+services.factory('ProcessiService', function($resource) {
+    return $resource('/restTEST/rest/persone/:id', {id: '@id'}, {
+        update: {
+            method: 'PUT'
+        }
+    });
+});
+
+services.factory('ProcessiTest', function($resource) {
+
+    var prcs = [];
+    var all = $resource('oggettoJson_DDO_1.json');
+
+    return {
+        prcs: prcs,
+        caricaProcessi: function() {
+            return all.get(function(data) {
+                console.log('I dati sono: ' + data.dataApertura);
+                prcs.push(prcs, data);
+            });
+        }
+    };
+});
+
+
 
 services.factory('AsanService', function($resource) {
 
@@ -62,14 +87,14 @@ services.factory('PromisedService', function($q, $timeout, Processi) {
             var deferred = $q.defer();
             $timeout(function() {
                 deferred.resolve('ciao');
-                $("#caricamento").click();
+                angular.element("#caricamento").click();
             }, 1500);
             return deferred.promise;
         },
         disattiva_md_caricamento: function() {
             $timeout(function() {
-                $("#caricamento").click();
-                $("#hValori").click();
+                angular.element("#caricamento").click();
+                angular.element("#hValori").click();
             }, 1500);
             return 'OK';
         },
@@ -78,8 +103,8 @@ services.factory('PromisedService', function($q, $timeout, Processi) {
                 return 1500;
             }
             $timeout(function() {
-                $("#caricamento").click();
-                $(".datiStruttura").click();
+                angular.element("#caricamento").click();
+                angular.element(".datiStruttura").click();
             }, fun());
             return 'OK';
         }
@@ -87,7 +112,7 @@ services.factory('PromisedService', function($q, $timeout, Processi) {
     };
 });
 services.factory('Entry', function($resource) {
-    return $resource('/restTEST/rest/persone/:id'); // Note the full endpoint address
+    return $resource('/restTEST/rest/persone/:id'); // Quì l'endpoint è fisso
 });
 
 services.factory('GestioneAnniService', function() {
