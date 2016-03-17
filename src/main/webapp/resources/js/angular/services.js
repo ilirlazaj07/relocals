@@ -45,6 +45,11 @@ services.factory('ProcessiService', function($resource) {
     });
 });
 
+
+services.factory('ProcessiUpdate', function($resource) {
+    return $resource('/restTEST/rest/persone/modifica');
+});
+
 services.factory('ProcessiTest', function($resource) {
 
     var prcs = [];

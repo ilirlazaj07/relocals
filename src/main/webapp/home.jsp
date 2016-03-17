@@ -725,7 +725,7 @@
 
                             </div>
                             <input type="submit" value="Update" />
-                            Modifica cognome:  <span>{{restTest.cognome}}</span>
+                          
                         </form>
 
                         ---------------------------------------------------------

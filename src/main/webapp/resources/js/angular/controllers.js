@@ -1,6 +1,6 @@
 var asanControllers = angular.module('relocalsApp.controllers', []);
 
-asanControllers.controller('RelocalsController', function($scope, $resource, Persone, ProcessiService, PromisedService, AsanService, GestioneAnniService, Entry, Processi, ProcessiTest) {
+asanControllers.controller('RelocalsController', function($scope, $resource, ProcessiUpdate, Persone, ProcessiService, PromisedService, AsanService, GestioneAnniService, Entry, Processi, ProcessiTest) {
 
 
     // **** Parte RESTful
@@ -50,11 +50,19 @@ asanControllers.controller('RelocalsController', function($scope, $resource, Per
     };
 
     $scope.update = function() {
-        $scope.entry = new ProcessiService();
         var input = $scope.prc;
-        ProcessiService.update(input);
-        $scope.restTest = ProcessiService.update(input);
+        $scope.restTest = ProcessiUpdate.save(input);
+        for (var k = 0; k < $scope.testProcessi.length; k++) {
+            if ($scope.testProcessi[k].id === $scope.restTest.id) {
+                $scope.testProcessi[k].nome = $scope.restTest.nome;
+                $scope.testProcessi[k].cognome = $scope.restTest.cognome;
+            }
+
+        }
+        //  $scope.testProcessi.push($scope.restTest);
     };
+
+
 
     $scope.nuovo = {};
     $scope.insert = function() {
