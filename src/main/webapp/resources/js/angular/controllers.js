@@ -1,12 +1,16 @@
 var asanControllers = angular.module('relocalsApp.controllers', []);
 
-asanControllers.controller('RelocalsController', function($scope, $resource, ProcessiUpdate, Persone, ProcessiService, PromisedService, AsanService, GestioneAnniService, Entry, Processi, ProcessiTest) {
+asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate, Persone, ProcessiService, SelezionaSingoloService, PromisedService, AsanService, GestioneAnniService, Entry, Processi, RicercaProcessiDDO) {
 
 
     // **** Parte RESTful
     $scope.testProcessi = ProcessiService.query();
 // **** 
-
+    $scope.RicercaProcessoDDO = {
+        "codiceProcesso": $scope.do_codice_processo
+    };
+    $scope.ente_gestore = 'ASST OVEST MILANESE';
+    $scope.quadrimestri = [{"id": 1, "descrizione": 'Primo quadrimestre'}, {"id": 2, "descrizione": 'Secondo quadrimestre'}, {"id": 3, "descrizione": 'Terzo quadrimestre'}];
     $scope.persone = Persone.caricaPersone();
     $scope.ats = AsanService.caricaAts();
     $scope.processi = Processi.caricaProcessi();
@@ -89,12 +93,31 @@ asanControllers.controller('RelocalsController', function($scope, $resource, Pro
     };
 
     $scope.ricerca = function() {
-        if ($scope.data_select_ats.selectedOption) {
-            console.log($scope.data_select_ats.selectedOption.id);
-            console.log('DO Codice Processo: ' + $scope.do_codice_processo);
-        } else {
-            console.log('Nessuna ATS selezionata');
-        }
+        var codice_processo;
+        var ente_gestore;
+        var ats;
+        var stato;
+        var anno;
+        var quadrimestre;
+
+        (!$scope.do_codice_processo) ? codice_processo = "" : codice_processo = $scope.do_codice_processo;
+
+        ente_gestore = $scope.ente_gestore;
+
+        (!$scope.data_select_ats.selectedOption) ? ats = "" : ats = $scope.data_select_ats.selectedOption.id;
+
+        stato = 'Stato In inserimento';
+
+        !($scope.anno_select_ats.selectedOption.anno === null) ? anno = "" : anno = $scope.anno_select_ats.selectedOption.anno.toString();
+
+        (!$scope.quadrimestre_select.selectedOption) ? quadrimestre = "" : quadrimestre = $scope.quadrimestre_select.selectedOption.id;
+
+        var oggettoRicerca = PromisedService.OggettoRicerca(codice_processo, ente_gestore, ats, stato, anno, quadrimestre);
+
+        RicercaProcessiDDO.save(oggettoRicerca);
+
+        $scope.svuota();
+
     };
 
     $scope.$watch('data_select_ats.selectedOption', function(prima, dopo) {
@@ -155,7 +178,10 @@ asanControllers.controller('RelocalsController', function($scope, $resource, Pro
         $scope.showDettaglioMacroAttivita.visibilita = false;
         $("#but").prop("disabled", true);
         $scope.processoSelezionato.listaStruttureDDO.strutturaSelezionata = null;
-        $scope.processoSelezionato.listaStruttureDDO = processo.listaStruttureDDO;
+        var processoSelezionato = SelezionaSingoloService.get({id: 1});
+        console.log(processoSelezionato);
+        $scope.processoSelezionato.listaStruttureDDO = processoSelezionato.listaStruttureDDO;
+        console.log($scope.processoSelezionato.listaStruttureDDO);
         PromisedService.disattiva_md_caricamento();
     };
 
@@ -219,15 +245,18 @@ asanControllers.controller('RelocalsController', function($scope, $resource, Pro
         } //Il valore di default della SELECT
     };
 
+    $scope.quadrimestre_select = {
+        availableOpt: $scope.quadrimestri,
+        selectedOption: {
+            "id": "",
+            "descrizione": ""
+        } //Il valore di default della SELECT
+    };
+
     $scope.anno_select_ats = {
         availableOpt: GestioneAnniService.getAnni(),
         selectedOption: {
-            "id": "",
-            "descrizione": "",
-            "IDRegione": "",
-            "map": "",
-            "propertyToCrypt": "",
-            "propertyToNotClean": ""
+            "anno": ""
         } //Il valore di default della SELECT
     };
 
@@ -237,7 +266,15 @@ asanControllers.controller('RelocalsController', function($scope, $resource, Pro
             "id": "",
             "descrizione": "",
             "IDRegione": ""
+        },
+        $scope.anno_select_ats.selectedOption = {
+            "anno": ""
+        },
+        $scope.quadrimestre_select.selectedOption = {
+            "id": "",
+            "descrizione": ""
         };
+
 
         $scope.anno_select_ats.selectedOption = {
             "id": "",

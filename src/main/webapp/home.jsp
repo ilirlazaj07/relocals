@@ -231,7 +231,7 @@
 
                     <h3 id="hTest">Processo DO- Ricerca</h3>
                     <div>
-                        <form class="form-ricerca" role="form" data-ng-submit="ricerca()" >
+                        <form  class="form-ricerca" role="form" data-ng-submit="ricerca()" >
                             <div class="form-group">
                                 <div class="left-label">                
                                     <label for="codice_processo_do">Codice Processo DO </label>
@@ -244,7 +244,7 @@
                                     <label for="ente_gestore">Ente Gestore </label>
                                 </div>
                                 <div>
-                                    <p data-ng-model="ente_gestore" id="ente_gestore">ASST OVEST MILANESE</p>
+                                    <p data-ng-model="ente_gestore" id="ente_gestore">{{ente_gestore}}</p>
                                 </div>
                                 <br><br>
                                 <div class="left-label" >                
@@ -273,11 +273,13 @@
                                 </div><br><br>
 
 
-                                <div class="left-label" >                
+                                <div class="left-label">                
                                     <label for="quadrimestre">Quadrimestre </label>
                                 </div>
                                 <div>
-                                    <select class="form-control" name="quadrimestre" id="quadrimestre">
+                                    <select class="form-control" name="quadrimestre" id="quadrimestre" 
+                                            data-ng-model="quadrimestre_select.selectedOption"
+                                            data-ng-options="option.descrizione for option in quadrimestre_select.availableOpt track by option.id">
                                         <option value="" selected="selected"></option>
                                     </select>    
                                 </div><br><br>
@@ -299,6 +301,7 @@
                                 <button type="button" ng-click="svuota()" id="button-svuota" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="submit">
                                     <span class="ui-button-text">Svuota</span>
                                 </button>  
+
                             </div>
                             <!-- <p>{{data_select_ats.selectedOption}}</p> -->
 
@@ -308,20 +311,20 @@
 
                     <h3 id="hResults">Processo DO- Risultati</h3>
                     <div>
-                        <table data-ng-show="processi.length">
+                        <table data-ng-show="processi.length"> 
                             <tr>
-                                <th>Codice DDO</th>
-                                <th>Ente Gestore</th>
-                                <th>ATS</th>
-                                <th>Anno</th>
-                                <th>Quad.</th>
-                                <th>Stato</th>
+                                <th>Codice DDO</th> 
+                                <th>Ente Gestore</th> 
+                                <th>ATS</th> 
+                                <th>Anno</th> 
+                                <th>Quad.</th> 
+                                <th>Stato</th> 
                             </tr>
                             <tr data-ng-repeat="processo in processi" data-ng-click="getDettagliSingoloProcesso(processo);" data-toggle="modal" data-target="#caricamento">
                                 <td><span>D-{{processo.codiceProcesso}}-{{processo.anno}}</span></td >
-                                <td><span>{{}}</span></td > 
                                 <td><span>{{}}</span></td >
-                                <td><span>{{processo.anno}}</span></td >
+                                <td><span>{{}}</span></td > 
+                                <td><span>{{processo.anno}}</span></td > 
                                 <td><span>{{processo.quadrimestre}}</span></td >
                                 <td><span>{{}}</span></td >
                             </tr>
@@ -390,7 +393,6 @@
                                         </div>
                                         <div>
                                             <table id="strutture" style="width: 70%; float: left">
-
                                                 <tr data-ng-repeat="struttura in processoSelezionato.listaStruttureDDO" ng-click="getStrutturaSelezionata(struttura)" ng-class="{strutturaSelezionataClass: struttura === processoSelezionato.listaStruttureDDO.strutturaSelezionata}">
                                                     <td style="border: 1px solid lightgray;"><asan-stato stato="{{struttura.cdStatoCompilazione}}"></asan-stato> <span>{{struttura.nome}}</span></td >
                                                 </tr>
@@ -400,7 +402,6 @@
                                             </button>  
                                         </div>
                                     </div><br> 
-
 
                                 </div>   
                                 <div class="bottoni_form">
@@ -725,7 +726,7 @@
 
                             </div>
                             <input type="submit" value="Update" />
-                          
+
                         </form>
 
                         ---------------------------------------------------------

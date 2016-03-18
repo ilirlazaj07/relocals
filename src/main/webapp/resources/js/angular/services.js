@@ -46,9 +46,24 @@ services.factory('ProcessiService', function($resource) {
 });
 
 
+services.factory('SelezionaSingoloService', function($resource) {
+    return $resource('/asan/web/pddo/seleziona/:id', {id: '@id'}, {
+        update: {
+            method: 'PUT'
+        }
+    });
+});
+
+///pddo/ricerca
+
 services.factory('ProcessiUpdate', function($resource) {
     return $resource('/restTEST/rest/persone/modifica');
 });
+
+services.factory('RicercaProcessiDDO', function($resource) {
+    return $resource('/asan/web/pddo/ricerca');
+});
+
 
 services.factory('ProcessiTest', function($resource) {
 
@@ -84,6 +99,8 @@ services.factory('AsanService', function($resource) {
     };
 });
 
+
+
 services.factory('PromisedService', function($q, $timeout, Processi) {
     var stringa = new Object();
     return {
@@ -112,6 +129,17 @@ services.factory('PromisedService', function($q, $timeout, Processi) {
                 angular.element(".datiStruttura").click();
             }, fun());
             return 'OK';
+        },
+        OggettoRicerca: function(codiceProcesso, idEnte, idAsl, idstato, anno, quadrimestre) {
+            var RicercaProcessoDDO = {
+                codiceProcesso: codiceProcesso,
+                idEnte: idEnte,
+                idAsl: idAsl,
+                idstato: idstato,
+                anno: anno,
+                quadrimestre: quadrimestre
+            };
+            return RicercaProcessoDDO;
         }
 
     };
