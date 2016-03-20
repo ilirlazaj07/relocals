@@ -237,7 +237,7 @@
                                     <label for="codice_processo_do">Codice Processo DO </label>
                                 </div>
                                 <div>
-                                    <input data-ng-model="do_codice_processo" type="text" class="form-control" id="codice_processo_do" name="codice_processo_do" > 
+                                    <input data-ng-maxlength="5" data-ng-model="do_codice_processo" type="text" class="form-control" id="codice_processo_do" name="codice_processo_do" > 
                                 </div>
                                 <br><br>
                                 <div class="left-label" >                
@@ -288,23 +288,23 @@
                                     <label for="stato_processo_do">Stato del Processo DO </label>
                                 </div>
                                 <div>
-                                    <select class="form-control" name="stato_processo_do" id="stato_processo_do">
+                                    <select class="form-control" name="stato_processo_do" id="stato_processo_do"
+                                            data-ng-model="stato_select.selectedOption"
+                                            data-ng-options="option.descrizione for option in stato_select.availableOpt track by option.id">
                                         <option value="" selected="selected"></option>
                                     </select>    
                                 </div><br><br>     
                             </div>     
 
                             <div class="bottoni_form">
-                                <button  type="submit" id="button-ricerca" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button">
-                                    <span id="ricerca" class="ui-button-text">Ricerca</span>
-                                </button>
-                                <button type="button" ng-click="svuota()" id="button-svuota" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="submit">
-                                    <span class="ui-button-text">Svuota</span>
+                                <button  id="buttonRicerca" data-toggle="modal" data-target="#caricamento" type="submit" data-ng-click="backToUnita();" style="width: 65px;margin-left: 2px" >
+                                    Ricerca
+                                </button> 
+                                <button type="button" ng-click="svuota()"  id="buttonSvuota" data-ng-click="svuota();" style="width: 65px;margin-left: 2px" >
+                                    Svuota
                                 </button>  
-
                             </div>
-                            <!-- <p>{{data_select_ats.selectedOption}}</p> -->
-
+                          
                         </form>
                     </div>
 
@@ -329,6 +329,8 @@
                                 <td><span>{{}}</span></td >
                             </tr>
                         </table>
+
+
                     </div>
 
                     <h3 id="hValori">Processo DO- Visualizza</h3>
@@ -507,9 +509,9 @@
                                                 </tr>
                                                 <tr data-ng-repeat="macro in processoSelezionato.macroAttivita" data-ng-click="getMacroSelezionata(macro);" ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}">
                                                     <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><asan-stato stato="{{2}}"></asan-stato></td>
-                                                <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><span>{{macro.nome}}</span></td>  
-                                                <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><span>{{macro.nome}}</span></td>  
-                                                <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><span>{{macro.nome}}</span></td>  
+                                                <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><span>{{macro.descrizione}}</span></td>  
+                                                <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><span>{{macro.descrizione}}</span></td>  
+                                                <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><span>{{macro.descrizione}}</span></td>  
                                                 </tr>
                                             </table>
                                             <div style="width: 35%;float: left">
@@ -604,14 +606,7 @@
 
                                             <!-- Update TEST -->
                                             <div id="update_test">
-                                                <table data-ng-show="persone.length">
-                                                    <tr>
-                                                        <th>ID</th>
-                                                    </tr>
-                                                    <tr data-ng-repeat="persona in persone" >
-                                                        <td><span>{{persona.id}}</span></td>
-                                                    </tr>
-                                                </table>  
+
                                             </div>
                                         </div><br> 
                                     </div>   
@@ -754,6 +749,21 @@
                             </div>
                             <input type="submit" value="Insert" />
                         </form>
+
+
+                        <table>
+                            <tr>
+                                <th>ID</th>
+                                <th>Descrizione</th>
+                            </tr>
+
+                            <tr data-ng-repeat="p in message" >
+                                <td><span>{{p.id}}</span></td>
+                                <td><span>{{p.codiceProcesso}}</span></td>
+                            </tr>
+                        </table>  
+
+
                     </div>
 
                     <!-- 

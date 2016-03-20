@@ -19,6 +19,10 @@ $(function() {
 
     $("#but5").button();
 
+    $("#buttonRicerca").button();
+
+    $("#buttonSvuota").button();
+
     $(".but").prop("disabled", true);
 
     $("#unita_dettaglio").prop("disabled", true);
@@ -44,10 +48,6 @@ $(function() {
         $("#hRicerca").click();
     });
 
-
-    $("#button-ricerca").on("click", function() {
-        $("#hResults").click();
-    });
 
     $("#persone").on("click", function() {
         alert('Done !');

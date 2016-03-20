@@ -1,6 +1,6 @@
 var asanControllers = angular.module('relocalsApp.controllers', []);
 
-asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate, Persone, ProcessiService, SelezionaSingoloService, PromisedService, AsanService, GestioneAnniService, Entry, Processi, RicercaProcessiDDO) {
+asanControllers.controller('RelocalsController', function($scope, $http, StatoInserimentoService, ProcessiUpdate, Persone, ProcessiService, SelezionaSingoloService, PromisedService, AsanService, GestioneAnniService) {
 
 
     // **** Parte RESTful
@@ -13,7 +13,6 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
     $scope.quadrimestri = [{"id": 1, "descrizione": 'Primo quadrimestre'}, {"id": 2, "descrizione": 'Secondo quadrimestre'}, {"id": 3, "descrizione": 'Terzo quadrimestre'}];
     $scope.persone = Persone.caricaPersone();
     $scope.ats = AsanService.caricaAts();
-    $scope.processi = Processi.caricaProcessi();
     $scope.anni_ricerca = GestioneAnniService.getAnni();
     $scope.showDatiStruttura = false;
     $scope.showUnitaOrganizzative = false;
@@ -25,6 +24,7 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
     };
 
     $scope.dettaglio = [];
+
 
     //dopo aver  selezionato un processo DDO dai risultati
     $scope.processoSelezionato = {
@@ -80,17 +80,11 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
         //  $scope.nuovo = new ProcessiService();
     };
 
-    var entry = Entry.get({id: 1}, function() {
-        console.log('La persona selezionata è: ' + entry.nome);
-    }); // get() singlo elemento
-
-    var entries = Entry.query(function() {
-        console.log('La lista delle persona ha ' + entries.length + ' dipendenti.');
-    }); //query() tutti gli elementi
-
     $scope.orderByValue = function(value) {
         return value;
     };
+
+
 
     $scope.ricerca = function() {
         var codice_processo;
@@ -106,15 +100,18 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
 
         (!$scope.data_select_ats.selectedOption) ? ats = "" : ats = $scope.data_select_ats.selectedOption.id;
 
-        stato = 'Stato In inserimento';
+        (!$scope.stato_select.selectedOption) ? stato = "" : stato = $scope.stato_select.selectedOption.id;
 
-        !($scope.anno_select_ats.selectedOption.anno === null) ? anno = "" : anno = $scope.anno_select_ats.selectedOption.anno.toString();
+        !($scope.anno_select_ats.selectedOption) ? anno = "" : anno = $scope.anno_select_ats.selectedOption.anno.toString();
 
         (!$scope.quadrimestre_select.selectedOption) ? quadrimestre = "" : quadrimestre = $scope.quadrimestre_select.selectedOption.id;
 
-        var oggettoRicerca = PromisedService.OggettoRicerca(codice_processo, ente_gestore, ats, stato, anno, quadrimestre);
+        var risultato = $http.post('/asan/web/pddo/ricerca', PromisedService.OggettoRicerca(codice_processo, "7", ats, stato, anno, quadrimestre));
+        risultato.success(function(risposta) {
+            $scope.processi = risposta;
+        });
 
-        RicercaProcessiDDO.save(oggettoRicerca);
+        PromisedService.disattiva_md_ricerca();
 
         $scope.svuota();
 
@@ -178,10 +175,10 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
         $scope.showDettaglioMacroAttivita.visibilita = false;
         $("#but").prop("disabled", true);
         $scope.processoSelezionato.listaStruttureDDO.strutturaSelezionata = null;
-        var processoSelezionato = SelezionaSingoloService.get({id: 1});
-        console.log(processoSelezionato);
-        $scope.processoSelezionato.listaStruttureDDO = processoSelezionato.listaStruttureDDO;
-        console.log($scope.processoSelezionato.listaStruttureDDO);
+        var processoSelezionato = SelezionaSingoloService.get({id: 1}, function() {
+            $scope.processoSelezionato.listaStruttureDDO = processoSelezionato.listaStruttureDDO;
+        });
+
         PromisedService.disattiva_md_caricamento();
     };
 
@@ -203,9 +200,6 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
     };
 
     $scope.getDettaglioMacroSelezionata = function() {
-        var dati_macro = {
-            "macroSelezionata": $scope.processoSelezionato.listaStruttureDDO.macroSelezionata
-        };
         $scope.showUnitaOrganizzative = false;
         $scope.showDettaglioUnitaOrganizzative.visibilita = false;
         $scope.showDettaglioMacroAttivita.visibilita = true;
@@ -223,18 +217,6 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
         if (prima === dopo)
             return;
     });
-
-    $scope.testa = function() {
-        console.log('Valore singolo: ' + Entry.getUser());
-    };
-
-    $scope.testPromise = function() {
-        PromisedService.getMessages().then(function(data) {
-            $scope.test_cacca = data;
-            console.log('Funziona');
-            //
-        });
-    };
 
     $scope.data_select_ats = {
         availableOptions: AsanService.caricaAts(),
@@ -260,8 +242,25 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
         } //Il valore di default della SELECT
     };
 
+    $scope.stato_select = {
+        availableOpt: StatoInserimentoService.query(),
+        selectedOption: {
+            "id": "",
+            "codice": "",
+            "descrizione": "",
+            "dataInizioValidita": ""
+        }
+    };
+
+
     $scope.svuota = function() {
         $scope.do_codice_processo = '';
+        $scope.stato_select.selectedOption = {
+            "id": "",
+            "codice": "",
+            "descrizione": "",
+            "dataInizioValidita": ""
+        },
         $scope.data_select_ats.selectedOption = {
             "id": "",
             "descrizione": "",
@@ -273,16 +272,6 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
         $scope.quadrimestre_select.selectedOption = {
             "id": "",
             "descrizione": ""
-        };
-
-
-        $scope.anno_select_ats.selectedOption = {
-            "id": "",
-            "descrizione": "",
-            "IDRegione": "",
-            "map": "",
-            "propertyToCrypt": "",
-            "propertyToNotClean": ""
         };
     };
 });

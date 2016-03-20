@@ -20,8 +20,6 @@ services.factory('Persone', function($resource) {
     };
 });
 
-
-
 services.factory('Processi', function($resource) {
 
     var prcs = [];
@@ -45,6 +43,9 @@ services.factory('ProcessiService', function($resource) {
     });
 });
 
+services.factory('StatoInserimentoService', function($resource) {
+    return $resource('/asan/web/dcod/statiPDDO');
+});
 
 services.factory('SelezionaSingoloService', function($resource) {
     return $resource('/asan/web/pddo/seleziona/:id', {id: '@id'}, {
@@ -54,15 +55,11 @@ services.factory('SelezionaSingoloService', function($resource) {
     });
 });
 
-///pddo/ricerca
-
 services.factory('ProcessiUpdate', function($resource) {
     return $resource('/restTEST/rest/persone/modifica');
 });
 
-services.factory('RicercaProcessiDDO', function($resource) {
-    return $resource('/asan/web/pddo/ricerca');
-});
+
 
 
 services.factory('ProcessiTest', function($resource) {
@@ -86,7 +83,7 @@ services.factory('ProcessiTest', function($resource) {
 services.factory('AsanService', function($resource) {
 
     var ats = [];
-    var all = $resource('/asan/web/dcod/ats_all/');
+    var all = $resource('/asan/web/dcod/ats');
 
     return {
         ats: ats,
@@ -117,6 +114,13 @@ services.factory('PromisedService', function($q, $timeout, Processi) {
             $timeout(function() {
                 angular.element("#caricamento").click();
                 angular.element("#hValori").click();
+            }, 1500);
+            return 'OK';
+        },
+        disattiva_md_ricerca: function() {
+            $timeout(function() {
+                angular.element("#caricamento").click();
+                angular.element("#hResults").click();
             }, 1500);
             return 'OK';
         },
