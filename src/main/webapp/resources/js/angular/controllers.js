@@ -1,8 +1,6 @@
 var asanControllers = angular.module('relocalsApp.controllers', []);
 
 asanControllers.controller('RelocalsController', function($scope, $http, StatoInserimentoService, ProcessiUpdate, Persone, ProcessiService, SelezionaSingoloService, PromisedService, AsanService, GestioneAnniService) {
-
-
     // **** Parte RESTful
     $scope.testProcessi = ProcessiService.query();
 // **** 
@@ -108,19 +106,23 @@ asanControllers.controller('RelocalsController', function($scope, $http, StatoIn
 
         var risultato = $http.post('/asan/web/pddo/ricerca', PromisedService.OggettoRicerca(codice_processo, "7", ats, stato, anno, quadrimestre));
         risultato.success(function(risposta) {
-            $scope.processi = risposta;
+            if (risposta.esitoOK) {
+                $scope.processi = risposta.risultato.processoDDOlist;
+                PromisedService.disattiva_md_ricerca();
+                $scope.svuota();
+            } else {
+                PromisedService.disattiva_md_ricerca();
+                $scope.svuota();
+            }
         });
-
-        PromisedService.disattiva_md_ricerca();
-
-        $scope.svuota();
-
     };
 
     $scope.$watch('data_select_ats.selectedOption', function(prima, dopo) {
         if (prima === dopo)
             return;
     });
+
+
 
     $scope.getUnitaSelezionata = function(unita) {
         $("#unita_dettaglio").prop("disabled", false);
@@ -156,6 +158,9 @@ asanControllers.controller('RelocalsController', function($scope, $http, StatoIn
         $scope.processoSelezionato.macroAttivita = [];
         $scope.processoSelezionato.listaStruttureDDO.strutturaSelezionata = struttura;
         $("#but").prop("disabled", false);
+        $("#unita_dettaglio").prop("disabled", true);
+
+        $("#macro_dettaglio").prop("disabled", true);
         $scope.showDatiStruttura = false;
         $scope.showUnitaOrganizzative = false;
         $scope.showDettaglioUnitaOrganizzative.visibilita = false;
@@ -175,8 +180,10 @@ asanControllers.controller('RelocalsController', function($scope, $http, StatoIn
         $scope.showDettaglioMacroAttivita.visibilita = false;
         $("#but").prop("disabled", true);
         $scope.processoSelezionato.listaStruttureDDO.strutturaSelezionata = null;
-        var processoSelezionato = SelezionaSingoloService.get({id: 1}, function() {
-            $scope.processoSelezionato.listaStruttureDDO = processoSelezionato.listaStruttureDDO;
+        var processoSelezionato = SelezionaSingoloService.get({id: processo.id}, function() {
+
+
+            $scope.processoSelezionato.listaStruttureDDO = processoSelezionato.risultato.listaStruttureDDO;
         });
 
         PromisedService.disattiva_md_caricamento();
@@ -329,3 +336,10 @@ asanControllers.controller('RelocalsController', function($scope, $http, StatoIn
  }, 0000);
  
  */
+asanControllers.controller('ModalController', function($scope, close) {
+
+    $scope.close = function(result) {
+        close(result, 500); 
+    };
+
+});
