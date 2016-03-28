@@ -5,6 +5,10 @@
 
 $(function() {
 
+
+
+    $("#passaValori").click();
+
     $("#but").button();
 
     $("#unita_dettaglio").button();
@@ -39,10 +43,50 @@ $(function() {
     $("#tabs2").tabs();
 
     $("#tabs_unita").tabs();
+    
+    $("#tabs_unita_modifica").tabs();
+
+    $("#tabs_modifica").tabs();
 
     $("#nav-accordion").accordion({
         collapsible: true, active: false
     });
+
+
+    $("#dialog").dialog({
+        autoOpen: false,
+        width: 400,
+        buttons: [
+            {
+                text: "Ok",
+                click: function() {
+                    $(this).dialog("close");
+                }
+            },
+            {
+                text: "Cancel",
+                click: function() {
+                    $(this).dialog("close");
+                }
+            }
+        ]
+    });
+
+// Link to open the dialog
+    $("#dialog-link").click(function(event) {
+        $("#dialog").dialog("open");
+        event.preventDefault();
+    });
+
+    // Hover states on the static widgets
+    $("#dialog-link, #icons li").hover(
+            function() {
+                $(this).addClass("ui-state-hover");
+            },
+            function() {
+                $(this).removeClass("ui-state-hover");
+            }
+    );
 
     $("#search").on("click", function() {
         $("#hRicerca").click();
@@ -57,6 +101,8 @@ $(function() {
     $("#inserimento").on("click", function() {
         $("#hInserimento").click();
     });
+
+
 
     $("#test").on("click", function() {
         $("#hTest").click();

@@ -1,5 +1,34 @@
+function asanInterceptor($q, jspTransporter) {
+    return {
+        request: function(config) {
+            config.headers['X-AUTH-TOKEN'] = jspTransporter.getToken();
+            return config;
+        },
+        response: function(result) {
+            return result;
+        },
+        responseError: function(rejection) {
+            return $q.reject(rejection);
+        }
+    };
+}
+
 
 var services = angular.module('relocalsApp.services', []);
+
+services.factory('jspTransporter', function() {
+    var valore = '';
+    return {
+        valore: valore,
+        setToken: function(input) {
+            valore = input;
+        },
+        getToken: function() {
+            return valore;
+        }
+    };
+});
+
 services.factory('Persone', function($resource) {
 
     var users = [];
@@ -47,6 +76,8 @@ services.factory('StatoInserimentoService', function($resource) {
     return $resource('/asan/web/dcod/statiPDDO');
 });
 
+
+
 services.factory('SelezionaSingoloService', function($resource) {
     return $resource('/asan/web/pddo/seleziona/:id', {id: '@id'}, {
         update: {
@@ -56,6 +87,10 @@ services.factory('SelezionaSingoloService', function($resource) {
 });
 
 services.factory('ProcessiUpdate', function($resource) {
+    return $resource('/restTEST/rest/persone/modifica');
+});
+
+services.factory('ProcessiUpdate2', function($resource) {
     return $resource('/restTEST/rest/persone/modifica');
 });
 
@@ -166,3 +201,5 @@ services.factory('GestioneAnniService', function() {
         }
     };
 });
+
+services.factory('asanInterceptor', asanInterceptor);

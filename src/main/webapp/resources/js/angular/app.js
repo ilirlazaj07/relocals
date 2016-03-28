@@ -11,4 +11,9 @@
  *
  */
 
-angular.module('relocalsApp', ['ngResource', 'relocalsApp.services', 'relocalsApp.controllers', 'relocalsApp.directives']);
+
+
+angular.module('relocalsApp', ['ngTable','ngResource', 'relocalsApp.services',
+    'relocalsApp.controllers', 'relocalsApp.directives']).config(function($httpProvider) {
+    $httpProvider.interceptors.push('asanInterceptor');
+});

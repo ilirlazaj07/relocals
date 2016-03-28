@@ -76,6 +76,12 @@
     padding-right: 10px;
 }
 
+.form-ricerca .form-group .left-label2{
+    float: left;
+    width: 10%;
+    padding-right: 10px;
+}
+
 .form-ricerca .form-group .left-label label{
     float: left;
     margin-top: 0.4em;
@@ -187,6 +193,7 @@
 
 }
 
+
 td { cursor: pointer;}
 
 
@@ -209,3 +216,5 @@ td { cursor: pointer;}
     background: #c2ddc0;
     margin-left: 4px;
 }
+
+
