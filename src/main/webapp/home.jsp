@@ -178,7 +178,7 @@
                     <div>
                         <form class="form-ricerca" role="form" data-ng-submit="modifica(persona1)">
                             <div class="form-group">
-
+                                <!-- Parte di test per l'inserimento -->
                                 <div class="left-label">
                                     <label>Ente</label>
                                 </div>
@@ -238,10 +238,10 @@
                                                         </select>   
                                                         <!--   <input class="form-control" style="height: 17px;" type="text" data-ng-show="personaDaModificare.visibilita && (persona === personaDaModificare.valore)"  />--><span data-ng-show="!(personaDaModificare.visibilita && persona === personaDaModificare.valore)">{{persona.id}}</span></td >
                                                     <td  ng-class="{strutturaSelezionataClass: persona === personaDaModificare.valore}">
-                                                        <input data-ng-model="persona1.nome" class="form-control"  style="height: 30px;width: 120px;background: white;color: black" type="text" data-ng-show="personaDaModificare.visibilita && (persona === personaDaModificare.valore)"  />   <span data-ng-show="!(personaDaModificare.visibilita && (persona === personaDaModificare.valore))">{{persona.nome}}</span>
+                                                        <input data-ng-model="personaDaModificare.valore.nome" class="form-control"  style="height: 30px;width: 120px;background: white;color: black" type="text" data-ng-show="personaDaModificare.visibilita && (persona === personaDaModificare.valore)"  />   <span data-ng-show="!(personaDaModificare.visibilita && (persona === personaDaModificare.valore))">{{persona.nome}}</span>
                                                     </td>
                                                     <td  ng-class="{strutturaSelezionataClass: persona === personaDaModificare.valore}">
-                                                        <input class="form-control" data-ng-model="persona1.cognome" style="height: 30px;width: 120px;background: white;color: black" type="text" data-ng-show="personaDaModificare.visibilita && (persona === personaDaModificare.valore)"  />     <span data-ng-show="!(personaDaModificare.visibilita && (persona === personaDaModificare.valore))">{{persona.cognome}}</span>
+                                                        <input class="form-control" data-ng-model="personaDaModificare.valore.cognome" style="height: 30px;width: 120px;background: white;color: black" type="text" data-ng-show="personaDaModificare.visibilita && (persona === personaDaModificare.valore)"  />     <span data-ng-show="!(personaDaModificare.visibilita && (persona === personaDaModificare.valore))">{{persona.cognome}}</span>
                                                     </td>
                                                 </tr>
                                             </table>                                             
@@ -268,7 +268,7 @@
                                     </div>
                                 </div>
 
-                                <br><br>
+                                <br><br> -->
                             </div>        
                             <div class="bottoni_form">
                                 <button type="button" data-ng-click="testPromise()" id="button-ricerca" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button">
@@ -287,14 +287,25 @@
                                     <label for="codice_processo_do">Codice Processo DO </label>
                                 </div>
                                 <div>
-                                    <input data-ng-maxlength="5" data-ng-model="do_codice_processo" type="text" class="form-control" id="codice_processo_do" name="codice_processo_do" > 
+                                    <input data-ng-model="do_codice_processo" type="text" class="form-control" id="codice_processo_do" name="codice_processo_do" > 
+                                </div>
+                                <br><br>
+                                <div class="left-label">
+                                    <span style="font-weight: bold">Codice Fiscale Ente</span>
+                                </div>
+                                <div>
+                                    <input style="margin-right: 15px;" data-ng-model="do_codice_fiscale" type="text" class="form-control" id="codice_processo_do" name="codice_processo_do" > 
+                                    <p style="font-weight: bold">Partita IVA Ente </p>
+                                    <p>{{quadrimestre}}</p>
+                                    <input data-ng-model="do_partita_iva" type="text" class="form-control" id="codice_processo_do" name="codice_processo_do" > 
                                 </div>
                                 <br><br>
                                 <div class="left-label" >                
-                                    <label for="ente_gestore">Ente Gestore </label>
+                                    <label for="ats">Nome Ente </label>
                                 </div>
                                 <div>
-                                    <p data-ng-model="ente_gestore" id="ente_gestore">{{ente_gestore}}</p>
+                                    <input data-ng-model="do_nome_ente" type="text" class="form-control" id="codice_processo_do" name="codice_processo_do" > 
+
                                 </div>
                                 <br><br>
                                 <div class="left-label" >                
@@ -376,7 +387,7 @@
                                 <td><span>{{processo.asl.descrizione}}</span></td > 
                                 <td><span>{{processo.anno}}</span></td > 
                                 <td><span>{{processo.quadrimestre}}</span></td >
-                                <td><span>{{processo.stato}}</span></td>
+                                <td><span>{{processo.stato.descrizione}}</span></td>
                             </tr>
                         </table>
 
@@ -425,7 +436,7 @@
                                         <p style="font-weight: bold">Quadrimestre </p>
                                         <p>{{quadrimestre}}</p>
                                         <p style="font-weight: bold">Stato </p>
-                                        <p>{{statoPDO}}</p>
+                                        <p>{{statoPDO.descrizione}}</p>
                                     </div><br><br>
                                     <div class="left-label2">
                                         <span style="font-weight: bold">Data apertura</span>
@@ -925,9 +936,8 @@
                                 </form>
 
                                 <!-- Parte per i dettagli singola Unita -->    
-                                <form class="form-ricerca" role="form" data-ng-show="showDettaglioUnitaOrganizzative.visibilita" >
+                                <form class="form-ricerca" role="form" data-ng-submit="aggiornaClasse();"  data-ng-show="showDettaglioUnitaOrganizzative.visibilita" >
                                     <div class="form-group">
-
                                         <div class="left-label2">
                                             <label>Codice UO</label>
                                         </div>
@@ -993,28 +1003,29 @@
                                                             data-ng-click="setClasseSelezionata(classe);" 
                                                             data-ng-class="{strutturaSelezionataClass: classe === classeDaModificare.valore}">
                                                             <td data-ng-class="{strutturaSelezionataClass: classe === classeDaModificare.valore}">
-                                                                <select style="width: 165px;background: white; color: black"  data-ng-show="classeDaModificare.visibilita && (classe === classeDaModificare.valore)" class="form-control" name="quadrimestre" 
-                                                                        data-ng-model="quadrimestre_select.selectedOption"
-                                                                        data-ng-options="option.descrizione for option in quadrimestre_select.availableOpt track by option.id">
-                                                                    <option value="" selected="selected"></option>
+                                                                <select data-ng-init ="classi_profilo_select.selectedOption = classeProfiloDefault" style="width: 165px;background: white; color: black"  data-ng-show="classeDaModificare.visibilita && (classe === classeDaModificare.valore)" class="form-control" name="classi_profilo" 
+                                                                        data-ng-model="classi_profilo_select.selectedOption"
+                                                                        data-ng-options="option.descrizione for option in classi_profilo_select.availableOptions track by option.id">
+                                                                    <!--  <option value="classeDaModificare.valore.classeProfilo.descrizione" selected="selected"></option> -->
                                                                 </select>   
                                                                 <!--    <input  class="form-control"  style="height: 30px;width: 120px;background: white;color: black" type="text" data-ng-show="classeDaModificare.visibilita && (classe === classeDaModificare.valore)"  /> -->
                                                                 <span data-ng-show="!(classeDaModificare.visibilita && (classe === classeDaModificare.valore))">{{classe.classeProfilo.descrizione}}</span>
                                                             </td>  
                                                             <td data-ng-class="{strutturaSelezionataClass: classe === classeDaModificare.valore}">
                                                                 <span data-ng-show="!(classeDaModificare.visibilita && (classe === classeDaModificare.valore))">{{classe.numeroOre}}</span>
-                                                                <input  class="form-control" style="height: 30px;width: 120px;background: white;color: black" type="text" data-ng-show="classeDaModificare.visibilita && (classe === classeDaModificare.valore)"  />
+                                                                <input data-ng-model="classeDaModificare.valore.numeroOre"  class="form-control" style="height: 30px;width: 120px;background: white;color: black" type="text" data-ng-show="classeDaModificare.visibilita && (classe === classeDaModificare.valore)"  />
                                                             </td>  
                                                         </tr>
                                                     </table>
                                                 </div>
-                                                <button  id="ok3" data-ng-click="backToUnita();" style="width: 90px;margin-left: 2px" >
-                                                    OK
-                                                </button> 
-                                                <button  id="ok55" data-ng-click="modificaClasse();" style="width: 90px;margin-left: 2px" >
-                                                    Modifica
-                                                </button> 
-                                                 
+                                                <input type="button" id="ok3" data-ng-click="backToUnita();" style="width: 90px;margin-left: 2px" value="OK" />
+
+                                                <input type="button" id="ok55" data-ng-click="modificaClasse();" style="width: 90px;margin-left: 2px" value="Modifica" />
+
+                                                <input   id="ok56" type="submit" style="width: 90px;margin-left: 2px" value="Salva" />
+
+
+
                                             </div>
 
                                             <!-- Update TEST -->

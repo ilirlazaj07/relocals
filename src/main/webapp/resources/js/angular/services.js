@@ -29,6 +29,10 @@ services.factory('jspTransporter', function() {
     };
 });
 
+services.factory('ClassiProfiloService', function($resource) {
+    return $resource('/asan/web/dcod/classiProfilo');
+});
+
 services.factory('Persone', function($resource) {
 
     var users = [];
@@ -169,12 +173,14 @@ services.factory('PromisedService', function($q, $timeout, Processi) {
             }, fun());
             return 'OK';
         },
-        OggettoRicerca: function(codiceProcesso, idEnte, idAsl, idstato, anno, quadrimestre) {
+        OggettoRicerca: function(codiceProcesso, codiceFiscale, partitaIva, nome, idAsl, idStato, anno, quadrimestre) {
             var RicercaProcessoDDO = {
                 codiceProcesso: codiceProcesso,
-                idEnte: idEnte,
+                codiceFiscale: codiceFiscale,
+                partitaIva: partitaIva,
+                nome: nome,
                 idAsl: idAsl,
-                idstato: idstato,
+                idStato: idStato,
                 anno: anno,
                 quadrimestre: quadrimestre
             };

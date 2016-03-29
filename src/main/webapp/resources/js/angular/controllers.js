@@ -1,6 +1,6 @@
 var asanControllers = angular.module('relocalsApp.controllers', []);
 
-asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate2, jspTransporter, $http, StatoInserimentoService, ProcessiUpdate, Persone, ProcessiService, SelezionaSingoloService, PromisedService, AsanService, GestioneAnniService) {
+asanControllers.controller('RelocalsController', function($scope, ClassiProfiloService, jspTransporter, $http, StatoInserimentoService, ProcessiUpdate, Persone, ProcessiService, SelezionaSingoloService, PromisedService, AsanService, GestioneAnniService) {
     // **** Parte RESTful
     $scope.testProcessi = ProcessiService.query();
 // **** 
@@ -10,6 +10,7 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
 
     $scope.classeDaModificare = {
         valore: '',
+        id: '',
         visibilita: false
     };
 
@@ -30,11 +31,23 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
         $scope.personaDaModificare.valore = persona;
     };
 
-    $scope.setClasseSelezionata = function(classeProfilo) {
-        console.log(classeProfilo);
-        if ($scope.classeDaModificare.valore !== classeProfilo)
+
+//valore necessario per settare il valore di default in modalità di modifica
+    $scope.classeProfiloDefault = {
+        "id": 1,
+        "descrizione": "",
+        "dataInizioValidita": ""
+    };
+
+    $scope.setClasseSelezionata = function(classe) {
+
+        if ($scope.classeDaModificare.valore !== classe)
             $scope.classeDaModificare.visibilita = false;
-        $scope.classeDaModificare.valore = classeProfilo;
+        if (!$scope.classeDaModificare.visibilita) {
+            $scope.classeDaModificare.valore = classe;
+            $scope.classeProfiloDefault.id = classe.classeProfilo.id;
+            $scope.classi_profilo_select.selectedOption.id = classe.classeProfilo.id;
+        }
     };
 
     $scope.modificaClasse = function() {
@@ -49,8 +62,6 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
 
     $scope.cancelModifica = function() {
         console.log('Funzione chiamata ' + 'cancelModifica');
-        console.log();
-
         $scope.personaDaModificare.valore = null;
         $scope.classeDaModificare.valore = null;
     };
@@ -61,8 +72,6 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
     };
 
     $scope.modifica = function(p) {
-        console.log('Funzione chiamata ' + 'modifica');
-
         var nome;
         var cognome;
         if (p.nome !== '') {
@@ -180,10 +189,19 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
         var stato;
         var anno;
         var quadrimestre;
+        var codice_fiscale;
+        var partitaIva;
+        var nome;
 
         (!$scope.do_codice_processo) ? codice_processo = "" : codice_processo = $scope.do_codice_processo;
 
         ente_gestore = $scope.ente_gestore;
+
+        (!$scope.do_codice_fiscale) ? codice_fiscale = "" : codice_fiscale = $scope.do_codice_fiscale;
+
+        (!$scope.do_partita_iva) ? partitaIva = "" : partitaIva = $scope.do_partita_iva;
+
+        (!$scope.do_nome_ente) ? nome = "" : nome = $scope.do_nome_ente;
 
         (!$scope.data_select_ats.selectedOption) ? ats = "" : ats = $scope.data_select_ats.selectedOption.id;
 
@@ -193,7 +211,7 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
 
         (!$scope.quadrimestre_select.selectedOption) ? quadrimestre = "" : quadrimestre = $scope.quadrimestre_select.selectedOption.id;
 
-        var risultato = $http.post('/asan/web/pddo/ricerca', PromisedService.OggettoRicerca(codice_processo, "7", ats, stato, anno, quadrimestre));
+        var risultato = $http.post('/asan/web/pddo/ricerca', PromisedService.OggettoRicerca(codice_processo, codice_fiscale, partitaIva, nome, ats, stato, anno, quadrimestre));
         risultato.success(function(risposta, stato, headers) {
 
             if (risposta.esitoOK) {
@@ -201,16 +219,14 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
                 PromisedService.disattiva_md_ricerca();
                 $scope.svuota();
             } else {
+                console.log('Lista DDO non trovata');
                 PromisedService.disattiva_md_ricerca();
                 $scope.svuota();
             }
         });
     };
 
-    $scope.$watch('data_select_ats.selectedOption', function(prima, dopo) {
-        if (prima === dopo)
-            return;
-    });
+
 
 
 
@@ -258,7 +274,6 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
         $scope.processoSelezionato.listaStruttureDDO.strutturaSelezionata = struttura;
         $("#but").prop("disabled", false);
         $("#unita_dettaglio").prop("disabled", true);
-
         $("#macro_dettaglio").prop("disabled", true);
         $scope.showDatiStruttura = false;
         $scope.showUnitaOrganizzative = false;
@@ -331,10 +346,23 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
     };
 
 
-    $scope.$watch('processoSelezionato', function(prima, dopo) {
+    $scope.$watch('$scope.setClasseSelezionata', function(prima, dopo) {
         if (prima === dopo)
             return;
+        alert('Cambio della classe');
     });
+
+
+    $scope.classi_profilo_select = {
+        availableOptions: ClassiProfiloService.query(),
+        selectedOption: {
+            "id": "",
+            "descrizione": "",
+            "dataInizioValidita": ""
+        }
+    };
+
+
 
     $scope.data_select_ats = {
         availableOptions: AsanService.caricaAts(),
@@ -390,6 +418,12 @@ asanControllers.controller('RelocalsController', function($scope, ProcessiUpdate
         $scope.quadrimestre_select.selectedOption = {
             "id": "",
             "descrizione": ""
+        };
+
+        $scope.classi_profilo_select.selectedOption = {
+            "id": "",
+            "descrizione": "",
+            "dataInizioValidita": ""
         };
     };
 });
