@@ -819,7 +819,6 @@
                                     <th>ID</th>
                                     <th >Nome</th>
                                     <th>Cognome</th>
-
                                 </tr>
                             </table>
                             <div style="height: 100px; overflow-y: auto; overflow-x: hidden; width: 50%;border: 0.1px solid lightgrey">
