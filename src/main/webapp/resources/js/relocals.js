@@ -5,9 +5,9 @@
 
 $(function() {
 
-
-
     $("#passaValori").click();
+
+    $("#idEnte").click();
 
     $("#but").button();
 
@@ -23,9 +23,10 @@ $(function() {
 
     $("#but5").button();
 
-    $("#buttonRicerca").button();
 
     $("#buttonSvuota").button();
+
+    $("#buttonRicerca").button();
 
     $(".but").prop("disabled", true);
 
@@ -43,7 +44,7 @@ $(function() {
     $("#tabs2").tabs();
 
     $("#tabs_unita").tabs();
-    
+
     $("#tabs_unita_modifica").tabs();
 
     $("#tabs_modifica").tabs();
@@ -52,46 +53,46 @@ $(function() {
         collapsible: true, active: false
     });
 
-
-    $("#dialog").dialog({
-        autoOpen: false,
-        width: 400,
-        buttons: [
-            {
-                text: "Ok",
-                click: function() {
-                    $(this).dialog("close");
-                }
-            },
-            {
-                text: "Cancel",
-                click: function() {
-                    $(this).dialog("close");
-                }
-            }
-        ]
-    });
-
-// Link to open the dialog
-    $("#dialog-link").click(function(event) {
-        $("#dialog").dialog("open");
-        event.preventDefault();
-    });
-
-    // Hover states on the static widgets
-    $("#dialog-link, #icons li").hover(
-            function() {
-                $(this).addClass("ui-state-hover");
-            },
-            function() {
-                $(this).removeClass("ui-state-hover");
-            }
-    );
-
     $("#search").on("click", function() {
         $("#hRicerca").click();
     });
 
+    $("#parteModifica").on("click", function() {
+        $("#scroll_event").click();
+    });
+
+    $("#hValori").on("click", function() {
+        $("#scroll_event").click();
+    });
+
+    $("#hInserimento").on("click", function() {
+        $("#scroll_event").click();
+    });
+
+    $("#hTest").on("click", function() {
+        $("#scroll_event").click();
+    });
+
+    $("#scroll_event").on("click", function() {
+        $("#strutture").css('height', 50);
+        $("#asanScrollbarID3").css('height', 50);
+        $("#asanScrollbarID2").css('height', 50);
+        $("#asanScrollbarID").css('height', 50);
+
+        $("#strutture").table_scroll({
+            rowsInScrollableArea: 2
+        });
+        $("#asanScrollbarID3").table_scroll({
+            rowsInScrollableArea: 5
+        });
+        $("#asanScrollbarID2").table_scroll({
+            rowsInScrollableArea: 5
+        });
+        $("#asanScrollbarID").table_scroll({
+            rowsInScrollableArea: 5
+        });
+
+    });
 
     $("#persone").on("click", function() {
         alert('Done !');
@@ -101,8 +102,6 @@ $(function() {
     $("#inserimento").on("click", function() {
         $("#hInserimento").click();
     });
-
-
 
     $("#test").on("click", function() {
         $("#hTest").click();

@@ -20,5 +20,15 @@ asanDirectives.directive('asanStato', function() {
     };
 });
 
-
-
+asanDirectives.directive('onRepeatCompletata', function($timeout) {
+    return {
+        restrict: 'A',
+        link: function(scope) {
+            if (scope.$last === true) {
+                $timeout(function() {
+                    scope.$emit('ngRepeatCompletata');
+                });
+            }
+        }
+    };
+});

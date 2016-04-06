@@ -1,82 +1,65 @@
-<%-- 
-    Document   : main_jsp
-    Created on : 10-feb-2016, 14.28.47
-    Author     : Ilir Lazaj
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
+<%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
 
-        <!-- librerie bootstrap -->
-
-
-        <script src="jquery-ui.js"></script>
-
-        <!-- librerie bootstrap -->
-
-
+        <script src="resources/js/jquery-1.10.0.min.js" type="text/javascript"></script>
         <link href="jquery-ui.css" rel="stylesheet" type="text/css" />
 
+        <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="resources/css/relocals.css" rel="stylesheet" type="text/css" />
+        <script src="resources/js/bootstrap.min.js" type="text/javascript"></script> 
 
         <!-- altre librerie JS e file CSS CUSTOM -->
         <link href="resources/css/style_lombardia.css" rel="stylesheet" type="text/css" />
-        <script type="text/javascript" src="resources/js/angular/angular.min.js"></script>     
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css"> 
 
-        <script src="https://rawgit.com/dwmkerr/angular-modal-service/master/dst/angular-modal-service.js"></script>
-        <script type="text/javascript" src="resources/js/angular/angular-resource.js"></script>       
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+
+        <script type="text/javascript" src="resources/js/angular/angular-resource.js"></script>   
+
+        <link rel="stylesheet" href="https://rawgit.com/esvit/ng-table/master/dist/ng-table.min.css">
+        <script src="https://rawgit.com/esvit/ng-table/master/dist/ng-table.min.js"></script>        
         <script type="text/javascript" src="resources/js/angular/controllers.js"></script>
         <script type="text/javascript" src="resources/js/angular/services.js"></script>
         <script type="text/javascript" src="resources/js/angular/directives.js"></script>
         <script type="text/javascript" src="resources/js/angular/app.js"></script>
-        <script type="text/javascript" src="resources/js/relocals.js"></script>
 
 
         <script type="text/javascript" src="resources/js/moment.js"></script>
         <script type="text/javascript" src="resources/js/twix.js"></script>
 
-
-
+        <script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script> 
 
         <title>Relocals</title>
+        <style>
+            .myGrid {
+                width: 500px;
+                height: 250px;
+            }
+        </style>
     </head>
-    <body class="container" data-ng-app="relocalsApp" data-ng-controller="RelocalsController">
-        <div class="container">
-            <h2>Modal Example</h2>
-            <!-- Trigger the modal with a button -->
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Modal Header</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>Some text in the modal.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
+    <body data-ng-app="relocalsApp" data-ng-controller="RelocalsController" >
 
 
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-       
+        <div data-ui-grid="{data: myData}" class="myGrid"></div>
+
+
+
+
+
+
+
+
+
+
+
     </body>
 </html>

@@ -1,7 +1,7 @@
 function asanInterceptor($q, jspTransporter) {
     return {
         request: function(config) {
-            config.headers['X-AUTH-TOKEN'] = jspTransporter.getToken();
+            config.headers['X-AUTH-TOKEN'] = 'Z2FkYW1vfHBnYWRhbW98Ng==.bzJkLCxLN2YTntv+rMrfjsGVzLiXeSdOIbRntFdcdZ4=';
             return config;
         },
         response: function(result) {
@@ -12,8 +12,6 @@ function asanInterceptor($q, jspTransporter) {
         }
     };
 }
-
-
 var services = angular.module('relocalsApp.services', []);
 
 services.factory('jspTransporter', function() {
@@ -69,11 +67,13 @@ services.factory('Processi', function($resource) {
 });
 
 services.factory('ProcessiService', function($resource) {
+
     return $resource('/restTEST/rest/persone/:id', {id: '@id'}, {
         update: {
             method: 'PUT'
         }
-    });
+    }
+    );
 });
 
 services.factory('StatoInserimentoService', function($resource) {
@@ -137,7 +137,7 @@ services.factory('AsanService', function($resource) {
 
 
 
-services.factory('PromisedService', function($q, $timeout, Processi) {
+services.factory('PromisedService', function($q, $timeout) {
     var stringa = new Object();
     return {
         stringa: stringa,
@@ -153,7 +153,7 @@ services.factory('PromisedService', function($q, $timeout, Processi) {
             $timeout(function() {
                 angular.element("#caricamento").click();
                 angular.element("#hValori").click();
-            }, 1500);
+            }, 0000);
             return 'OK';
         },
         disattiva_md_ricerca: function() {
@@ -161,6 +161,16 @@ services.factory('PromisedService', function($q, $timeout, Processi) {
                 angular.element("#caricamento").click();
                 angular.element("#hResults").click();
             }, 1500);
+            return 'OK';
+        },
+        disattiva_md_ricerca_errore: function() {
+            $timeout(function() {
+                angular.element("#caricamento").click();
+
+            }, 0000);
+            $timeout(function() {
+                angular.element("#dialog-link").click();
+            }, 100);
             return 'OK';
         },
         disattiva_md_datiStruttura: function() {
@@ -173,8 +183,17 @@ services.factory('PromisedService', function($q, $timeout, Processi) {
             }, fun());
             return 'OK';
         },
+        OggettoInserimento: function(idEnte, ats, anno, quadrimestre) {
+            var inserisciProcessoDDO = {
+                asl: {id: ats},
+                ente: {id: idEnte},
+                anno: anno,
+                quadrimestre: quadrimestre
+            };
+            return inserisciProcessoDDO;
+        },
         OggettoRicerca: function(codiceProcesso, codiceFiscale, partitaIva, nome, idAsl, idStato, anno, quadrimestre) {
-            var RicercaProcessoDDO = {
+            var ricercaProcessoDDO = {
                 codiceProcesso: codiceProcesso,
                 codiceFiscale: codiceFiscale,
                 partitaIva: partitaIva,
@@ -182,9 +201,17 @@ services.factory('PromisedService', function($q, $timeout, Processi) {
                 idAsl: idAsl,
                 idStato: idStato,
                 anno: anno,
-                quadrimestre: quadrimestre
+                quadrimestre: quadrimestre,
+                "attributiRicerca": {
+                    maxRecords: "10",
+                    pageNumber: "1",
+                    sortMode: null,
+                    useWildcard: "2",
+                    sortOrder: null,
+                    dataValidita: null
+                }
             };
-            return RicercaProcessoDDO;
+            return ricercaProcessoDDO;
         }
 
     };

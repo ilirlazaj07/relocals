@@ -1,12 +1,26 @@
+var angular;
 var asanControllers = angular.module('relocalsApp.controllers', []);
 
 asanControllers.controller('RelocalsController', function($scope, ClassiProfiloService, jspTransporter, $http, StatoInserimentoService, ProcessiUpdate, Persone, ProcessiService, SelezionaSingoloService, PromisedService, AsanService, GestioneAnniService) {
     // **** Parte RESTful
     $scope.testProcessi = ProcessiService.query();
+
+
+    /**
+     $scope.$on('ngRepeatCompletata', function() {
+     angular.element(".asanScrollbar").table_scroll({
+     });
+     });
+     **/
+
 // **** 
 
 
 // **** Parte UPDATE *****
+
+    $scope.te = function() {
+
+    };
 
     $scope.classeDaModificare = {
         valore: '',
@@ -101,6 +115,13 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
         $scope.jspVal = inp;
         jspTransporter.setToken($scope.jspVal);
     };
+
+    $scope.idEnte = '';
+    $scope.getIdEnte = function(idEnte) {
+        $scope.idEnte = idEnte;
+    };
+
+
     $scope.RicercaProcessoDDO = {
         "codiceProcesso": $scope.do_codice_processo
     };
@@ -180,7 +201,39 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
         return value;
     };
 
+    $scope.inserimento = function() {
+        var idEnte;
+        var ats;
+        var anno;
+        var quadrimestre;
 
+        idEnte = $scope.idEnte;
+
+        (!$scope.ricerca_data_select_ats.selectedOption) ? ats = "" : ats = $scope.ricerca_data_select_ats.selectedOption.id;
+
+        anno = $scope.ricerca_anno_select_ats.selectedOption.anno;
+
+        (!$scope.ricerca_quadrimestre_select.selectedOption) ? quadrimestre = "" : quadrimestre = $scope.ricerca_quadrimestre_select.selectedOption.id;
+
+        var risultato = $http.post('/asan/web/pddo/inserisci', PromisedService.OggettoInserimento(idEnte, ats, anno, quadrimestre));
+
+        risultato.success(function(risposta, stato, headers) {
+
+            if (risposta.esitoOK) {
+                $("#dialog-link").click();
+                $scope.messaggio = 'Inserimento effettuato con successo !';
+            } else {
+                $("#dialog-link").click();
+                $scope.messaggio = 'Inserimento non effettuato !' + risposta.errori[0].descrizione;
+            }
+        });
+
+        risultato.error(function(risposta) {
+            $("#dialog-link").click();
+            $scope.messaggio = 'Errore durante il processo di inserimento: ' + risposta;
+        });
+        $scope.svuota_inserimento();
+    };
 
     $scope.ricerca = function() {
         var codice_processo;
@@ -220,8 +273,10 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
                 $scope.svuota();
             } else {
                 console.log('Lista DDO non trovata');
-                PromisedService.disattiva_md_ricerca();
+                PromisedService.disattiva_md_ricerca_errore();
                 $scope.svuota();
+                $scope.messaggio = risposta.errori[0].descrizione;
+
             }
         });
     };
@@ -305,10 +360,10 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
             $scope.dataChiusura = processoSelezionato.risultato.dataChiusura;
             $scope.dataConsolidamento = processoSelezionato.risultato.dataConsolidamento;
             $scope.dataInizioValidita = processoSelezionato.risultato.dataInizioValidita;
-
+            PromisedService.disattiva_md_caricamento();
         });
 
-        PromisedService.disattiva_md_caricamento();
+
     };
 
     $scope.getDettaglioPerSingolaUnita = function() {
@@ -373,6 +428,15 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
         } //Il valore di default della SELECT
     };
 
+    $scope.ricerca_data_select_ats = {
+        availableOptions: AsanService.caricaAts(),
+        selectedOption: {
+            "id": "",
+            "descrizione": "",
+            "IDRegione": ""
+        } //Il valore di default della SELECT
+    };
+
     $scope.quadrimestre_select = {
         availableOpt: $scope.quadrimestri,
         selectedOption: {
@@ -381,7 +445,22 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
         } //Il valore di default della SELECT
     };
 
+    $scope.ricerca_quadrimestre_select = {
+        availableOpt: $scope.quadrimestri,
+        selectedOption: {
+            "id": "",
+            "descrizione": ""
+        } //Il valore di default della SELECT
+    };
+
     $scope.anno_select_ats = {
+        availableOpt: GestioneAnniService.getAnni(),
+        selectedOption: {
+            "anno": ""
+        } //Il valore di default della SELECT
+    };
+
+    $scope.ricerca_anno_select_ats = {
         availableOpt: GestioneAnniService.getAnni(),
         selectedOption: {
             "anno": ""
@@ -399,8 +478,13 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
     };
 
 
+
+
     $scope.svuota = function() {
         $scope.do_codice_processo = '';
+        $scope.do_codice_fiscale = '';
+        $scope.do_partita_iva = '';
+        $scope.do_nome_ente = '';
         $scope.stato_select.selectedOption = {
             "id": "",
             "codice": "",
@@ -424,6 +508,20 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
             "id": "",
             "descrizione": "",
             "dataInizioValidita": ""
+        };
+    };
+
+    $scope.svuota_inserimento = function() {
+        $scope.ricerca_do_nome_ente = '';
+        $scope.ricerca_anno_select_ats.selectedOption.anno = '';
+        $scope.ricerca_data_select_ats.selectedOption = {
+            "id": '',
+            "descrizione": '',
+            "IDRegione": ''
+        };
+        $scope.ricerca_quadrimestre_select.selectedOption = {
+            "id": '',
+            "descrizione": ''
         };
     };
 });
