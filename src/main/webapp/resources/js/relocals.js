@@ -65,6 +65,8 @@ $(function() {
         $("#scroll_event").click();
     });
 
+
+
     $("#hInserimento").on("click", function() {
         $("#scroll_event").click();
     });
@@ -106,9 +108,17 @@ $(function() {
     $("#test").on("click", function() {
         $("#hTest").click();
     });
+
+    $("#parteModifica").on("click", function() {
+               $(".tabmia").width($(".tabmia1").width());
+    });
+    
+
+
 });
 
 $(function() {
+
     var $altezzaFinestra = $(document).height();
     var $altezzaFinal = $("#final").height();
     var $altezza = $altezzaFinestra - $altezzaFinal;
@@ -117,5 +127,28 @@ $(function() {
     $("#parte_nav").height($altezza);
     $("#parte_contenuto").height($altezza);
     $("#").height($altezza);
+
+
+
+
+
+
+    // Change the selector if needed
+    var $table = $('table.scroll'),
+            $bodyCells = $table.find('tbody tr:first').children(),
+            colWidth;
+
+// Adjust the width of thead cells when window resizes
+    $(window).resize(function() {
+        // Get the tbody columns width array
+        colWidth = $bodyCells.map(function() {
+            return $(this).width();
+        }).get();
+
+        // Set the width of thead columns
+        $table.find('thead tr').children().each(function(i, v) {
+            $(v).width(colWidth[i]);
+        });
+    }).resize(); // Trigger resize handler
 
 });

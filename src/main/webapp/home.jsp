@@ -39,7 +39,10 @@
 
 
 
+        <script>
 
+
+        </script>
         <title>Relocals</title>
     </head>
     <body data-ng-app="relocalsApp" data-ng-controller="RelocalsController" style="background: lightgrey">
@@ -809,8 +812,39 @@
                     </div> <!-- Fine del main tabs -->
 
                     <h3 id="parteModifica">Processo DO- Modifica</h3>
-
                     <div>
+                        <div>
+                            <table class="tabmia1" >
+                                <tr>
+                                    <th>ID</th>
+                                    <th >Nome</th>
+                                    <th>Cognome</th>
+
+                                </tr>
+                            </table>
+                            <div style="height: 100px; overflow-y: auto; overflow-x: hidden; width: 50%;border: 0.1px solid lightgrey">
+                                <table class="tabmia">
+                                    <tbody >
+                                        <tr data-ng-repeat="utente in utenti">
+                                            <td><span>{{utente.id}}</td>  
+                                            <td><span>{{utente.nome}}</span></td>    
+                                            <td><span>{{utente.cognome}}</span></td>    
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>       
+                        </div>
+                        <style>
+                            .tabmia1{
+                                table-layout: fixed;
+                                width: 50%;
+                            }
+                            th, td {
+                                width: 100px;
+                            }
+                        </style>
+                        <br>
+
                         <!-- ui-dialog -->
 
                         <div id="tabs_modifica">
@@ -883,12 +917,7 @@
                                         </div><br> 
 
                                     </div>   
-                                    <div class="bottoni_form">
-                                        <asan-submit nome="Modifica" id="buttonModifica"></asan-submit>           
-                                        <asan-submit nome="Calcolo dot."></asan-submit>  
-                                        <asan-submit nome="Report"></asan-submit>  
-                                        <asan-submit nome="Consolida"></asan-submit>  
-                                    </div>
+
 
                                 </form>
 
@@ -937,12 +966,7 @@
                                         </div>
                                     </div>   
 
-                                    <div class="bottoni_form">
-                                        <asan-submit nome="Modifica" id="buttonModifica2"></asan-submit>           
-                                        <asan-submit nome="Calcolo dot."></asan-submit>  
-                                        <asan-submit nome="Report"></asan-submit>  
-                                        <asan-submit nome="Consolida"></asan-submit>  
-                                    </div>
+
                                 </form><div style="height: 197px"></div>
                             </div>
 
@@ -1002,12 +1026,6 @@
                                             </div>
                                         </div>   
 
-                                        <div class="bottoni_form">
-                                            <asan-submit nome="Modifica" id="buttonModifica4"></asan-submit>           
-                                            <asan-submit nome="Calcolo dot."></asan-submit>  
-                                            <asan-submit nome="Report"></asan-submit>  
-                                            <asan-submit nome="Consolida"></asan-submit>  
-                                        </div>
                                     </form>
 
                                     <!-- Parte per i dettagli singola Unita -->    
@@ -1107,12 +1125,7 @@
 
                                             </div><br> 
                                         </div>   
-                                        <div class="bottoni_form">
-                                            <asan-submit nome="Modifica" id="buttonModifica5"></asan-submit>           
-                                            <asan-submit nome="Calcolo dot."></asan-submit>  
-                                            <asan-submit nome="Report"></asan-submit>  
-                                            <asan-submit nome="Consolida"></asan-submit>  
-                                        </div>
+
 
                                     </form> 
 
@@ -1165,12 +1178,7 @@
 
 
                                         </div>   
-                                        <div class="bottoni_form">
-                                            <asan-submit nome="Modifica" id="buttonModifica7"></asan-submit>           
-                                            <asan-submit nome="Calcolo dot."></asan-submit>  
-                                            <asan-submit nome="Report"></asan-submit>  
-                                            <asan-submit nome="Consolida"></asan-submit>  
-                                        </div>
+
 
                                     </form> 
 
@@ -1230,65 +1238,37 @@
 
 
 
-                                                            $("#dialog").dialog({
-                                                                autoOpen: false,
-                                                                width: 400,
-                                                                buttons: [
-                                                                    {
-                                                                        text: "Ok",
-                                                                        click: function() {
-                                                                            $(this).dialog("close");
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            });
+            $("#dialog").dialog({
+                autoOpen: false,
+                width: 400,
+                buttons: [
+                    {
+                        text: "Ok",
+                        click: function() {
+                            $(this).dialog("close");
+                        }
+                    }
+                ]
+            });
 
-// Link to open the dialog
-                                                            $("#dialog-link").click(function(event) {
-                                                                $(function() {
-                                                                    $("#dialog-message").dialog({
-                                                                        modal: true,
-                                                                        autoOpen: true,
-                                                                        buttons: {
-                                                                            Ok: function() {
-                                                                                $(this).dialog("close");
-                                                                            }
-                                                                        }
-                                                                    });
-                                                                });
-                                                            });
+            // Link to open the dialog
+            $("#dialog-link").click(function(event) {
+                $(function() {
+                    $("#dialog-message").dialog({
+                        modal: true,
+                        autoOpen: true,
+                        buttons: {
+                            Ok: function() {
+                                $(this).dialog("close");
+                            }
+                        }
+                    });
+                });
+            });
 
         </script>
 
-        <script>
-            function stileStrutture(input) {
-                var domJQ = $(input);
-                $('#scroll_tabella_struttureID tr').removeClass("strutturaSelezionataClass");
-                $('#scroll_tabella_struttureID td').removeClass("strutturaSelezionataClass");
-                domJQ.addClass("strutturaSelezionataClass");
-                domJQ.siblings().addClass("strutturaSelezionataClass");
-            }
-            ;
 
-            function stileUnita(input) {
-                var domJQ = $(input);
-                $('#unita tr').removeClass("strutturaSelezionataClass");
-                $('#unita td').removeClass("strutturaSelezionataClass");
-                domJQ.addClass("strutturaSelezionataClass");
-                domJQ.siblings().addClass("strutturaSelezionataClass");
 
-            }
-            ;
-
-            function stileMacro(input) {
-                var domJQ = $(input);
-                $('#macro tr').removeClass("strutturaSelezionataClass");
-                $('#macro td').removeClass("strutturaSelezionataClass");
-                domJQ.addClass("strutturaSelezionataClass");
-                domJQ.siblings().addClass("strutturaSelezionataClass");
-            }
-            ;
-        </script>
-        <script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script> 
     </body>
 </html>

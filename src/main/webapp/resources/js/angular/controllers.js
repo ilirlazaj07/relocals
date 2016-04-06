@@ -3,7 +3,7 @@ var asanControllers = angular.module('relocalsApp.controllers', []);
 
 asanControllers.controller('RelocalsController', function($scope, ClassiProfiloService, jspTransporter, $http, StatoInserimentoService, ProcessiUpdate, Persone, ProcessiService, SelezionaSingoloService, PromisedService, AsanService, GestioneAnniService) {
     // **** Parte RESTful
-    $scope.testProcessi = ProcessiService.query();
+    $scope.utenti = [{"cognome":"Terranova","id":1,"nome":"Giovanni"},{"cognome":"Marini","id":2,"nome":"Fabrizio"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"}];
 
 
     /**
