@@ -110,7 +110,7 @@ $(function() {
     });
 
     $("#parteModifica").on("click", function() {
-               $(".tabmia").width($(".tabmia1").width());
+               $(".parte_contenuto").width($(".parte_header").width());
     });
     
 

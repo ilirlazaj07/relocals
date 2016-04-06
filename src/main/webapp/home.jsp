@@ -814,7 +814,7 @@
                     <h3 id="parteModifica">Processo DO- Modifica</h3>
                     <div>
                         <div>
-                            <table class="tabmia1" >
+                            <table class="parte_header" >
                                 <tr>
                                     <th>ID</th 
                                     <th >Nome</th>
@@ -822,7 +822,7 @@
                                 </tr>
                             </table>
                             <div style="height: 100px; overflow-y: auto; overflow-x: hidden; width: 50%;border: 0.1px solid lightgrey">
-                                <table class="tabmia">
+                                <table class="parte_contenuto">
                                     <tbody >
                                         <tr data-ng-repeat="utente in utenti">
                                             <td><span>{{utente.id}}</td>  
@@ -834,7 +834,7 @@
                             </div>       
                         </div>
                         <style>
-                            .tabmia1{
+                            .parte_header{
                                 table-layout: fixed;
                                 width: 50%;
                             }
