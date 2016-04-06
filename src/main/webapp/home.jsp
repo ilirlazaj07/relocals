@@ -816,7 +816,7 @@
                         <div>
                             <table class="tabmia1" >
                                 <tr>
-                                    <th>ID</th>
+                                    <th>ID</th 
                                     <th >Nome</th>
                                     <th>Cognome</th>
                                 </tr>
