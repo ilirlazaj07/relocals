@@ -3,25 +3,14 @@ var asanControllers = angular.module('relocalsApp.controllers', []);
 
 asanControllers.controller('RelocalsController', function($scope, ClassiProfiloService, jspTransporter, $http, StatoInserimentoService, ProcessiUpdate, Persone, ProcessiService, SelezionaSingoloService, PromisedService, AsanService, GestioneAnniService) {
     // **** Parte RESTful
-    $scope.utenti = [{"cognome":"Terranova","id":1,"nome":"Giovanni"},{"cognome":"Marini","id":2,"nome":"Fabrizio"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"},{"cognome":"Lazaj","id":3,"nome":"Ilir"}];
 
 
-    /**
-     $scope.$on('ngRepeatCompletata', function() {
-     angular.element(".asanScrollbar").table_scroll({
-     });
-     });
-     **/
-
-// **** 
+   
 
 
 // **** Parte UPDATE *****
 
-    $scope.te = function() {
-
-    };
-
+    
     $scope.classeDaModificare = {
         valore: '',
         id: '',
@@ -53,6 +42,7 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
         "dataInizioValidita": ""
     };
 
+//Parte di Modifica delle classe
     $scope.setClasseSelezionata = function(classe) {
 
         if ($scope.classeDaModificare.valore !== classe)
@@ -67,7 +57,7 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
     $scope.modificaClasse = function() {
         $scope.classeDaModificare.visibilita = !$scope.classeDaModificare.visibilita;
     };
-
+//Fine Parte di Modifica delle classe
     $scope.modificaRigaSelezionata = function() {
         console.log('Funzione chiamata ' + 'modificaRigaSelezionata');
         $scope.svuota();
@@ -140,6 +130,7 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
     };
 
     $scope.dettaglio = [];
+
 
 
     //dopo aver  selezionato un processo DDO dai risultati
@@ -282,6 +273,9 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
     };
 
 
+    $scope.testUtenti = function(utente) {
+        $scope.testUtente = utente;
+    };
 
 
 

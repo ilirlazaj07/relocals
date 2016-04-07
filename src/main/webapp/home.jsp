@@ -813,35 +813,38 @@
 
                     <h3 id="parteModifica">Processo DO- Modifica</h3>
                     <div>
+                        <!-- 
                         <div>
                             <table class="parte_header" >
                                 <tr>
                                     <th>ID</th 
-                                    <th >Nome</th>
+                                    <th>Nome</th>
+                                    <th>Nome</th>
                                     <th>Cognome</th>
                                 </tr>
                             </table>
                             <div style="height: 100px; overflow-y: auto; overflow-x: hidden; width: 50%;border: 0.1px solid lightgrey">
                                 <table class="parte_contenuto">
                                     <tbody >
-                                        <tr data-ng-repeat="utente in utenti">
-                                            <td><span>{{utente.id}}</td>  
-                                            <td><span>{{utente.nome}}</span></td>    
-                                            <td><span>{{utente.cognome}}</span></td>    
+                                        <tr data-ng-repeat="utente in utenti" data-ng-click="testUtenti(utente);" ng-class="{macroSelezionataClass: utente === testUtente">
+                                            <td ng-class="{macroSelezionataClass: utente === testUtente"><span>{{utente.id}}</td>  
+                                            <td ng-class="{macroSelezionataClass: utente === testUtente"><span>{{utente.nome}}</span></td>    
+                                            <td ng-class="{macroSelezionataClass: utente === testUtente"> <span>{{utente.cognome}}</span></td>    
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>       
                         </div>
+                      
                         <style>
                             .parte_header{
-                                table-layout: fixed;
                                 width: 50%;
                             }
                             th, td {
                                 width: 100px;
                             }
                         </style>
+                        -->
                         <br>
 
                         <!-- ui-dialog -->
@@ -1188,7 +1191,7 @@
                     </div>
                     <h3 id="hResults">Processo DO- TEST</h3>
                     <div>
-
+                        eee
 
                     </div>
 
