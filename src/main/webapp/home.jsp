@@ -338,7 +338,7 @@
                                 <div>
                                     <input style="margin-right: 15px;" data-ng-model="do_codice_fiscale" type="text" class="form-control" id="codice_processo_do" name="codice_processo_do" > 
                                     <p style="font-weight: bold">Partita IVA Ente </p>
-                                    <p>{{quadrimestre}}</p>
+
                                     <input data-ng-model="do_partita_iva" type="text" class="form-control" id="codice_processo_do" name="codice_processo_do" > 
                                 </div>
                                 <br><br>
@@ -531,7 +531,7 @@
 
                                 </div>   
                                 <div class="bottoni_form">
-                                    <asan-submit nome="Modifica" id="buttonModifica"></asan-submit>           
+                                    <asan-submit data-ng-click="attivaModifica();" data-toggle="modal" data-target="#caricamento" nome="Modifica" id="buttonModifica"></asan-submit>           
                                     <asan-submit nome="Calcolo dot."></asan-submit>  
                                     <asan-submit nome="Report"></asan-submit>  
                                     <asan-submit nome="Consolida"></asan-submit>  
@@ -542,8 +542,8 @@
                         </div>
 
 
-                        <div id="dati-struttura" data-ng-show="showDatiStruttura" style="border: 2px solid #D7EAD5">       
-                            <form class="form-ricerca" role="form" >
+                        <div id="dati-struttura" _ style="border: 2px solid #D7EAD5">       
+                             <form class="form-ricerca" role="form" >
                                 <div class="form-group">
                                     <div class="left-label">
                                         <label>Codice</label>
@@ -585,7 +585,7 @@
                                 </div>   
 
                                 <div class="bottoni_form">
-                                    <asan-submit nome="Modifica" id="buttonModifica2"></asan-submit>           
+                                    <asan-submit data-toggle="modal" data-target="#caricamento" data-ng-click="attivaModifica();" nome="Modifica"  id="buttonModifica2"></asan-submit>           
                                     <asan-submit nome="Calcolo dot."></asan-submit>  
                                     <asan-submit nome="Report"></asan-submit>  
                                     <asan-submit nome="Consolida"></asan-submit>  
@@ -653,7 +653,7 @@
                                     </div>   
 
                                     <div class="bottoni_form">
-                                        <asan-submit nome="Modifica" id="buttonModifica4"></asan-submit>           
+                                        <asan-submit data-toggle="modal" data-target="#caricamento" data-ng-click="attivaModifica();" nome="Modifica" id="buttonModifica4"></asan-submit>           
                                         <asan-submit nome="Calcolo dot."></asan-submit>  
                                         <asan-submit nome="Report"></asan-submit>  
                                         <asan-submit nome="Consolida"></asan-submit>  
@@ -740,7 +740,7 @@
                                         </div><br> 
                                     </div>   
                                     <div class="bottoni_form">
-                                        <asan-submit nome="Modifica" id="buttonModifica5"></asan-submit>           
+                                        <asan-submit data-toggle="modal" data-target="#caricamento" data-ng-click="attivaModifica();" nome="Modifica" id="buttonModifica5"></asan-submit>           
                                         <asan-submit nome="Calcolo dot."></asan-submit>  
                                         <asan-submit nome="Report"></asan-submit>  
                                         <asan-submit nome="Consolida"></asan-submit>  
@@ -798,7 +798,7 @@
 
                                     </div>   
                                     <div class="bottoni_form">
-                                        <asan-submit nome="Modifica" id="buttonModifica7"></asan-submit>           
+                                        <asan-submit data-toggle="modal" data-target="#caricamento" data-ng-click="attivaModifica();" nome="Modifica" id="buttonModifica7"></asan-submit>           
                                         <asan-submit nome="Calcolo dot."></asan-submit>  
                                         <asan-submit nome="Report"></asan-submit>  
                                         <asan-submit nome="Consolida"></asan-submit>  
@@ -845,18 +845,18 @@
                             }
                         </style>
                         -->
-                        <br>
+
 
                         <!-- ui-dialog -->
 
-                        <div id="tabs_modifica">
-                            <ul data-ng-show="processoSelezionato.visibilita">
-                                <li><a href="#processo-do">Processo DO</a></li>
-                                <li><a class="datiStruttura" href="#dati-struttura">Dati Struttura</a></li>
-                                <li><a href="#unita-org">Unità organizzative</a></li>
+                        <div id="tabs_modifica" data-ng-show="processoSelezionatoMOD.visibilita">
+                            <ul>
+                                <li><a href="#processo_do_mod">Processo DO</a></li>
+                                <li><a class="datiStruttura" href="#dati_struttura_mod">Dati Struttura</a></li>
+                                <li><a href="#unita_org_mod">Unità organizzative</a></li>
                             </ul>
 
-                            <div id="processo-do" data-ng-show="processoSelezionato.visibilita">
+                            <div id="processo_do_mod">
 
 
                                 <div hidden="true" id="dialog-message" title="Esito Operazione">
@@ -907,13 +907,13 @@
                                                 <span>Strutture</span>
                                             </div>
                                             <div>
-                                                <table id="strutture2" style="width: 70%; float: left">
-                                                    <tr data-ng-repeat="struttura in processoSelezionato.listaStruttureDDO" ng-click="getStrutturaSelezionata(struttura)" ng-class="{strutturaSelezionataClass: struttura === processoSelezionato.listaStruttureDDO.strutturaSelezionata}">
-                                                        <td onclick="al(this);" style="border: 1px solid lightgray;"><asan-stato stato="{{struttura.cdStatoCompilazione}}"></asan-stato> <span>{{struttura.nome}}</span></td >
+                                                <table id="strutture_mod" style="width: 70%; float: left">
+                                                    <tr data-ng-repeat="struttura in processoSelezionatoMOD.listaStruttureDDO" ng-click="getStrutturaSelezionataMOD(struttura)" ng-class="{strutturaSelezionataClass: struttura === processoSelezionatoMOD.listaStruttureDDO.strutturaSelezionata}">
+                                                        <td style="border: 1px solid lightgray;"><asan-stato stato="{{struttura.cdStatoCompilazione}}"></asan-stato> <span>{{struttura.nome}}</span></td >
                                                     </tr>
                                                 </table>
-                                                <button  id="but" data-toggle="modal" data-target="#caricamento" data-ng-click="getDettagliStrutturaSelezionata();" style="width: 90px;margin-left: 2px" >
-                                                    Visualizza
+                                                <button  id="but_mod" data-toggle="modal" data-target="#caricamento" data-ng-click="getDettagliStrutturaSelezionataMOD();" style="width: 90px;margin-left: 2px" >
+                                                    Modifica
                                                 </button>  
                                             </div>
                                         </div><br> 
@@ -926,7 +926,7 @@
                             </div>
 
 
-                            <div id="dati-struttura" data-ng-show="showDatiStruttura" style="border: 2px solid #D7EAD5">       
+                            <div id="dati_struttura_mod" data-ng-show="showDatiStrutturaMOD" style="border: 2px solid #D7EAD5">       
                                 <form class="form-ricerca" role="form" >
                                     <div class="form-group">
                                         <div class="left-label">
@@ -968,19 +968,15 @@
                                         </div>
                                     </div>   
 
-
                                 </form><div style="height: 197px"></div>
                             </div>
 
-
-
-                            <div id="unita-org">
+                            <div id="unita_org_mod">
                                 <div>
-                                    <!-- style="border: 2px solid #D7EAD5" -->
-                                    <form class="form-ricerca" role="form" data-ng-show="showUnitaOrganizzative">
+                                    <form class="form-ricerca" role="form" data-ng-show="showUnitaOrganizzativeMOD">
                                         <div class="form-group" data-ng-show="true">
                                             <div>
-                                                <table id="unitamod" style="width: 65%; float: left">
+                                                <table id="unita_mod" style="width: 65%; float: left">
                                                     <tr>
                                                         <th></th>
                                                         <th>Codice UO</th>
@@ -989,23 +985,23 @@
                                                         <th>Descrizione</th>
                                                     </tr>
 
-                                                    <tr data-ng-repeat="unita in processoSelezionato.unitaOrganizzative" data-ng-click="getUnitaSelezionata(unita);" ng-class="{unitaSelezionataClass: unita === processoSelezionato.listaStruttureDDO.unitaSelezionata}">
-                                                        <td ng-class="{unitaSelezionataClass: unita === processoSelezionato.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><asan-stato hidden="true" stato="{{unita.numSequenza}}"></asan-stato></td>
-                                                    <td ng-class="{unitaSelezionataClass: unita === processoSelezionato.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><span>{{unita.tipoUnitaOrganizzativa.codice}}</span></td>
-                                                    <td ng-class="{unitaSelezionataClass: unita === processoSelezionato.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><span>{{unita.tipoUnitaOrganizzativa.descrizione}}</span></td>
-                                                    <td ng-class="{unitaSelezionataClass: unita === processoSelezionato.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><span>{{unita.numSequenza}}</span></td>
-                                                    <td ng-class="{unitaSelezionataClass: unita === processoSelezionato.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><span>{{unita.descrizione}}</span></td>
+                                                    <tr data-ng-repeat="unita in processoSelezionatoMOD.unitaOrganizzative" data-ng-click="getUnitaSelezionataMOD(unita);" ng-class="{unitaSelezionataClass: unita === processoSelezionatoMOD.listaStruttureDDO.unitaSelezionata}">
+                                                        <td ng-class="{unitaSelezionataClass: unita === processoSelezionatoMOD.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><asan-stato hidden="true" stato="{{unita.numSequenza}}"></asan-stato></td>
+                                                    <td ng-class="{unitaSelezionataClass: unita === processoSelezionatoMOD.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><span>{{unita.tipoUnitaOrganizzativa.codice}}</span></td>
+                                                    <td ng-class="{unitaSelezionataClass: unita === processoSelezionatoMOD.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><span>{{unita.tipoUnitaOrganizzativa.descrizione}}</span></td>
+                                                    <td ng-class="{unitaSelezionataClass: unita === processoSelezionatoMOD.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><span>{{unita.numSequenza}}</span></td>
+                                                    <td ng-class="{unitaSelezionataClass: unita === processoSelezionatoMOD.listaStruttureDDO.unitaSelezionata}" style="border: 1px solid lightgray;"><span>{{unita.descrizione}}</span></td>
                                                     </tr>
                                                 </table> 
                                                 <div style="width: 35%;float: left">
-                                                    <button  id="unita_dettaglio"  data-ng-click="getDettaglioPerSingolaUnita();" style="width: 90px;margin-left: 2px" >
+                                                    <button  id="unita_dettaglio_mod"  data-ng-click="getDettaglioPerSingolaUnitaMOD();" style="width: 90px;margin-left: 2px" >
                                                         Dettaglio
                                                     </button> 
                                                 </div>
                                             </div>
 
-                                            <div data-ng-show="processoSelezionato.listaStruttureDDO.unitaSelezionata"><br>
-                                                <div data-ng-show="processoSelezionato.listaStruttureDDO.unitaSelezionata"><span style="border: 1px solid #D7EAD5;background: #c2ddc0">Macroattività</span></div>
+                                            <div data-ng-show="processoSelezionatoMOD.listaStruttureDDO.unitaSelezionata"><br>
+                                                <div data-ng-show="processoSelezionatoMOD.listaStruttureDDO.unitaSelezionata"><span style="border: 1px solid #D7EAD5;background: #c2ddc0">Macroattività</span></div>
                                                 <table id="macro" style="width: 65%; float: left"><br>
                                                     <tr>
                                                         <th></th>
@@ -1013,15 +1009,15 @@
                                                         <th>N.Seq</th>
                                                         <th>Descrizione</th>
                                                     </tr>
-                                                    <tr data-ng-repeat="macro in processoSelezionato.macroAttivita" data-ng-click="getMacroSelezionata(macro);" ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}">
-                                                        <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><asan-stato stato="{{2}}"></asan-stato></td>
-                                                    <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><span>{{macro.tipoMacroAttivita.descrizione}}</span></td>  
-                                                    <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><span>{{macro.numSequenza}}</span></td>  
-                                                    <td ng-class="{macroSelezionataClass: macro === processoSelezionato.listaStruttureDDO.macroSelezionata}"><span>{{macro.descrizione}}</span></td>  
+                                                    <tr data-ng-repeat="macro in processoSelezionatoMOD.macroAttivita" data-ng-click="getMacroSelezionataMOD(macro);" ng-class="{macroSelezionataClass: macro === processoSelezionatoMOD.listaStruttureDDO.macroSelezionata}">
+                                                        <td ng-class="{macroSelezionataClass: macro === processoSelezionatoMOD.listaStruttureDDO.macroSelezionata}"><asan-stato stato="{{2}}"></asan-stato></td>
+                                                    <td ng-class="{macroSelezionataClass: macro === processoSelezionatoMOD.listaStruttureDDO.macroSelezionata}"><span>{{macro.tipoMacroAttivita.descrizione}}</span></td>  
+                                                    <td ng-class="{macroSelezionataClass: macro === processoSelezionatoMOD.listaStruttureDDO.macroSelezionata}"><span>{{macro.numSequenza}}</span></td>  
+                                                    <td ng-class="{macroSelezionataClass: macro === processoSelezionatoMOD.listaStruttureDDO.macroSelezionata}"><span>{{macro.descrizione}}</span></td>  
                                                     </tr>
                                                 </table>
                                                 <div style="width: 35%;float: left">
-                                                    <button  id="macro_dettaglio" data-ng-click="getDettaglioMacroSelezionata();" style="width: 90px;margin-left: 2px" >
+                                                    <button  id="macro_dettaglio_mod" data-ng-click="getDettaglioMacroSelezionataMOD();" style="width: 90px;margin-left: 2px" >
                                                         Dettaglio
                                                     </button> 
                                                 </div>
@@ -1031,7 +1027,7 @@
                                     </form>
 
                                     <!-- Parte per i dettagli singola Unita -->    
-                                    <form class="form-ricerca" role="form" data-ng-submit="aggiornaClasse();"  data-ng-show="showDettaglioUnitaOrganizzative.visibilita" >
+                                    <form class="form-ricerca" role="form" data-ng-submit="aggiornaClasse();"  data-ng-show="showDettaglioUnitaOrganizzativeMOD.visibilita" >
                                         <div class="form-group">
                                             <div class="left-label2">
                                                 <label>Codice UO</label>
@@ -1059,19 +1055,19 @@
 
                                             <div id="tabs_unita_modifica">
                                                 <ul>
-                                                    <li><a href="#ragruppamento_uo">Ragruppamento UO</a></li>
-                                                    <li><a href="#classi_d_profili">Classi di profili</a></li>
+                                                    <li><a href="#ragruppamento_uo_mod">Ragruppamento UO</a></li>
+                                                    <li><a href="#classi_d_profili_mod">Classi di profili</a></li>
                                                 </ul>
-                                                <div id="ragruppamento_uo">
+                                                <div id="ragruppamento_uo_mod">
                                                     <div>
-                                                        <table id="strutture_classi_d_profili" style="float: left">
+                                                        <table id="strutture_classi_d_profili_mod" style="float: left">
                                                             <tr>
                                                                 <th>Codice UO</th>
                                                                 <th>Nome</th>
                                                                 <th>N.SEQ</th>
                                                                 <th>Descrizione</th>
                                                             </tr>
-                                                            <tr data-ng-repeat="unita_assiociata in processoSelezionato.listaUOAssociate">
+                                                            <tr data-ng-repeat="unita_assiociata in processoSelezionatoMOD.listaUOAssociate">
                                                                 <td><span>{{unita_assiociata.codice}}</span></td>  
                                                                 <td><span>{{unita_assiociata.nome}}</span></td>  
                                                                 <td><span>{{unita_assiociata.numSequenza}}</span></td>  
@@ -1080,21 +1076,21 @@
                                                             </tr>
                                                         </table>
                                                     </div>
-                                                    <button  id="ok" data-ng-click="backToUnita();" style="width: 90px;margin-left: 2px; float: left" >
+                                                    <button  id="ok" data-ng-click="backToUnitaMOD();" style="width: 90px;margin-left: 2px; float: left" >
                                                         OK
                                                     </button> 
                                                 </div>
 
                                                 <!-- Parte di lavoro UPDATE -->
-                                                <div id="classi_d_profili">
+                                                <div id="classi_d_profili_mod">
                                                     <div>
-                                                        <table id="strutture_ragruppamento_uo" style="float: left">
+                                                        <table id="strutture_ragruppamento_uo_mod" style="float: left">
                                                             <tr>
                                                                 <th>Classe di profili</th>
                                                                 <th>Numero ore lavorate</th>
                                                             </tr>
 
-                                                            <tr data-ng-repeat="classe in processoSelezionato.classiProfili" 
+                                                            <tr data-ng-repeat="classe in processoSelezionatoMOD.classiProfili" 
                                                                 data-ng-click="setClasseSelezionata(classe);" 
                                                                 data-ng-class="{strutturaSelezionataClass: classe === classeDaModificare.valore}">
                                                                 <td data-ng-class="{strutturaSelezionataClass: classe === classeDaModificare.valore}">
@@ -1113,7 +1109,7 @@
                                                             </tr>
                                                         </table>
                                                     </div>
-                                                    <input type="button" id="ok3" data-ng-click="backToUnita();" style="width: 90px;margin-left: 2px" value="OK" />
+                                                    <input type="button" id="ok3" data-ng-click="backToUnitaMOD();" style="width: 90px;margin-left: 2px" value="OK" />
 
                                                     <input type="button" id="ok55" data-ng-click="modificaClasse();" style="width: 90px;margin-left: 2px" value="Modifica" />
 
@@ -1131,10 +1127,8 @@
 
                                     </form> 
 
-
-
                                     <!-- Parte per i dettagli singola MacroAttività -->    
-                                    <form class="form-ricerca" role="form" data-ng-show="showDettaglioMacroAttivita.visibilita" >
+                                    <form class="form-ricerca" role="form" data-ng-show="showDettaglioMacroAttivitaMOD.visibilita" >
                                         <div class="form-group">
 
                                             <div class="left-label">
@@ -1167,14 +1161,14 @@
                                                     <th>Descrizione</th>
                                                     <th>Valore</th> 
                                                 </tr>
-                                                <tr data-ng-repeat="dettaglioMacro in listaParametriMacro">
+                                                <tr data-ng-repeat="dettaglioMacro in listaParametriMacroMOD">
                                                     <td><span>{{dettaglioMacro.tipo.codice}}</span></td>  
                                                     <td><span>{{dettaglioMacro.tipo.descrizione}}</span></td>  
                                                     <td><span>{{dettaglioMacro.valore}}</span></td>  
                                                 </tr>
                                             </table>
 
-                                            <button  id="ok2" data-ng-click="backToUnita();" style="width: 90px;margin-left: 2px" >
+                                            <button  id="ok2" data-ng-click="backToUnitaMOD();" style="width: 90px;margin-left: 2px" >
                                                 OK
                                             </button> 
 

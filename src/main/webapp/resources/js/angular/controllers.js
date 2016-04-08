@@ -5,12 +5,12 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
     // **** Parte RESTful
 
 
-   
+
 
 
 // **** Parte UPDATE *****
 
-    
+
     $scope.classeDaModificare = {
         valore: '',
         id: '',
@@ -72,7 +72,7 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
 
 
     $scope.aggiornaClasse = function() {
-
+        alert('Aggiornamento classe mancante');
     };
 
     $scope.modifica = function(p) {
@@ -122,10 +122,18 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
     $scope.anni_ricerca = GestioneAnniService.getAnni();
     $scope.showDatiStruttura = false;
     $scope.showUnitaOrganizzative = false;
+    $scope.showDatiStrutturaMOD = false;
+    $scope.showUnitaOrganizzativeMOD = false;
     $scope.showDettaglioUnitaOrganizzative = {
         "visibilita": false
     };
+    $scope.showDettaglioUnitaOrganizzativeMOD = {
+        "visibilita": false
+    };
     $scope.showDettaglioMacroAttivita = {
+        "visibilita": false
+    };
+    $scope.showDettaglioMacroAttivitaMOD = {
         "visibilita": false
     };
 
@@ -148,9 +156,29 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
         }
     };
 
+    $scope.processoSelezionatoMOD = {
+        "visibilita": false,
+        "unitaOrganizzative": [],
+        "macroAttivita": [],
+        "classiProfili": [],
+        "listaUOAssociate": [],
+        "listaStruttureDDO": {
+            "strutturaSelezionata": null,
+            "unitaSelezionata": null,
+            "macroSelezionata": null,
+            "classeSelezionata": null
+        }
+    };
+
     $scope.getDettagliStrutturaSelezionata = function() {
         $scope.showDatiStruttura = true;
         $scope.showUnitaOrganizzative = true;
+        PromisedService.disattiva_md_datiStruttura();
+    };
+
+    $scope.getDettagliStrutturaSelezionataMOD = function() {
+        $scope.showDatiStrutturaMOD = true;
+        $scope.showUnitaOrganizzativeMOD = true;
         PromisedService.disattiva_md_datiStruttura();
     };
 
@@ -311,6 +339,40 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
         //alert('UO Assiciate: ' + $scope.processoSelezionato.listaUOAssociate.length);
     };
 
+
+    $scope.getUnitaSelezionataMOD = function(unita) {
+        $("#unita_dettaglio_mod").prop("disabled", false);
+        $("#macro_dettaglio_mod").prop("disabled", true);
+        $scope.codiceUOUnita = unita.tipoUnitaOrganizzativa.codice;
+        $scope.nomeUOUnita = unita.tipoUnitaOrganizzativa.descrizione;
+        $scope.sequenzaUOUnita = unita.numSequenza;
+        $scope.descrizioneUOUnita = unita.descrizione;
+        $scope.processoSelezionatoMOD.listaStruttureDDO.macroSelezionata = null;
+        $scope.processoSelezionatoMOD.listaStruttureDDO.unitaSelezionata = unita;
+        $scope.processoSelezionatoMOD.macroAttivita = [];
+        $scope.processoSelezionatoMOD.classiProfili = [];
+        $scope.processoSelezionatoMOD.listaUOAssociate = [];
+
+        for (var k = 0; k < unita.listaOreLavorateDDO.length; k++) {
+            var unita_lavoro_ore = unita.listaOreLavorateDDO[k];
+            var uo_associata = unita.listaUOAssociateDDO[k];
+            if (unita_lavoro_ore.classeProfilo) {
+                $scope.processoSelezionatoMOD.classiProfili.push(unita.listaOreLavorateDDO[k]);
+            }
+            if (uo_associata) {
+                $scope.processoSelezionatoMOD.listaUOAssociate.push(uo_associata);
+            }
+        }
+        //alert('Lunghezza dell array: ' + $scope.processoSelezionato.classiProfili.length);
+
+
+        for (var j = 0; j < unita.listaMacroAttivitaDDO.length; j++) {
+            $scope.processoSelezionatoMOD.macroAttivita.push(unita.listaMacroAttivitaDDO[j]);
+        }
+        //alert('UO Assiciate: ' + $scope.processoSelezionato.listaUOAssociate.length);
+    };
+
+
     $scope.getStrutturaSelezionata = function(struttura) {
         $scope.tipoStruttura = struttura.tipoStruttura.descrizione;
         $scope.tipoOspedale = struttura.tipoOspedale.descrizione;
@@ -335,7 +397,34 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
         console.log('Nr macroattivita' + $scope.processoSelezionato.macroAttivita.length);
     };
 
+    $scope.getStrutturaSelezionataMOD = function(struttura) {
+        $scope.tipoStruttura = struttura.tipoStruttura.descrizione;
+        $scope.tipoOspedale = struttura.tipoOspedale.descrizione;
+        //$scope.codiceStruttura = struttura
+        $scope.nomeStruttura = struttura.nome;
+        $scope.codiceStruttura = struttura.codiceNoVincolo;
+        $scope.processoSelezionatoMOD.listaStruttureDDO.unitaSelezionata = null;
+        $scope.processoSelezionatoMOD.unitaOrganizzative = [];
+        $scope.processoSelezionatoMOD.macroAttivita = [];
+        $scope.processoSelezionatoMOD.listaStruttureDDO.strutturaSelezionata = struttura;
+        $("#but_mod").prop("disabled", false);
+        $("#unita_dettaglio_mod").prop("disabled", true);
+        $("#macro_dettaglio_mod").prop("disabled", true);
+        $scope.showDatiStrutturaMOD = false;
+        $scope.showUnitaOrganizzativeMOD = false;
+        $scope.showDettaglioUnitaOrganizzativeMOD.visibilita = false;
+        $scope.showDettaglioMacroAttivitaMOD.visibilita = false;
+        for (var i = 0; i < struttura.listaUnitaOrganizzativeDDO.length; i++) {
+            var unita = struttura.listaUnitaOrganizzativeDDO[i];
+            $scope.processoSelezionatoMOD.unitaOrganizzative.push(unita);
+        }
+        console.log('Nr macroattivita' + $scope.processoSelezionatoMOD.macroAttivita.length);
+    };
+
+
+
     $scope.getDettagliSingoloProcesso = function(processo) {
+        $scope.idProcessoDaModificare = processo.id; // Su questo punto viene definito l'id per il processo che si va a modificare in seguito
         $scope.processoSelezionato.visibilita = true;
         $scope.showDatiStruttura = false;
         $scope.showUnitaOrganizzative = false;
@@ -371,6 +460,17 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
         //alert('Unità: ' + dati_unita.unitaSelezionata.codice);
     };
 
+    $scope.getDettaglioPerSingolaUnitaMOD = function() {
+        var dati_unita = {
+            "unitaSelezionataMOD": $scope.processoSelezionatoMOD.listaStruttureDDO.unitaSelezionata,
+            "classi_di_profiliMOD": ''
+        };
+        $scope.showUnitaOrganizzativeMOD = false;
+        $scope.showDettaglioUnitaOrganizzativeMOD.visibilita = true;
+        $("#unita_dettaglio_mod").prop("disabled", false);
+        //alert('Unità: ' + dati_unita.unitaSelezionata.codice);
+    };
+
 
     $scope.getMacroSelezionata = function(macro) {
         $scope.macroSelezionataNome = macro.tipoMacroAttivita.descrizione;
@@ -381,10 +481,25 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
         $scope.listaParametriMacro = macro.listaParametriDDO;
     };
 
+    $scope.getMacroSelezionataMOD = function(macro) {
+        $scope.macroSelezionataNome = macro.tipoMacroAttivita.descrizione;
+        $scope.macroSelezionataNSeq = macro.numSequenza;
+        $scope.macroSelezionataDescrizione = macro.descrizione;
+        $("#macro_dettaglio_mod").prop("disabled", false);
+        $scope.processoSelezionatoMOD.listaStruttureDDO.macroSelezionata = macro;
+        $scope.listaParametriMacroMOD = macro.listaParametriDDO;
+    };
+
     $scope.getDettaglioMacroSelezionata = function() {
         $scope.showUnitaOrganizzative = false;
         $scope.showDettaglioUnitaOrganizzative.visibilita = false;
         $scope.showDettaglioMacroAttivita.visibilita = true;
+    };
+
+    $scope.getDettaglioMacroSelezionataMOD = function() {
+        $scope.showUnitaOrganizzativeMOD = false;
+        $scope.showDettaglioUnitaOrganizzativeMOD.visibilita = false;
+        $scope.showDettaglioMacroAttivitaMOD.visibilita = true;
     };
 
 
@@ -392,6 +507,12 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
         $scope.showUnitaOrganizzative = true;
         $scope.showDettaglioMacroAttivita.visibilita = false;
         $scope.showDettaglioUnitaOrganizzative.visibilita = false;
+    };
+
+    $scope.backToUnitaMOD = function() {
+        $scope.showUnitaOrganizzativeMOD = true;
+        $scope.showDettaglioMacroAttivitaMOD.visibilita = false;
+        $scope.showDettaglioUnitaOrganizzativeMOD.visibilita = false;
     };
 
 
@@ -517,6 +638,20 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
             "id": '',
             "descrizione": ''
         };
+    };
+
+
+    $scope.attivaModifica = function() {
+        var processoSelezionatoMOD = SelezionaSingoloService.get({id: $scope.idProcessoDaModificare}, function() {
+            $scope.processoSelezionatoMOD.listaStruttureDDO = processoSelezionatoMOD.risultato.listaStruttureDDO;
+            $scope.processoSelezionatoMOD.visibilita = true;
+
+            angular.element("#caricamento").click();
+            angular.element("#parteModifica").click();
+            // PromisedService.disattiva_md_caricamento();
+
+        });
+
     };
 });
 

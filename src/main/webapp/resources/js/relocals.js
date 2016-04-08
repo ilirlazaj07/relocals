@@ -30,7 +30,11 @@ $(function() {
 
     $(".but").prop("disabled", true);
 
+    $("#but_mod").prop("disabled", true);
+
     $("#unita_dettaglio").prop("disabled", true);
+
+    $("#unita_dettaglio_mod").prop("disabled", true);
 
     $("#macro_dettaglio").prop("disabled", true);
 
@@ -110,9 +114,9 @@ $(function() {
     });
 
     $("#parteModifica").on("click", function() {
-               $(".parte_contenuto").width($(".parte_header").width());
+        $(".parte_contenuto").width($(".parte_header").width());
     });
-    
+
 
 
 });
