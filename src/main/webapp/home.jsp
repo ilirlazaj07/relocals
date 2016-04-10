@@ -1185,7 +1185,54 @@
                     </div>
                     <h3 id="hResults">Processo DO- TEST</h3>
                     <div>
-                        eee
+
+
+                        <table id="macro" style="width: 65%; float: left"><br>
+                            <tr>
+
+                                <th>id</th>
+                                <th>Nome</th>
+                                <th>cognome</th>
+                            </tr>
+                            <tr data-ng-repeat="utente in testProcessi" data-ng-click="getUtenteMOD(utente);" ng-class="{macroSelezionataClass: utente === utenteTEST">
+                                <td ng-class="{macroSelezionataClass: utente === utenteTEST}">
+                                    <span>{{utente.id}}</span>
+
+                                </td>
+                                <td ng-class="{macroSelezionataClass: utente === utenteTEST}">
+                                    <span>{{utente.nome}}</span>
+                                </td>  
+                                <td ng-class="{macroSelezionataClass: utente === utenteTEST}">
+                                    <span data-ng-show="!(visibilitaMOD && utente === utenteSOTTOMODIFICA)" data-ng-bind="utente.cognome"></span>
+                                    <input style="background: white;color: black" data-ng-model="utenteSOTTOMODIFICA.cognome" type="text" data-ng-show="visibilitaMOD && utente === utenteSOTTOMODIFICA" /> 
+                                    <input data-ng-show="visibilitaMOD && utente === utenteSOTTOMODIFICA" style="width: 70px;margin-left: 1px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Salva" data-ng-click="salvaMOD();" />
+                                    <input data-ng-show="visibilitaMOD && utente === utenteSOTTOMODIFICA" style="width: 70px;margin-left: 1px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Cancel" data-ng-click="cancellaMOD();" />
+
+                                </td>  
+                            </tr>
+                            <tr data-ng-show="inserimentoMOD">
+                                <td>
+                                    <input type="text" data-ng-model="utenteInserimento.id" />
+                                </td>
+                                <td>
+                                    <input type="text" data-ng-model="utenteInserimento.nome" />
+                                </td>  
+                                <td>
+                                    <input type="text" data-ng-model="utenteInserimento.cognome" />
+                                    <input style="width: 70px;margin-left: 1px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Cancel" data-ng-click="cancellaMOD();" />
+                                    <input style="width: 70px;margin-left: 1px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Conferma" data-ng-click="utenteConfInserisci();" />
+
+                                </td>
+
+                            </tr>
+                        </table>
+                        <table  id="ins" style="width: 65%; float: left">
+
+                        </table>
+                        <input data-ng-show="!visibilitaMOD" style="width: 90px;margin-left: 2px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Modifica" data-ng-click="utenteMOD(utente);" /><br>
+                        <input data-ng-show="!visibilitaMOD" style="width: 90px;margin-left: 2px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Elimina" data-ng-click="utenteElimina(utente);" /><br>
+                        <input data-ng-show="!visibilitaMOD" style="width: 90px;margin-left: 2px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Inserisci" data-ng-click="utenteInserisci();" />
+
 
                     </div>
 

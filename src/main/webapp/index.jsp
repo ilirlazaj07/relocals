@@ -48,12 +48,8 @@
     <body data-ng-app="relocalsApp" data-ng-controller="RelocalsController" >
 
 
-
-        <div data-ui-grid="{data: myData}" class="myGrid"></div>
-
-
-
-
+  <input type="button" value="Test" data-ng-click="test();">
+                        Valore: <p>{{t1}}</p>
 
 
 

@@ -1,0 +1,2549 @@
+[{
+        "esitoOK": true,
+        "risultato": {
+            "id": 22,
+            "ente": {
+                "id": 720,
+                "codice": "731660",
+                "codiceTipo": null,
+                "codiceFiscale": "13055640158",
+                "partitaIva": "13055640158",
+                "nome": "CENTRO CARDIOLOGICO S.P.A. FONDAZIONE MONZINO",
+                "puntoIndirizzo": {
+                    "id": 1005130,
+                    "tipoVia": null,
+                    "via": null,
+                    "viaCompatta": null,
+                    "civico": null,
+                    "codiceCapdist": null,
+                    "frazione": null,
+                    "localita": null,
+                    "idDistretto": 0,
+                    "dataInizioValidita": null
+                },
+                "asl": null,
+                "numeroTelefono": "02580021",
+                "numeroFax": "02504667",
+                "indirizzoEMail": "DIREZIONE@CCFM.IT",
+                "sitoWeb": null,
+                "dataInizioAttivita": "1900-01-01 00:00:00",
+                "dataFineAttivita": null,
+                "statoEnte": {
+                    "id": 1,
+                    "codice": null,
+                    "descrizione": null,
+                    "dataInizioValidita": null
+                },
+                "holding": null,
+                "nota": null,
+                "flagAnnulla": false,
+                "dataInizioValidita": "2012-11-28 17:03:54",
+                "flagModifica": true,
+                "flagPMEG": true,
+                "flagPubblico": "N",
+                "formaGiuridica": {
+                    "id": 5,
+                    "codice": null,
+                    "descrizione": null,
+                    "flagPubblico": null,
+                    "codiceTipoEnte": null,
+                    "dataInizioValidita": null
+                },
+                "codiceTipoTemporaneo": null,
+                "listaRuoliGestore": [],
+                "facenteUltimaModifica": "  - SUPERVISORE TECNICO ()",
+                "codiceEnteFM": null,
+                "codiceMRA": "000AJ"
+            },
+            "stato": {
+                "id": 3,
+                "codice": "03",
+                "descrizione": "Concluso Positivo",
+                "dataInizioValidita": "1900-01-01 00:00:00"
+            },
+            "asl": {
+                "id": 10000,
+                "codice": "321",
+                "descrizione": "ATS DELLA CITTA' METROPOLITANA DI MILANO",
+                "numeroPartitaIva": null,
+                "descrizioneEsattoria": null,
+                "descrizioneQualificaResponsabile": null,
+                "descrizioneNominativoResponsabile": null,
+                "dataInizioValidita": "2016-02-05 17:34:22",
+                "idregione": 30
+            },
+            "anno": 2016,
+            "quadrimestre": 1,
+            "listaStruttureDDO": [
+                {
+                    "flagObbligatoria": true,
+                    "cdStatoCompilazione": null,
+                    "listaUnitaOrganizzativeDDO": [
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [{
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [
+                                        {
+                                            "id": 582,
+                                            "tipo": {
+                                                "id": 18,
+                                                "codice": "NSASA01",
+                                                "descrizione": "Indicare il numero di settimane di apertura della U.O. nel periodo di riferimento",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 60,
+                                            "uoAssociataDDO": {
+                                                "id": 6558,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-04-01 11:07:26",
+                                            "idMacroAttivita": 10899,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 583,
+                                            "tipo": {
+                                                "id": 48,
+                                                "codice": "PTPAP01",
+                                                "descrizione": "Indicare il profilo dedicato all'attivitÃ  di accoglienza",
+                                                "tipoValore": "P",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": {
+                                                "id": 30,
+                                                "descrizione": null,
+                                                "dataInizioValidita": null
+                                            },
+                                            "valore": 0,
+                                            "uoAssociataDDO": {
+                                                "id": 6558,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-04-01 11:07:26",
+                                            "idMacroAttivita": 10899,
+                                            "idProcessoDDO": 22
+                                        }
+                                    ],
+                                    "id": 10899,
+                                    "tipoMacroAttivita": {
+                                        "id": 23,
+                                        "codice": "43",
+                                        "descrizione": "Polo Territoriale",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "Y",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "X",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": "NPI"
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": null,
+                                    "dataInizioValidita": "2012-11-28 17:01:46"
+                                }],
+                            "listaOreLavorateDDO": [],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 29,
+                                "codice": "33",
+                                "descrizione": "Neuropsichiatria infantile",
+                                "codiceUOTrascodifica": "33",
+                                "flagRequisiti": "N",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 1
+                            },
+                            "id": 6558,
+                            "descrizione": null,
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:01:46"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [{
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [],
+                                    "id": 11005,
+                                    "tipoMacroAttivita": {
+                                        "id": 93,
+                                        "codice": "1700",
+                                        "descrizione": "Chirurgia a bassa complessitÃ  operativa ed assistenziale",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "N",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "T",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": null
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": null,
+                                    "dataInizioValidita": "2012-11-28 17:03:58"
+                                }],
+                            "listaOreLavorateDDO": [],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 10,
+                                "codice": "100",
+                                "descrizione": "Chirurgia a bassa complessitÃ  operativa ed assistenziale",
+                                "codiceUOTrascodifica": "100",
+                                "flagRequisiti": "N",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 1
+                            },
+                            "id": 6666,
+                            "descrizione": "MACROATTIVITÃ€ A VALENZA DIPARTIMENTALE",
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:03:58"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [
+                                {
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [
+                                        {
+                                            "id": 545,
+                                            "tipo": {
+                                                "id": 9,
+                                                "codice": "GGTRE01",
+                                                "descrizione": "Indicare i giorni totali di apertura del reparto nel periodo di riferimento",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 40,
+                                            "uoAssociataDDO": {
+                                                "id": 6667,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11006,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 546,
+                                            "tipo": {
+                                                "id": 14,
+                                                "codice": "NPLRE01",
+                                                "descrizione": "Indicare il numero di posti letto in regime ordinario",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 80,
+                                            "uoAssociataDDO": {
+                                                "id": 6667,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11006,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 547,
+                                            "tipo": {
+                                                "id": 44,
+                                                "codice": "POCRE01",
+                                                "descrizione": "Indicare la percentuale di occupazione dei posti letto del reparto per il periodo di riferimento (gg. totali di degenza/gg. totali di apertura del reparto*P.L. *100)",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 10,
+                                            "uoAssociataDDO": {
+                                                "id": 6667,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11006,
+                                            "idProcessoDDO": 22
+                                        }
+                                    ],
+                                    "id": 11006,
+                                    "tipoMacroAttivita": {
+                                        "id": 8,
+                                        "codice": "23",
+                                        "descrizione": "Reparto di degenza",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "N",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "L",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": "MM"
+                                    },
+                                    "numSequenza": 2,
+                                    "descrizione": "CARD CLINICA SCOMPENSO E SETTORE COMUNE",
+                                    "dataInizioValidita": "2012-11-28 17:03:58"
+                                },
+                                {
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [
+                                        {
+                                            "id": 548,
+                                            "tipo": {
+                                                "id": 9,
+                                                "codice": "GGTRE01",
+                                                "descrizione": "Indicare i giorni totali di apertura del reparto nel periodo di riferimento",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 100,
+                                            "uoAssociataDDO": {
+                                                "id": 6667,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11007,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 549,
+                                            "tipo": {
+                                                "id": 14,
+                                                "codice": "NPLRE01",
+                                                "descrizione": "Indicare il numero di posti letto in regime ordinario",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 10,
+                                            "uoAssociataDDO": {
+                                                "id": 6667,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11007,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 550,
+                                            "tipo": {
+                                                "id": 44,
+                                                "codice": "POCRE01",
+                                                "descrizione": "Indicare la percentuale di occupazione dei posti letto del reparto per il periodo di riferimento (gg. totali di degenza/gg. totali di apertura del reparto*P.L. *100)",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 90,
+                                            "uoAssociataDDO": {
+                                                "id": 6667,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11007,
+                                            "idProcessoDDO": 22
+                                        }
+                                    ],
+                                    "id": 11007,
+                                    "tipoMacroAttivita": {
+                                        "id": 8,
+                                        "codice": "23",
+                                        "descrizione": "Reparto di degenza",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "N",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "L",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": "MM"
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": "CARDIOLOGIA D'URGENZA",
+                                    "dataInizioValidita": "2012-11-28 17:03:58"
+                                }
+                            ],
+                            "listaOreLavorateDDO": [
+                                {
+                                    "id": 14,
+                                    "classeProfilo": {
+                                        "id": 1,
+                                        "descrizione": "Medici",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 822,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6667,
+                                    "idProcessoDDO": 22
+                                },
+                                {
+                                    "id": 15,
+                                    "classeProfilo": {
+                                        "id": 6,
+                                        "descrizione": "Infermieri",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 398,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6667,
+                                    "idProcessoDDO": 22
+                                },
+                                {
+                                    "id": 29,
+                                    "classeProfilo": {
+                                        "id": 5,
+                                        "descrizione": "Psicologi",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 320,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6667,
+                                    "idProcessoDDO": 22
+                                }
+                            ],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 7,
+                                "codice": "08",
+                                "descrizione": "Cardiologia",
+                                "codiceUOTrascodifica": "08",
+                                "flagRequisiti": "N",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 1
+                            },
+                            "id": 6667,
+                            "descrizione": null,
+                            "numSequenza": 2,
+                            "dataInizioValidita": "2012-11-28 17:03:58"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [
+                                {
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [],
+                                    "id": 11008,
+                                    "tipoMacroAttivita": {
+                                        "id": 82,
+                                        "codice": "1310",
+                                        "descrizione": "Reparto di degenza di riabilitazione specialistica - cardiologica",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "N",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "L",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": null
+                                    },
+                                    "numSequenza": 2,
+                                    "descrizione": null,
+                                    "dataInizioValidita": "2012-11-28 17:03:59"
+                                },
+                                {
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [],
+                                    "id": 11009,
+                                    "tipoMacroAttivita": {
+                                        "id": 82,
+                                        "codice": "1310",
+                                        "descrizione": "Reparto di degenza di riabilitazione specialistica - cardiologica",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "N",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "L",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": null
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": null,
+                                    "dataInizioValidita": "2012-11-28 17:03:59"
+                                }
+                            ],
+                            "listaOreLavorateDDO": [],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 49,
+                                "codice": "56",
+                                "descrizione": "Riabilitazione Specialistica",
+                                "codiceUOTrascodifica": "56",
+                                "flagRequisiti": "N",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 1
+                            },
+                            "id": 6668,
+                            "descrizione": "CARDIOLOGICA",
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:03:59"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [
+                                {
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [
+                                        {
+                                            "id": 551,
+                                            "tipo": {
+                                                "id": 9,
+                                                "codice": "GGTRE01",
+                                                "descrizione": "Indicare i giorni totali di apertura del reparto nel periodo di riferimento",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 20,
+                                            "uoAssociataDDO": {
+                                                "id": 6669,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11010,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 552,
+                                            "tipo": {
+                                                "id": 14,
+                                                "codice": "NPLRE01",
+                                                "descrizione": "Indicare il numero di posti letto in regime ordinario",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 60,
+                                            "uoAssociataDDO": {
+                                                "id": 6669,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11010,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 553,
+                                            "tipo": {
+                                                "id": 44,
+                                                "codice": "POCRE01",
+                                                "descrizione": "Indicare la percentuale di occupazione dei posti letto del reparto per il periodo di riferimento (gg. totali di degenza/gg. totali di apertura del reparto*P.L. *100)",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 60,
+                                            "uoAssociataDDO": {
+                                                "id": 6669,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11010,
+                                            "idProcessoDDO": 22
+                                        }
+                                    ],
+                                    "id": 11010,
+                                    "tipoMacroAttivita": {
+                                        "id": 6,
+                                        "codice": "21",
+                                        "descrizione": "Reparto di degenza",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "Y",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "L",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": "MB"
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": null,
+                                    "dataInizioValidita": "2012-11-28 17:04:00"
+                                },
+                                {
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [{
+                                            "id": 554,
+                                            "tipo": {
+                                                "id": 25,
+                                                "codice": "OTADH01",
+                                                "descrizione": "Indicare le ore totali del periodo di riferimento di apertura del D.H. (ore al giorno* n giorni di apertura alla settimana*n. settimane di apertura del D.H nel periodo di riferimento)",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 20,
+                                            "uoAssociataDDO": {
+                                                "id": 6669,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11011,
+                                            "idProcessoDDO": 22
+                                        }],
+                                    "id": 11011,
+                                    "tipoMacroAttivita": {
+                                        "id": 31,
+                                        "codice": "81",
+                                        "descrizione": "Day Hospital",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "Y",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "L",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": null
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": null,
+                                    "dataInizioValidita": "2012-11-28 17:04:00"
+                                }
+                            ],
+                            "listaOreLavorateDDO": [
+                                {
+                                    "id": 16,
+                                    "classeProfilo": {
+                                        "id": 1,
+                                        "descrizione": "Medici",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 411,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6669,
+                                    "idProcessoDDO": 22
+                                },
+                                {
+                                    "id": 17,
+                                    "classeProfilo": {
+                                        "id": 6,
+                                        "descrizione": "Infermieri",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 962,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6669,
+                                    "idProcessoDDO": 22
+                                }
+                            ],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 23,
+                                "codice": "26",
+                                "descrizione": "Medicina generale",
+                                "codiceUOTrascodifica": "26",
+                                "flagRequisiti": "N",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 1
+                            },
+                            "id": 6669,
+                            "descrizione": "(PENSIONANTI)",
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:04:00"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [{
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [
+                                        {
+                                            "id": 555,
+                                            "tipo": {
+                                                "id": 6,
+                                                "codice": "GGTIN01",
+                                                "descrizione": "Indicare i giorni totali di apertura dell'area intensiva del reparto nel periodo di riferimento",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 90,
+                                            "uoAssociataDDO": {
+                                                "id": 6670,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11012,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 556,
+                                            "tipo": {
+                                                "id": 15,
+                                                "codice": "NPLTI01",
+                                                "descrizione": "Indicare il numero di posti letto per l'area intensiva",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 30,
+                                            "uoAssociataDDO": {
+                                                "id": 6670,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11012,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 557,
+                                            "tipo": {
+                                                "id": 45,
+                                                "codice": "POCTI01",
+                                                "descrizione": "Indicare la percentuale di occupazione dei posti letto dell'area intensiva del reparto per il periodo di riferimento (gg. totali di degenza/gg. totali di apertura del reparto*P.L. *100)",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 10,
+                                            "uoAssociataDDO": {
+                                                "id": 6670,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11012,
+                                            "idProcessoDDO": 22
+                                        }
+                                    ],
+                                    "id": 11012,
+                                    "tipoMacroAttivita": {
+                                        "id": 40,
+                                        "codice": "141",
+                                        "descrizione": "AttivitÃ  di Rianimazione e Terapia Intensiva",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "Y",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "L",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": null
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": "TIPO",
+                                    "dataInizioValidita": "2012-11-28 17:04:01"
+                                }],
+                            "listaOreLavorateDDO": [
+                                {
+                                    "id": 23,
+                                    "classeProfilo": {
+                                        "id": 1,
+                                        "descrizione": "Medici",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 829,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6670,
+                                    "idProcessoDDO": 22
+                                },
+                                {
+                                    "id": 24,
+                                    "classeProfilo": {
+                                        "id": 6,
+                                        "descrizione": "Infermieri",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 594,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6670,
+                                    "idProcessoDDO": 22
+                                },
+                                {
+                                    "id": 30,
+                                    "classeProfilo": {
+                                        "id": 9,
+                                        "descrizione": "Addetti alla riabilitazione",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 180,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6670,
+                                    "idProcessoDDO": 22
+                                }
+                            ],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 72,
+                                "codice": "A_03",
+                                "descrizione": "Anestesia e Rianimazione",
+                                "codiceUOTrascodifica": "A_03",
+                                "flagRequisiti": "N",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 1
+                            },
+                            "id": 6670,
+                            "descrizione": null,
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:04:01"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [
+                                {
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [],
+                                    "id": 11013,
+                                    "tipoMacroAttivita": {
+                                        "id": 73,
+                                        "codice": "1080",
+                                        "descrizione": "Punto prelievi esterno in struttura socio-sanitaria",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "Y",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "X",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": null
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": "SESTO S. GIOVANNI - VIA GORIZIA 23",
+                                    "dataInizioValidita": "2012-11-28 17:04:01"
+                                },
+                                {
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [],
+                                    "id": 11014,
+                                    "tipoMacroAttivita": {
+                                        "id": 67,
+                                        "codice": "1020",
+                                        "descrizione": "SMeL Generale di base con sezioni specializzate",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "Y",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "X",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 1,
+                                        "rd": null
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": "CON PUNTO PRELIEVI CONTIGUO",
+                                    "dataInizioValidita": "2012-11-28 17:04:01"
+                                }
+                            ],
+                            "listaOreLavorateDDO": [],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 94,
+                                "codice": "A_26",
+                                "descrizione": "Servizio di Medicina di Laboratorio",
+                                "codiceUOTrascodifica": "A_26",
+                                "flagRequisiti": "N",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 1
+                            },
+                            "id": 6671,
+                            "descrizione": "CODICE SMEL  105",
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:04:01"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [{
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [
+                                        {
+                                            "id": 558,
+                                            "tipo": {
+                                                "id": 22,
+                                                "codice": "OSAOP02",
+                                                "descrizione": "Indicare le ore totali del periodo di riferimento di apertura della sala operatoria (in presenza di piÃ¹ tavoli operatori sommare le ore dedicate a ciascuno di questi)",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 50,
+                                            "uoAssociataDDO": {
+                                                "id": 6672,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11015,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 559,
+                                            "tipo": {
+                                                "id": 23,
+                                                "codice": "OSAOP03",
+                                                "descrizione": "Indicare il numero di sale operatorie presenti nel blocco operatorio",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 25,
+                                            "uoAssociataDDO": {
+                                                "id": 6672,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11015,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 1486,
+                                            "tipo": {
+                                                "id": 22,
+                                                "codice": "OSAOP02",
+                                                "descrizione": "Indicare le ore totali del periodo di riferimento di apertura della sala operatoria (in presenza di piÃ¹ tavoli operatori sommare le ore dedicate a ciascuno di questi)",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 50,
+                                            "uoAssociataDDO": {
+                                                "id": 6669,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11015,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 1487,
+                                            "tipo": {
+                                                "id": 23,
+                                                "codice": "OSAOP03",
+                                                "descrizione": "Indicare il numero di sale operatorie presenti nel blocco operatorio",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 25,
+                                            "uoAssociataDDO": {
+                                                "id": 6674,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11015,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 1488,
+                                            "tipo": {
+                                                "id": 22,
+                                                "codice": "OSAOP02",
+                                                "descrizione": "Indicare le ore totali del periodo di riferimento di apertura della sala operatoria (in presenza di piÃ¹ tavoli operatori sommare le ore dedicate a ciascuno di questi)",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 30,
+                                            "uoAssociataDDO": {
+                                                "id": 6678,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11015,
+                                            "idProcessoDDO": 22
+                                        }
+                                    ],
+                                    "id": 11015,
+                                    "tipoMacroAttivita": {
+                                        "id": 2,
+                                        "codice": "2",
+                                        "descrizione": "Sala Operatoria",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "N",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "X",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": "BLOK"
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": null,
+                                    "dataInizioValidita": "2012-11-28 17:04:02"
+                                }],
+                            "listaOreLavorateDDO": [
+                                {
+                                    "id": 9,
+                                    "classeProfilo": {
+                                        "id": 1,
+                                        "descrizione": "Medici",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 326,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6672,
+                                    "idProcessoDDO": 22
+                                },
+                                {
+                                    "id": 10,
+                                    "classeProfilo": {
+                                        "id": 98,
+                                        "descrizione": "Medici anestesisti",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 660,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6672,
+                                    "idProcessoDDO": 22
+                                },
+                                {
+                                    "id": 11,
+                                    "classeProfilo": {
+                                        "id": 6,
+                                        "descrizione": "Infermieri",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 569,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6672,
+                                    "idProcessoDDO": 22
+                                }
+                            ],
+                            "listaUOAssociateDDO": [
+                                {
+                                    "id": 6669,
+                                    "tipoUnitaOrganizzativa": {
+                                        "id": 23,
+                                        "codice": "26",
+                                        "descrizione": "Medicina generale",
+                                        "codiceUOTrascodifica": "26",
+                                        "flagRequisiti": "N",
+                                        "dataInizioValidita": "2010-01-01 12:00:00",
+                                        "numeroMacroAttivitaMinino": 1
+                                    },
+                                    "descrizione": "(PENSIONANTI)",
+                                    "numSequenza": 1,
+                                    "dataInizioValidita": "2016-04-05 14:40:30",
+                                    "idUOMadre": 6672,
+                                    "idProcessoDDO": 22
+                                },
+                                {
+                                    "id": 6674,
+                                    "tipoUnitaOrganizzativa": {
+                                        "id": 6,
+                                        "codice": "07",
+                                        "descrizione": "Cardiochirurgia",
+                                        "codiceUOTrascodifica": "07",
+                                        "flagRequisiti": "N",
+                                        "dataInizioValidita": "2010-01-01 12:00:00",
+                                        "numeroMacroAttivitaMinino": 1
+                                    },
+                                    "descrizione": null,
+                                    "numSequenza": 1,
+                                    "dataInizioValidita": "2016-04-05 14:39:08",
+                                    "idUOMadre": 6672,
+                                    "idProcessoDDO": 22
+                                },
+                                {
+                                    "id": 6678,
+                                    "tipoUnitaOrganizzativa": {
+                                        "id": 14,
+                                        "codice": "14",
+                                        "descrizione": "Chirurgia vascolare",
+                                        "codiceUOTrascodifica": "14",
+                                        "flagRequisiti": "N",
+                                        "dataInizioValidita": "2010-01-01 12:00:00",
+                                        "numeroMacroAttivitaMinino": 1
+                                    },
+                                    "descrizione": null,
+                                    "numSequenza": 1,
+                                    "dataInizioValidita": "2016-04-05 14:40:29",
+                                    "idUOMadre": 6672,
+                                    "idProcessoDDO": 22
+                                }
+                            ],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 74,
+                                "codice": "A_05",
+                                "descrizione": "Blocco operatorio",
+                                "codiceUOTrascodifica": "A_05",
+                                "flagRequisiti": "N",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 1
+                            },
+                            "id": 6672,
+                            "descrizione": null,
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:04:02"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [{
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [],
+                                    "id": 11016,
+                                    "tipoMacroAttivita": {
+                                        "id": 44,
+                                        "codice": "191",
+                                        "descrizione": "AttivitÃ  Camera mortuaria",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "Y",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "X",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": null
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": null,
+                                    "dataInizioValidita": "2012-11-28 17:04:02"
+                                }],
+                            "listaOreLavorateDDO": [],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 75,
+                                "codice": "A_06",
+                                "descrizione": "Camera mortuaria",
+                                "codiceUOTrascodifica": "A_06",
+                                "flagRequisiti": "N",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 1
+                            },
+                            "id": 6673,
+                            "descrizione": null,
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:04:02"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [{
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [
+                                        {
+                                            "id": 560,
+                                            "tipo": {
+                                                "id": 9,
+                                                "codice": "GGTRE01",
+                                                "descrizione": "Indicare i giorni totali di apertura del reparto nel periodo di riferimento",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 40,
+                                            "uoAssociataDDO": {
+                                                "id": 6674,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11017,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 561,
+                                            "tipo": {
+                                                "id": 14,
+                                                "codice": "NPLRE01",
+                                                "descrizione": "Indicare il numero di posti letto in regime ordinario",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 40,
+                                            "uoAssociataDDO": {
+                                                "id": 6674,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11017,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 562,
+                                            "tipo": {
+                                                "id": 44,
+                                                "codice": "POCRE01",
+                                                "descrizione": "Indicare la percentuale di occupazione dei posti letto del reparto per il periodo di riferimento (gg. totali di degenza/gg. totali di apertura del reparto*P.L. *100)",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 80,
+                                            "uoAssociataDDO": {
+                                                "id": 6674,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11017,
+                                            "idProcessoDDO": 22
+                                        }
+                                    ],
+                                    "id": 11017,
+                                    "tipoMacroAttivita": {
+                                        "id": 11,
+                                        "codice": "26",
+                                        "descrizione": "Reparto di degenza",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "N",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "L",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": "CE"
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": null,
+                                    "dataInizioValidita": "2012-11-28 17:04:03"
+                                }],
+                            "listaOreLavorateDDO": [
+                                {
+                                    "id": 18,
+                                    "classeProfilo": {
+                                        "id": 1,
+                                        "descrizione": "Medici",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 279,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6674,
+                                    "idProcessoDDO": 22
+                                },
+                                {
+                                    "id": 19,
+                                    "classeProfilo": {
+                                        "id": 6,
+                                        "descrizione": "Infermieri",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 354,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6674,
+                                    "idProcessoDDO": 22
+                                }
+                            ],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 6,
+                                "codice": "07",
+                                "descrizione": "Cardiochirurgia",
+                                "codiceUOTrascodifica": "07",
+                                "flagRequisiti": "N",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 1
+                            },
+                            "id": 6674,
+                            "descrizione": null,
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:04:03"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [
+                                {
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [
+                                        {
+                                            "id": 563,
+                                            "tipo": {
+                                                "id": 9,
+                                                "codice": "GGTRE01",
+                                                "descrizione": "Indicare i giorni totali di apertura del reparto nel periodo di riferimento",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 60,
+                                            "uoAssociataDDO": {
+                                                "id": 6675,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11018,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 564,
+                                            "tipo": {
+                                                "id": 14,
+                                                "codice": "NPLRE01",
+                                                "descrizione": "Indicare il numero di posti letto in regime ordinario",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 10,
+                                            "uoAssociataDDO": {
+                                                "id": 6675,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11018,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 565,
+                                            "tipo": {
+                                                "id": 44,
+                                                "codice": "POCRE01",
+                                                "descrizione": "Indicare la percentuale di occupazione dei posti letto del reparto per il periodo di riferimento (gg. totali di degenza/gg. totali di apertura del reparto*P.L. *100)",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 80,
+                                            "uoAssociataDDO": {
+                                                "id": 6675,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11018,
+                                            "idProcessoDDO": 22
+                                        }
+                                    ],
+                                    "id": 11018,
+                                    "tipoMacroAttivita": {
+                                        "id": 8,
+                                        "codice": "23",
+                                        "descrizione": "Reparto di degenza",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "N",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "L",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": "MM"
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": "EMODINAMICA E ARITMOLOGIA",
+                                    "dataInizioValidita": "2012-11-28 17:04:03"
+                                },
+                                {
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [],
+                                    "id": 11019,
+                                    "tipoMacroAttivita": {
+                                        "id": 36,
+                                        "codice": "115",
+                                        "descrizione": "AttivitÃ  di Emodinamica",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "Y",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "X",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": " "
+                                    },
+                                    "numSequenza": 2,
+                                    "descrizione": null,
+                                    "dataInizioValidita": "2012-11-28 17:04:04"
+                                }
+                            ],
+                            "listaOreLavorateDDO": [
+                                {
+                                    "id": 25,
+                                    "classeProfilo": {
+                                        "id": 1,
+                                        "descrizione": "Medici",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 166,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6675,
+                                    "idProcessoDDO": 22
+                                },
+                                {
+                                    "id": 26,
+                                    "classeProfilo": {
+                                        "id": 6,
+                                        "descrizione": "Infermieri",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 532,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6675,
+                                    "idProcessoDDO": 22
+                                }
+                            ],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 7,
+                                "codice": "08",
+                                "descrizione": "Cardiologia",
+                                "codiceUOTrascodifica": "08",
+                                "flagRequisiti": "N",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 1
+                            },
+                            "id": 6675,
+                            "descrizione": null,
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:04:03"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [{
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [{
+                                            "id": 566,
+                                            "tipo": {
+                                                "id": 24,
+                                                "codice": "OTAAS01",
+                                                "descrizione": "Indicare le ore totali del periodo di riferimento di apertura del servizio (ore al giorno* n. giorni di apertura alla settimana*n. settimane di apertura del servizio nel periodo di riferimento)",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 20,
+                                            "uoAssociataDDO": {
+                                                "id": 6676,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11020,
+                                            "idProcessoDDO": 22
+                                        }],
+                                    "id": 11020,
+                                    "tipoMacroAttivita": {
+                                        "id": 45,
+                                        "codice": "201",
+                                        "descrizione": "AttivitÃ  di Sterilizzazione",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "Y",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "X",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": null
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": null,
+                                    "dataInizioValidita": "2012-11-28 17:04:04"
+                                }],
+                            "listaOreLavorateDDO": [{
+                                    "id": 20,
+                                    "classeProfilo": {
+                                        "id": 6,
+                                        "descrizione": "Infermieri",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 441,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6676,
+                                    "idProcessoDDO": 22
+                                }],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 78,
+                                "codice": "A_10",
+                                "descrizione": "Centrale di sterilizzazione",
+                                "codiceUOTrascodifica": "A_10",
+                                "flagRequisiti": "N",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 1
+                            },
+                            "id": 6676,
+                            "descrizione": null,
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:04:04"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [{
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [
+                                        {
+                                            "id": 567,
+                                            "tipo": {
+                                                "id": 5,
+                                                "codice": "GGTAU01",
+                                                "descrizione": "Indicare i giorni totali di apertura della U.O. nel periodo di riferimento",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 60,
+                                            "uoAssociataDDO": {
+                                                "id": 6677,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11021,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 568,
+                                            "tipo": {
+                                                "id": 27,
+                                                "codice": "OTAGM01",
+                                                "descrizione": "Ore totali di Guardia nel periodo di riferimento",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 20,
+                                            "uoAssociataDDO": {
+                                                "id": 6677,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11021,
+                                            "idProcessoDDO": 22
+                                        }
+                                    ],
+                                    "id": 11021,
+                                    "tipoMacroAttivita": {
+                                        "id": 59,
+                                        "codice": "601",
+                                        "descrizione": "AttivitÃ  di EAS",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "Y",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "X",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": null
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": null,
+                                    "dataInizioValidita": "2012-11-28 17:04:05"
+                                }],
+                            "listaOreLavorateDDO": [
+                                {
+                                    "id": 1,
+                                    "classeProfilo": {
+                                        "id": 1,
+                                        "descrizione": "Medici",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 806,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6677,
+                                    "idProcessoDDO": 22
+                                },
+                                {
+                                    "id": 2,
+                                    "classeProfilo": {
+                                        "id": 6,
+                                        "descrizione": "Infermieri",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 880,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6677,
+                                    "idProcessoDDO": 22
+                                }
+                            ],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 100,
+                                "codice": "A_32",
+                                "descrizione": "Centro di EAS",
+                                "codiceUOTrascodifica": "A_32",
+                                "flagRequisiti": "N",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 1
+                            },
+                            "id": 6677,
+                            "descrizione": null,
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:04:05"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [{
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [
+                                        {
+                                            "id": 569,
+                                            "tipo": {
+                                                "id": 9,
+                                                "codice": "GGTRE01",
+                                                "descrizione": "Indicare i giorni totali di apertura del reparto nel periodo di riferimento",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 50,
+                                            "uoAssociataDDO": {
+                                                "id": 6678,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11022,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 570,
+                                            "tipo": {
+                                                "id": 14,
+                                                "codice": "NPLRE01",
+                                                "descrizione": "Indicare il numero di posti letto in regime ordinario",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 30,
+                                            "uoAssociataDDO": {
+                                                "id": 6678,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11022,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 571,
+                                            "tipo": {
+                                                "id": 44,
+                                                "codice": "POCRE01",
+                                                "descrizione": "Indicare la percentuale di occupazione dei posti letto del reparto per il periodo di riferimento (gg. totali di degenza/gg. totali di apertura del reparto*P.L. *100)",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 60,
+                                            "uoAssociataDDO": {
+                                                "id": 6678,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11022,
+                                            "idProcessoDDO": 22
+                                        }
+                                    ],
+                                    "id": 11022,
+                                    "tipoMacroAttivita": {
+                                        "id": 9,
+                                        "codice": "24",
+                                        "descrizione": "Reparto di degenza",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "N",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "L",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": "CM"
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": null,
+                                    "dataInizioValidita": "2012-11-28 17:04:05"
+                                }],
+                            "listaOreLavorateDDO": [
+                                {
+                                    "id": 21,
+                                    "classeProfilo": {
+                                        "id": 1,
+                                        "descrizione": "Medici",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 450,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6678,
+                                    "idProcessoDDO": 22
+                                },
+                                {
+                                    "id": 22,
+                                    "classeProfilo": {
+                                        "id": 6,
+                                        "descrizione": "Infermieri",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 462,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6678,
+                                    "idProcessoDDO": 22
+                                }
+                            ],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 14,
+                                "codice": "14",
+                                "descrizione": "Chirurgia vascolare",
+                                "codiceUOTrascodifica": "14",
+                                "flagRequisiti": "N",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 1
+                            },
+                            "id": 6678,
+                            "descrizione": null,
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:04:05"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [],
+                            "listaOreLavorateDDO": [],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 81,
+                                "codice": "A_13",
+                                "descrizione": "Direzione sanitaria",
+                                "codiceUOTrascodifica": "A_13",
+                                "flagRequisiti": "Y",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 0
+                            },
+                            "id": 6679,
+                            "descrizione": null,
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:04:05"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [{
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [
+                                        {
+                                            "id": 572,
+                                            "tipo": {
+                                                "id": 24,
+                                                "codice": "OTAAS01",
+                                                "descrizione": "Indicare le ore totali del periodo di riferimento di apertura del servizio (ore al giorno* n. giorni di apertura alla settimana*n. settimane di apertura del servizio nel periodo di riferimento)",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 30,
+                                            "uoAssociataDDO": {
+                                                "id": 6680,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11023,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 573,
+                                            "tipo": {
+                                                "id": 41,
+                                                "codice": "OTRAD02",
+                                                "descrizione": "Indicare le ore totali del periodo di riferimento dedicate dal tecnico all'attivitÃ  diagnostica (nel caso di piÃ¹ diagnostiche sommare le ore dedicate a ciascuna di queste escludendo quelle relative all'attivitÃ  di ecografia)",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 10,
+                                            "uoAssociataDDO": {
+                                                "id": 6680,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11023,
+                                            "idProcessoDDO": 22
+                                        }
+                                    ],
+                                    "id": 11023,
+                                    "tipoMacroAttivita": {
+                                        "id": 34,
+                                        "codice": "111",
+                                        "descrizione": "AttivitÃ  di Diagnostica per Immagini",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "Y",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "X",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": null
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": null,
+                                    "dataInizioValidita": "2012-11-28 17:04:05"
+                                }],
+                            "listaOreLavorateDDO": [
+                                {
+                                    "id": 27,
+                                    "classeProfilo": {
+                                        "id": 1,
+                                        "descrizione": "Medici",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 502,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6680,
+                                    "idProcessoDDO": 22
+                                },
+                                {
+                                    "id": 28,
+                                    "classeProfilo": {
+                                        "id": 7,
+                                        "descrizione": "Tecnici sanitari",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 559,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6680,
+                                    "idProcessoDDO": 22
+                                }
+                            ],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 60,
+                                "codice": "69",
+                                "descrizione": "Radiologia/Diagnostica per immagini",
+                                "codiceUOTrascodifica": "69",
+                                "flagRequisiti": "N",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 1
+                            },
+                            "id": 6680,
+                            "descrizione": null,
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:04:05"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [],
+                            "listaOreLavorateDDO": [],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 91,
+                                "codice": "A_23",
+                                "descrizione": "Servizio religioso",
+                                "codiceUOTrascodifica": "A_23",
+                                "flagRequisiti": "Y",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 0
+                            },
+                            "id": 6681,
+                            "descrizione": null,
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:04:06"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [],
+                            "listaOreLavorateDDO": [],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 93,
+                                "codice": "A_25",
+                                "descrizione": "Ufficio infermieristico",
+                                "codiceUOTrascodifica": "A_25",
+                                "flagRequisiti": "Y",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 0
+                            },
+                            "id": 6682,
+                            "descrizione": null,
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:04:06"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [{
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [
+                                        {
+                                            "id": 574,
+                                            "tipo": {
+                                                "id": 6,
+                                                "codice": "GGTIN01",
+                                                "descrizione": "Indicare i giorni totali di apertura dell'area intensiva del reparto nel periodo di riferimento",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 60,
+                                            "uoAssociataDDO": {
+                                                "id": 6683,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11024,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 575,
+                                            "tipo": {
+                                                "id": 15,
+                                                "codice": "NPLTI01",
+                                                "descrizione": "Indicare il numero di posti letto per l'area intensiva",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 100,
+                                            "uoAssociataDDO": {
+                                                "id": 6683,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11024,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 576,
+                                            "tipo": {
+                                                "id": 45,
+                                                "codice": "POCTI01",
+                                                "descrizione": "Indicare la percentuale di occupazione dei posti letto dell'area intensiva del reparto per il periodo di riferimento (gg. totali di degenza/gg. totali di apertura del reparto*P.L. *100)",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 90,
+                                            "uoAssociataDDO": {
+                                                "id": 6683,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11024,
+                                            "idProcessoDDO": 22
+                                        }
+                                    ],
+                                    "id": 11024,
+                                    "tipoMacroAttivita": {
+                                        "id": 40,
+                                        "codice": "141",
+                                        "descrizione": "AttivitÃ  di Rianimazione e Terapia Intensiva",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "Y",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "L",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": null
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": "UCC",
+                                    "dataInizioValidita": "2012-11-28 17:04:06"
+                                }],
+                            "listaOreLavorateDDO": [
+                                {
+                                    "id": 3,
+                                    "classeProfilo": {
+                                        "id": 1,
+                                        "descrizione": "Medici",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 293,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6683,
+                                    "idProcessoDDO": 22
+                                },
+                                {
+                                    "id": 4,
+                                    "classeProfilo": {
+                                        "id": 6,
+                                        "descrizione": "Infermieri",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 634,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6683,
+                                    "idProcessoDDO": 22
+                                }
+                            ],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 44,
+                                "codice": "50",
+                                "descrizione": "UnitÃ  coronarica",
+                                "codiceUOTrascodifica": "50",
+                                "flagRequisiti": "N",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 1
+                            },
+                            "id": 6683,
+                            "descrizione": null,
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:04:06"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [{
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [
+                                        {
+                                            "id": 577,
+                                            "tipo": {
+                                                "id": 30,
+                                                "codice": "OTASS01",
+                                                "descrizione": "Indicare le ore totali del periodo di riferimento di apertura dell'ambulatorio (nel caso di piÃ¹ sotto specialitÃ  sommare le ore dedicate a ciascuna di queste)",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 20,
+                                            "uoAssociataDDO": {
+                                                "id": 6684,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11025,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 578,
+                                            "tipo": {
+                                                "id": 31,
+                                                "codice": "OTASS02",
+                                                "descrizione": "Indicare le ore totali del periodo di riferimento di apertura dell'ambulatorio indipendentemente dal numero di sotto specialitÃ  trattate",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 60,
+                                            "uoAssociataDDO": {
+                                                "id": 6684,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 11025,
+                                            "idProcessoDDO": 22
+                                        }
+                                    ],
+                                    "id": 11025,
+                                    "tipoMacroAttivita": {
+                                        "id": 21,
+                                        "codice": "41",
+                                        "descrizione": "Ambulatorio principale (specialitÃ  status omogeneo piÃ¹ elevato)",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "Y",
+                                        "flagSpecNonCodificate": "Y",
+                                        "codiceTipoPosti": "X",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 1,
+                                        "rd": null
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": null,
+                                    "dataInizioValidita": "2012-11-28 17:04:07"
+                                }],
+                            "listaOreLavorateDDO": [
+                                {
+                                    "id": 5,
+                                    "classeProfilo": {
+                                        "id": 1,
+                                        "descrizione": "Medici",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 969,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6684,
+                                    "idProcessoDDO": 22
+                                },
+                                {
+                                    "id": 6,
+                                    "classeProfilo": {
+                                        "id": 6,
+                                        "descrizione": "Infermieri",
+                                        "dataInizioValidita": "1900-01-01 00:00:00"
+                                    },
+                                    "numeroOre": 259,
+                                    "dataInizioValidita": "2016-03-31 13:55:44",
+                                    "idUnitaOrganizzativa": 6684,
+                                    "idProcessoDDO": 22
+                                }
+                            ],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 86,
+                                "codice": "A_18",
+                                "descrizione": "Poliambulatorio",
+                                "codiceUOTrascodifica": "A_18",
+                                "flagRequisiti": "N",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 1
+                            },
+                            "id": 6684,
+                            "descrizione": null,
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:04:07"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [],
+                            "listaOreLavorateDDO": [],
+                            "listaUOAssociateDDO": [],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 98,
+                                "codice": "A_30",
+                                "descrizione": "Ufficio Farmaceutico",
+                                "codiceUOTrascodifica": "A_30",
+                                "flagRequisiti": "Y",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 0
+                            },
+                            "id": 6685,
+                            "descrizione": null,
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2012-11-28 17:04:07"
+                        },
+                        {
+                            "cdStatoCompilazione": null,
+                            "listaMacroAttivitaDDO": [{
+                                    "cdStatoCompilazione": null,
+                                    "listaParametriDDO": [
+                                        {
+                                            "id": 1489,
+                                            "tipo": {
+                                                "id": 5,
+                                                "codice": "GGTAU01",
+                                                "descrizione": "Indicare i giorni totali di apertura della U.O. nel periodo di riferimento",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 30,
+                                            "uoAssociataDDO": {
+                                                "id": 22064,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 34400,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 1490,
+                                            "tipo": {
+                                                "id": 27,
+                                                "codice": "OTAGM01",
+                                                "descrizione": "Ore totali di Guardia nel periodo di riferimento",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 50,
+                                            "uoAssociataDDO": {
+                                                "id": 22064,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 34400,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 1491,
+                                            "tipo": {
+                                                "id": 27,
+                                                "codice": "OTAGM01",
+                                                "descrizione": "Ore totali di Guardia nel periodo di riferimento",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 10,
+                                            "uoAssociataDDO": {
+                                                "id": 6674,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 34400,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 1492,
+                                            "tipo": {
+                                                "id": 27,
+                                                "codice": "OTAGM01",
+                                                "descrizione": "Ore totali di Guardia nel periodo di riferimento",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 20,
+                                            "uoAssociataDDO": {
+                                                "id": 6669,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 34400,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 1493,
+                                            "tipo": {
+                                                "id": 5,
+                                                "codice": "GGTAU01",
+                                                "descrizione": "Indicare i giorni totali di apertura della U.O. nel periodo di riferimento",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 20,
+                                            "uoAssociataDDO": {
+                                                "id": 6674,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 34400,
+                                            "idProcessoDDO": 22
+                                        },
+                                        {
+                                            "id": 1494,
+                                            "tipo": {
+                                                "id": 5,
+                                                "codice": "GGTAU01",
+                                                "descrizione": "Indicare i giorni totali di apertura della U.O. nel periodo di riferimento",
+                                                "tipoValore": "N",
+                                                "dataInizioValidita": "1900-01-01 00:00:00"
+                                            },
+                                            "classeProfilo": null,
+                                            "valore": 20,
+                                            "uoAssociataDDO": {
+                                                "id": 6669,
+                                                "tipoUnitaOrganizzativa": null,
+                                                "descrizione": null,
+                                                "numSequenza": 0,
+                                                "dataInizioValidita": null,
+                                                "idUOMadre": 0,
+                                                "idProcessoDDO": 0
+                                            },
+                                            "dataInizioValidita": "2016-03-29 18:43:26",
+                                            "idMacroAttivita": 34400,
+                                            "idProcessoDDO": 22
+                                        }
+                                    ],
+                                    "id": 34400,
+                                    "tipoMacroAttivita": {
+                                        "id": 56,
+                                        "codice": "401",
+                                        "descrizione": "AttivitÃ  del Pronto Soccorso",
+                                        "flagRipetibile": "Y",
+                                        "flagDPR": "Y",
+                                        "flagSpecNonCodificate": "N",
+                                        "codiceTipoPosti": "X",
+                                        "dataInizioValidita": "2011-10-18 14:24:06",
+                                        "numeroSpecialitaMinimo": 0,
+                                        "rd": null
+                                    },
+                                    "numSequenza": 1,
+                                    "descrizione": "PRONTO SOCCORSO",
+                                    "dataInizioValidita": "2015-08-03 16:14:00"
+                                }],
+                            "listaOreLavorateDDO": [],
+                            "listaUOAssociateDDO": [
+                                {
+                                    "id": 6669,
+                                    "tipoUnitaOrganizzativa": {
+                                        "id": 23,
+                                        "codice": "26",
+                                        "descrizione": "Medicina generale",
+                                        "codiceUOTrascodifica": "26",
+                                        "flagRequisiti": "N",
+                                        "dataInizioValidita": "2010-01-01 12:00:00",
+                                        "numeroMacroAttivitaMinino": 1
+                                    },
+                                    "descrizione": "(PENSIONANTI)",
+                                    "numSequenza": 1,
+                                    "dataInizioValidita": "2016-04-05 14:40:29",
+                                    "idUOMadre": 22064,
+                                    "idProcessoDDO": 22
+                                },
+                                {
+                                    "id": 6674,
+                                    "tipoUnitaOrganizzativa": {
+                                        "id": 6,
+                                        "codice": "07",
+                                        "descrizione": "Cardiochirurgia",
+                                        "codiceUOTrascodifica": "07",
+                                        "flagRequisiti": "N",
+                                        "dataInizioValidita": "2010-01-01 12:00:00",
+                                        "numeroMacroAttivitaMinino": 1
+                                    },
+                                    "descrizione": null,
+                                    "numSequenza": 1,
+                                    "dataInizioValidita": "2016-04-05 14:40:29",
+                                    "idUOMadre": 22064,
+                                    "idProcessoDDO": 22
+                                }
+                            ],
+                            "tipoUnitaOrganizzativa": {
+                                "id": 70,
+                                "codice": "A_01",
+                                "descrizione": "Pronto Soccorso",
+                                "codiceUOTrascodifica": "A_01",
+                                "flagRequisiti": "N",
+                                "dataInizioValidita": "2010-01-01 12:00:00",
+                                "numeroMacroAttivitaMinino": 1
+                            },
+                            "id": 22064,
+                            "descrizione": null,
+                            "numSequenza": 1,
+                            "dataInizioValidita": "2015-08-03 16:14:00"
+                        }
+                    ],
+                    "id": 1248,
+                    "ente": {
+                        "id": 720,
+                        "codice": "731660",
+                        "codiceTipo": null,
+                        "codiceFiscale": "13055640158",
+                        "partitaIva": "13055640158",
+                        "nome": "CENTRO CARDIOLOGICO S.P.A. FONDAZIONE MONZINO",
+                        "puntoIndirizzo": {
+                            "id": 1005130,
+                            "tipoVia": null,
+                            "via": null,
+                            "viaCompatta": null,
+                            "civico": null,
+                            "codiceCapdist": null,
+                            "frazione": null,
+                            "localita": null,
+                            "idDistretto": 0,
+                            "dataInizioValidita": null
+                        },
+                        "asl": null,
+                        "numeroTelefono": "02580021",
+                        "numeroFax": "02504667",
+                        "indirizzoEMail": "DIREZIONE@CCFM.IT",
+                        "sitoWeb": null,
+                        "dataInizioAttivita": "1900-01-01 00:00:00",
+                        "dataFineAttivita": null,
+                        "statoEnte": {
+                            "id": 1,
+                            "codice": null,
+                            "descrizione": null,
+                            "dataInizioValidita": null
+                        },
+                        "holding": null,
+                        "nota": null,
+                        "flagAnnulla": false,
+                        "dataInizioValidita": "2012-11-28 17:03:54",
+                        "flagModifica": true,
+                        "flagPMEG": true,
+                        "flagPubblico": "N",
+                        "formaGiuridica": {
+                            "id": 5,
+                            "codice": null,
+                            "descrizione": null,
+                            "flagPubblico": null,
+                            "codiceTipoEnte": null,
+                            "dataInizioValidita": null
+                        },
+                        "codiceTipoTemporaneo": null,
+                        "listaRuoliGestore": [],
+                        "facenteUltimaModifica": "  - SUPERVISORE TECNICO ()",
+                        "codiceEnteFM": null,
+                        "codiceMRA": "000AJ"
+                    },
+                    "asl": {
+                        "id": 10000,
+                        "codice": "321",
+                        "descrizione": "ATS DELLA CITTA' METROPOLITANA DI MILANO",
+                        "numeroPartitaIva": null,
+                        "descrizioneEsattoria": null,
+                        "descrizioneQualificaResponsabile": null,
+                        "descrizioneNominativoResponsabile": null,
+                        "dataInizioValidita": "2016-02-05 17:34:22",
+                        "idregione": 30
+                    },
+                    "tipoStruttura": {
+                        "id": 1,
+                        "codice": "OSP",
+                        "descrizione": "Struttura di ricovero e cura",
+                        "flagUsabile": "S",
+                        "dataInizioValidita": "1900-01-01 00:00:00"
+                    },
+                    "tipoOspedale": {
+                        "id": 3,
+                        "codice": 2,
+                        "descrizione": "IRCCS",
+                        "dataInizioValidita": "2011-06-10 12:13:41"
+                    },
+                    "codiceNoVincolo": "030934",
+                    "nome": "CENTRO CARDIOLOGICO S.P.A. \"FONDAZIONE MONZINO\"",
+                    "idProcessoDDO": 22,
+                    "dataInizioValidita": "2016-04-30 23:59:59"
+                }],
+            "flagWkfTerminato": false,
+            "codiceProcesso": "D-3/2016",
+            "dataApertura": "2016-03-29 00:00:00",
+            "dataConsolidamento": null,
+            "dataChiusura": null,
+            "dataInizioValidita": "2016-03-29 18:43:26"
+        },
+        "errori": null
+    }]

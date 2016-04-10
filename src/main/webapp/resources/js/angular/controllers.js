@@ -2,13 +2,110 @@ var angular;
 var asanControllers = angular.module('relocalsApp.controllers', []);
 
 asanControllers.controller('RelocalsController', function($scope, ClassiProfiloService, jspTransporter, $http, StatoInserimentoService, ProcessiUpdate, Persone, ProcessiService, SelezionaSingoloService, PromisedService, AsanService, GestioneAnniService) {
-    // **** Parte RESTful
-
-
-
-
-
 // **** Parte UPDATE *****
+
+    $scope.testProcessi = [{"cognome": "Terranova", "id": 1, "nome": "Giovanni"}, {"cognome": "Marini", "id": 2, "nome": "Fabrizio"}, {"cognome": "Lazaj", "id": 3, "nome": "Ilir"}];
+    console.log('Valore: ' + $scope.testProcessi);
+
+    $scope.visibilitaMOD = false;
+    $scope.inserimentoMOD = false;
+
+    $scope.utenteInserimento = {
+        id: "",
+        nome: "",
+        cognome: ""
+    };
+    $scope.utenteSOTTOMODIFICA = {
+        id: "",
+        nome: "",
+        cognome: ""
+    };
+
+    var valorePrecedente = {
+        id: "",
+        nome: "",
+        cognome: ""
+    };
+    $scope.getUtenteMOD = function(utente) {
+        $scope.inserimentoMOD = false;
+
+        if ($scope.utenteSOTTOMODIFICA === null & $scope.visibilitaMOD === false) {
+
+        }
+        //DOPO IL CAMBIO DELL'UTENTE
+        if (utente !== $scope.utenteSOTTOMODIFICA) {
+
+            $scope.utenteSOTTOMODIFICA.id = valorePrecedente.id;
+            $scope.utenteSOTTOMODIFICA.nome = valorePrecedente.nome;
+            $scope.utenteSOTTOMODIFICA.cognome = valorePrecedente.cognome;
+
+            $scope.visibilitaMOD = false;
+            $scope.utenteTEST = utente;
+            $scope.utenteSOTTOMODIFICA = utente;
+
+            valorePrecedente.id = $scope.utenteSOTTOMODIFICA.id;
+            valorePrecedente.nome = $scope.utenteSOTTOMODIFICA.nome;
+            valorePrecedente.cognome = $scope.utenteSOTTOMODIFICA.cognome;
+        } else {
+            //SELEZIONE DELLO STESSO DELL'UTENTE
+
+        }
+    };
+
+    $scope.utenteMOD = function(utenteMOD) {
+        $scope.visibilitaMOD = !$scope.visibilitaMOD;
+        $scope.inserimentoMOD = false;
+    };
+
+    $scope.cancellaMOD = function(utente) {
+        $scope.utenteSOTTOMODIFICA.id = valorePrecedente.id;
+        $scope.utenteSOTTOMODIFICA.nome = valorePrecedente.nome;
+        $scope.utenteSOTTOMODIFICA.cognome = valorePrecedente.cognome;
+
+        $scope.visibilitaMOD = false;
+        $scope.inserimentoMOD = false;
+
+        $scope.utenteInserimento = {
+            id: "",
+            nome: "",
+            cognome: ""
+        };
+    };
+
+    $scope.salvaMOD = function() {
+        $scope.visibilitaMOD = false;
+    };
+
+    $scope.utenteElimina = function() {
+        var i = $scope.testProcessi.indexOf($scope.utenteSOTTOMODIFICA);
+        if (i !== -1) {
+            $scope.testProcessi.splice(i, 1);
+        }
+    };
+
+
+    $scope.utenteInserisci = function() {
+        $scope.utenteInserimento = {
+            id: "",
+            nome: "",
+            cognome: ""
+        };
+        $scope.inserimentoMOD = true;
+
+    };
+
+    $scope.utenteConfInserisci = function() {
+        $scope.testProcessi.push($scope.utenteInserimento);
+        $scope.inserimentoMOD = false;
+        $scope.utenteInserimento = {
+            id: "",
+            nome: "",
+            cognome: ""
+        };
+
+    };
+
+// **** Parte UPDATE fine *****
 
 
     $scope.classeDaModificare = {
@@ -653,6 +750,31 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
         });
 
     };
+
+
+    $scope.Hello = function($resource) {
+        var m;
+        $resource.get("oggettoPROCESSO22.json").
+                success(function(data) {
+            m = 'data';
+        });
+
+        setTimeout(function() {
+            $scope.$apply(function() {
+                $scope.t1 = m;
+            });
+        }, 0000);
+
+
+    };
+
+    $scope.test = function() {
+
+        $scope.Hello();
+
+
+    };
+
 });
 
 /* 
