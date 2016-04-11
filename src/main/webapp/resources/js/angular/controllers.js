@@ -35,9 +35,7 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
         //DOPO IL CAMBIO DELL'UTENTE
         if (utente !== $scope.utenteSOTTOMODIFICA) {
 
-            $scope.utenteSOTTOMODIFICA.id = valorePrecedente.id;
-            $scope.utenteSOTTOMODIFICA.nome = valorePrecedente.nome;
-            $scope.utenteSOTTOMODIFICA.cognome = valorePrecedente.cognome;
+           
 
             $scope.visibilitaMOD = false;
             $scope.utenteTEST = utente;
@@ -73,6 +71,7 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
     };
 
     $scope.salvaMOD = function() {
+        $scope.testProcessi[valorePrecedente.id - 1].cognome = $scope.utenteSOTTOMODIFICA.cognome;
         $scope.visibilitaMOD = false;
     };
 
