@@ -65,7 +65,7 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
             valorePrecedente.cognome = $scope.utenteSOTTOMODIFICA.cognome;
         } else {
             //SELEZIONE DELLO STESSO DELL'UTENTE
-
+            //valorePrecedente.id = $scope.utenteSOTTOMODIFICA.id;
             console.log($scope.id_select.selectedOption.id);
         }
     };
@@ -92,10 +92,14 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
     };
 
     $scope.salvaMOD = function() {
+//CHE CAZZATA
 
-        $scope.testProcessi[valorePrecedente.id - 1].id = $scope.id_select.selectedOption.id;
-        $scope.testProcessi[valorePrecedente.id - 1].cognome = $scope.utenteSOTTOMODIFICA.cognome;
+        $scope.testProcessi[$scope.testProcessi.indexOf($scope.utenteSOTTOMODIFICA)].id = $scope.id_select.selectedOption.id;
+        $scope.testProcessi[$scope.testProcessi.indexOf($scope.utenteSOTTOMODIFICA)].cognome = $scope.utenteSOTTOMODIFICA.cognome;
         $scope.visibilitaMOD = false;
+        valorePrecedente.id = $scope.utenteSOTTOMODIFICA.id;
+        valorePrecedente.nome = $scope.utenteSOTTOMODIFICA.nome;
+        valorePrecedente.cognome = $scope.utenteSOTTOMODIFICA.cognome;
     };
 
     $scope.utenteElimina = function() {
