@@ -1196,7 +1196,17 @@
                             </tr>
                             <tr data-ng-repeat="utente in testProcessi" data-ng-click="getUtenteMOD(utente);" ng-class="{macroSelezionataClass: utente === utenteTEST">
                                 <td ng-class="{macroSelezionataClass: utente === utenteTEST}">
-                                    <span>{{utente.id}}</span>
+                                    <span data-ng-show="!(visibilitaMOD && utente === utenteSOTTOMODIFICA)" data-ng-bind="utente.id"></span>
+                                    <select 
+                                       
+                                        data-ng-show="visibilitaMOD && utente === utenteSOTTOMODIFICA" 
+                                        style="width: 165px;background: white; color: black"  
+                                        class="form-control" 
+                                        name="is-sel" 
+                                        data-ng-model="id_select.selectedOption"
+                                        data-ng-options="option.id for option in id_select.availableOptions track by option.id">
+                                        <!--  <option value="classeDaModificare.valore.classeProfilo.descrizione" selected="selected"></option> -->
+                                    </select>  
 
                                 </td>
                                 <td ng-class="{macroSelezionataClass: utente === utenteTEST}">

@@ -21,12 +21,25 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
         cognome: ""
     };
 
+
+    $scope.id_select = {
+        availableOptions: [{"id": 1}, {"id": 2}, {"id": 3}, {"id": 4}, {"id": 5}, {"id": 6}, {"id": 7}, {"id": 8}, {"id": 9}],
+        selectedOption: {
+            "id": ""
+        }
+    };
+
+    $scope.id_default = {
+        "id": "1"
+    };
+
     var valorePrecedente = {
         id: "",
         nome: "",
         cognome: ""
     };
     $scope.getUtenteMOD = function(utente) {
+
         $scope.inserimentoMOD = false;
 
         if ($scope.utenteSOTTOMODIFICA === null & $scope.visibilitaMOD === false) {
@@ -35,7 +48,13 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
         //DOPO IL CAMBIO DELL'UTENTE
         if (utente !== $scope.utenteSOTTOMODIFICA) {
 
-           
+            $scope.id_select.selectedOption.id = utente.id;
+
+
+            valorePrecedente.id = $scope.utenteSOTTOMODIFICA.id;
+            valorePrecedente.nome = $scope.utenteSOTTOMODIFICA.nome;
+            valorePrecedente.cognome = $scope.utenteSOTTOMODIFICA.cognome;
+
 
             $scope.visibilitaMOD = false;
             $scope.utenteTEST = utente;
@@ -47,6 +66,7 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
         } else {
             //SELEZIONE DELLO STESSO DELL'UTENTE
 
+            console.log($scope.id_select.selectedOption.id);
         }
     };
 
@@ -56,6 +76,7 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
     };
 
     $scope.cancellaMOD = function(utente) {
+        $scope.id_select.selectedOption.id = valorePrecedente.id;
         $scope.utenteSOTTOMODIFICA.id = valorePrecedente.id;
         $scope.utenteSOTTOMODIFICA.nome = valorePrecedente.nome;
         $scope.utenteSOTTOMODIFICA.cognome = valorePrecedente.cognome;
@@ -71,6 +92,8 @@ asanControllers.controller('RelocalsController', function($scope, ClassiProfiloS
     };
 
     $scope.salvaMOD = function() {
+
+        $scope.testProcessi[valorePrecedente.id - 1].id = $scope.id_select.selectedOption.id;
         $scope.testProcessi[valorePrecedente.id - 1].cognome = $scope.utenteSOTTOMODIFICA.cognome;
         $scope.visibilitaMOD = false;
     };
