@@ -12,7 +12,42 @@ function asanInterceptor($q, jspTransporter) {
         }
     };
 }
+
+
 var services = angular.module('relocalsApp.services', []);
+
+
+services.service('AggParMac', function($resource, $q) {
+    var lista_macro = [];
+    var risorsaBackENDTest = $resource('/asan/web/pddo/aggparmac/:id');
+    return {
+        lista_macro: lista_macro,
+        caricaTest: function(tipoMacroId) {
+
+            return  risorsaBackENDTest.query({id: tipoMacroId}, function(data) {
+                lista_macro.push(lista_macro, data);
+            });
+        }
+    };
+});
+
+services.factory('Processi', function($resource, $q) {
+
+    var prcs = [];
+    var all = $resource('/restTEST/rest/persone/');
+
+    return {
+        prcs: prcs,
+        caricaProcessi: function() {
+            var promessa = $q.defer();
+            all.query(function(data) {
+                prcs.push(data);
+                promessa.resolve(prcs);
+            });
+            return promessa.promise;
+        }
+    };
+});
 
 services.factory('jspTransporter', function() {
     var valore = '';
@@ -51,29 +86,17 @@ services.factory('Persone', function($resource) {
     };
 });
 
-services.factory('Processi', function($resource) {
 
-    var prcs = [];
-    var all = $resource('oggettoJson_DDO.json');
+services.factory('ProcessiService', function($resource, $q) {
 
-    return {
-        prcs: prcs,
-        caricaProcessi: function() {
-            return all.query(function(data) {
-                prcs.push(prcs, data);
-            });
-        }
-    };
-});
+    var deferred = $q.defer();
 
-services.factory('ProcessiService', function($resource) {
-
-    return $resource('/restTEST/rest/persone/:id', {id: '@id'}, {
+    deferred.resolve($resource('/restTEST/rest/persone/:id', {id: '@id'}, {
         update: {
             method: 'PUT'
         }
-    }
-    );
+    }));
+    return deferred.promise;
 });
 
 services.factory('StatoInserimentoService', function($resource) {

@@ -52,9 +52,6 @@
         <input type="hidden" id="passaValori" value="Test" data-ng-click="transport('${tokenTEST}');" />
         <input type="hidden" id="idEnte" value="idEnte" data-ng-click="getIdEnte('${idEnte}');" />
 
-
-
-
         <!-- BARRA ISTITUZIONALE 
         Per la customizzazione del TEMA ricordarsi di usare i file già forniti dopo il download
         -->
@@ -788,6 +785,8 @@
                                                 <td><span>{{dettaglioMacro.tipo.codice}}</span></td>  
                                                 <td><span>{{dettaglioMacro.tipo.descrizione}}</span></td>  
                                                 <td><span>{{dettaglioMacro.valore}}</span></td>  
+                                                <td><span>{{dettaglioMacro.classeProfilo.descrizione}}</span></td>
+                                                <td><span>{{dettaglioMacro.uoAssociataDDO.tipoUnitaOrganizzativa.descrizione}} - {{dettaglioMacro.uoAssociataDDO.numSequenza}}</span></td>
                                             </tr>
                                         </table>
 
@@ -1009,7 +1008,8 @@
                                                         <th>N.Seq</th>
                                                         <th>Descrizione</th>
                                                     </tr>
-                                                    <tr data-ng-repeat="macro in processoSelezionatoMOD.macroAttivita" data-ng-click="getMacroSelezionataMOD(macro);" ng-class="{macroSelezionataClass: macro === processoSelezionatoMOD.listaStruttureDDO.macroSelezionata}">
+                                                    <tr data-ng-repeat="macro in processoSelezionatoMOD.macroAttivita" data-ng-click="getMacroSelezionataMOD(macro);" 
+                                                        ng-class="{macroSelezionataClass: macro === processoSelezionatoMOD.listaStruttureDDO.macroSelezionata}">
                                                         <td ng-class="{macroSelezionataClass: macro === processoSelezionatoMOD.listaStruttureDDO.macroSelezionata}"><asan-stato stato="{{2}}"></asan-stato></td>
                                                     <td ng-class="{macroSelezionataClass: macro === processoSelezionatoMOD.listaStruttureDDO.macroSelezionata}"><span>{{macro.tipoMacroAttivita.descrizione}}</span></td>  
                                                     <td ng-class="{macroSelezionataClass: macro === processoSelezionatoMOD.listaStruttureDDO.macroSelezionata}"><span>{{macro.numSequenza}}</span></td>  
@@ -1060,18 +1060,31 @@
                                                 </ul>
                                                 <div id="ragruppamento_uo_mod">
                                                     <div>
-                                                        <table id="strutture_classi_d_profili_mod" style="float: left">
+                                                        <table  id="strutture_classi_d_profili_mod" style="float: left;">
                                                             <tr>
-                                                                <th>Codice UO</th>
-                                                                <th>Nome</th>
-                                                                <th>N.SEQ</th>
-                                                                <th>Descrizione</th>
+                                                                <th>UO ASSOCIATE</th>                                                               
                                                             </tr>
-                                                            <tr data-ng-repeat="unita_assiociata in processoSelezionatoMOD.listaUOAssociate">
-                                                                <td><span>{{unita_assiociata.codice}}</span></td>  
-                                                                <td><span>{{unita_assiociata.nome}}</span></td>  
-                                                                <td><span>{{unita_assiociata.numSequenza}}</span></td>  
-                                                                <td><span>{{unita_assiociata.descrizione}}</span></td>  
+                                                            <tr data-ng-class="{unitaSelezionataClass: unita_assiociata === unitaAssociataTEST}" 
+                                                                data-ng-repeat="unita_assiociata in processoSelezionatoMOD.listaUOAssociate" 
+                                                                data-ng-click="setUnitaAssociataELM(unita_assiociata);">
+                                                                <td data-ng-class="{unitaSelezionataClass: unita_assiociata === unitaAssociataTEST}">
+                                                                    <span>{{unita_assiociata.descrizioneComposta}}</span>
+                                                                </td>  
+                                                            </tr>
+
+                                                            <tr data-ng-show="showInserimentoRAGRUPPAMENTOUO">
+                                                                <td>
+                                                                    <select 
+                                                                        style="width: 165px;background: white; color: black"  
+                                                                        class="form-control" 
+                                                                        name="classe-uo-inserimento" 
+                                                                        data-ng-model="ragruppamentoUOMOD_select_inserimento.selectedOption"
+                                                                        data-ng-options="option.descrizioneComposta for option in ragruppamentoUOMOD_select_inserimento.availableOptions track by option.id">
+                                                                        <!--  <option value="classeDaModificare.valore.classeProfilo.descrizione" selected="selected"></option> -->
+                                                                    </select> 
+                                                                    <input data-ng-click="cancIns();" style="width: 20px;margin-left: 1px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="C" />
+                                                                    <input data-ng-click="salvaRagruppamentoUOMOD();" style="width: 20px;margin-left: 1px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="S"  />
+                                                                </td>
 
                                                             </tr>
                                                         </table>
@@ -1079,44 +1092,70 @@
                                                     <button  id="ok" data-ng-click="backToUnitaMOD();" style="width: 90px;margin-left: 2px; float: left" >
                                                         OK
                                                     </button> 
+
+                                                    <input class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" value="Inserisci" id="ok1e" data-ng-click="inserimentoRAGRUPPAMENTOUO();" style="width: 90px;margin-left: 2px; float: left" />
+                                                    <input class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" value="Elimina" id="ok1e1" data-ng-click="unitaAssociataELM();" style="width: 90px;margin-left: 2px; float: left" />
+
                                                 </div>
 
                                                 <!-- Parte di lavoro UPDATE -->
                                                 <div id="classi_d_profili_mod">
                                                     <div>
-                                                        <table id="strutture_ragruppamento_uo_mod" style="float: left">
+
+                                                        <table id="strutture_ragruppamento_uo_mod" style="float: left;width: 80%; height: 50%">
                                                             <tr>
-                                                                <th>Classe di profili</th>
+                                                                <th>Classe di profilo</th>
                                                                 <th>Numero ore lavorate</th>
                                                             </tr>
-
-                                                            <tr data-ng-repeat="classe in processoSelezionatoMOD.classiProfili" 
-                                                                data-ng-click="setClasseSelezionata(classe);" 
-                                                                data-ng-class="{strutturaSelezionataClass: classe === classeDaModificare.valore}">
-                                                                <td data-ng-class="{strutturaSelezionataClass: classe === classeDaModificare.valore}">
-                                                                    <select data-ng-init ="classi_profilo_select.selectedOption = classeProfiloDefault" style="width: 165px;background: white; color: black"  data-ng-show="classeDaModificare.visibilita && (classe === classeDaModificare.valore)" class="form-control" name="classi_profilo" 
-                                                                            data-ng-model="classi_profilo_select.selectedOption"
-                                                                            data-ng-options="option.descrizione for option in classi_profilo_select.availableOptions track by option.id">
+                                                            <tr  data-ng-repeat="classeUO in processoSelezionatoMOD.classiProfili"
+                                                                 ng-click="getUOCPMOD(classeUO);"
+                                                                 data-ng-class="{macroSelezionataClass: classeUO === classeUOTEST}">
+                                                                <td data-ng-class="{macroSelezionataClass: classeUO === classeUOTEST}">
+                                                                    <span data-ng-show="!(visibilitaUOCPMOD && classeUO === classeUOSOTTOMODIFICA)">{{classeUO.classeProfilo.descrizione}}</span>
+                                                                    <select 
+                                                                        data-ng-show="(visibilitaUOCPMOD && classeUO === classeUOSOTTOMODIFICA)" 
+                                                                        style="width: 165px;background: white; color: black"  
+                                                                        class="form-control" 
+                                                                        name="classeuo-select" 
+                                                                        data-ng-model="classeUOMOD_select.selectedOption"
+                                                                        data-ng-options="option.descrizione for option in classeUOMOD_select.availableOptions track by option.id">
                                                                         <!--  <option value="classeDaModificare.valore.classeProfilo.descrizione" selected="selected"></option> -->
-                                                                    </select>   
-                                                                    <!--    <input  class="form-control"  style="height: 30px;width: 120px;background: white;color: black" type="text" data-ng-show="classeDaModificare.visibilita && (classe === classeDaModificare.valore)"  /> -->
-                                                                    <span data-ng-show="!(classeDaModificare.visibilita && (classe === classeDaModificare.valore))">{{classe.classeProfilo.descrizione}}</span>
+                                                                    </select>
                                                                 </td>  
-                                                                <td data-ng-class="{strutturaSelezionataClass: classe === classeDaModificare.valore}">
-                                                                    <span data-ng-show="!(classeDaModificare.visibilita && (classe === classeDaModificare.valore))">{{classe.numeroOre}}</span>
-                                                                    <input data-ng-model="classeDaModificare.valore.numeroOre"  class="form-control" style="height: 30px;width: 120px;background: white;color: black" type="text" data-ng-show="classeDaModificare.visibilita && (classe === classeDaModificare.valore)"  />
+                                                                <td data-ng-class="{macroSelezionataClass: classeUO === classeUOTEST}">
+                                                                    <span data-ng-show="!(visibilitaUOCPMOD && classeUO === classeUOSOTTOMODIFICA)">{{classeUO.numeroOre}}</span>
+                                                                    <input style="background: white;color: black" 
+                                                                           data-ng-model="classeUOSOTTOMODIFICA.numeroOre" 
+                                                                           type="number"                                 
+                                                                           data-ng-show="visibilitaUOCPMOD && classeUO === classeUOSOTTOMODIFICA" /> 
+                                                                    <input data-ng-click="cancellaUOCPMOD();" data-ng-show="visibilitaUOCPMOD && classeUO === classeUOSOTTOMODIFICA" type="button" value="C" style="width: 20px;margin-left: 2px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"/>                 
+                                                                    <input data-ng-click="salvaUOCPMOD()" data-ng-show="visibilitaUOCPMOD && classeUO === classeUOSOTTOMODIFICA" type="button" value="S" style="width: 20px;margin-left: 2px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"/>                 
                                                                 </td>  
                                                             </tr>
+
+                                                            <tr data-ng-show="inserimentoUOCPMOD">
+                                                                <td>
+                                                                    <select 
+                                                                        style="width: 165px;background: white; color: black"  
+                                                                        class="form-control" 
+                                                                        name="classe-uo-inserimento" 
+                                                                        data-ng-model="classeUOMOD_select_inserimento.selectedOption"
+                                                                        data-ng-options="option.descrizione for option in classeUOMOD_select_inserimento.availableOptions track by option.id">
+                                                                        <!--  <option value="classeDaModificare.valore.classeProfilo.descrizione" selected="selected"></option> -->
+                                                                    </select> 
+                                                                </td>
+                                                                <td>
+                                                                    <input type="number" data-ng-model="classeUOSOTTOMODIFICA_inserimento.numeroOre" />
+                                                                    <input style="width: 20px;margin-left: 1px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="C" data-ng-click="cancellaUOCPMOD();" />
+                                                                    <input data-ng-click="confermaInserimento()" style="width: 20px;margin-left: 1px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="S"  />
+                                                                </td>
+                                                            </tr>
                                                         </table>
+                                                        <input data-ng-show="!visibilitaUOCPMOD" style="width: 90px;margin-left: 2px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Modifica" data-ng-click="classeUOCPMOD();" /><br>
+                                                        <input data-ng-show="!visibilitaUOCPMOD" style="width: 90px;margin-left: 2px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Elimina" data-ng-click="eliminaUOCPMOD();" /><br>
+                                                        <input data-ng-show="!visibilitaUOCPMOD" style="width: 90px;margin-left: 2px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Inserisci" data-ng-click="inserisciUOCPMOD();" /><br>
+
                                                     </div>
-                                                    <input type="button" id="ok3" data-ng-click="backToUnitaMOD();" style="width: 90px;margin-left: 2px" value="OK" />
-
-                                                    <input type="button" id="ok55" data-ng-click="modificaClasse();" style="width: 90px;margin-left: 2px" value="Modifica" />
-
-                                                    <input   id="ok56" type="submit" style="width: 90px;margin-left: 2px" value="Salva" />
-
-
-
                                                 </div>
 
                                                 <!-- Update TEST -->
@@ -1155,22 +1194,62 @@
                                                 <span></span>
                                             </div><br><br>
 
+                                            <!-- Parte in lavorazione -->
                                             <table id="dettagli_macro" style="width: 50%; float: left">
                                                 <tr>
                                                     <th>Codice</th>
                                                     <th>Descrizione</th>
                                                     <th>Valore</th> 
+                                                    <th>Classe Profilo</th> 
+                                                    <th>UO Associata</th> 
                                                 </tr>
-                                                <tr data-ng-repeat="dettaglioMacro in listaParametriMacroMOD">
-                                                    <td><span>{{dettaglioMacro.tipo.codice}}</span></td>  
-                                                    <td><span>{{dettaglioMacro.tipo.descrizione}}</span></td>  
-                                                    <td><span>{{dettaglioMacro.valore}}</span></td>  
+                                                <tr data-ng-repeat="dettaglioMacro in listaParametriMacroMOD"
+                                                    data-ng-click="getMacroMOD(dettaglioMacro);"
+                                                    ng-class="{macroSelezionataClass: dettaglioMacro === macroTEST}">
+                                                    <td ng-class="{macroSelezionataClass: dettaglioMacro === macroTEST}">
+                                                        <span>{{dettaglioMacro.tipo.codice}}</span>
+                                                    </td>  
+                                                    <td ng-class="{macroSelezionataClass: dettaglioMacro === macroTEST}">
+                                                        <span>{{dettaglioMacro.tipo.descrizione}}</span>
+
+                                                    </td>  
+                                                    <td ng-class="{macroSelezionataClass: dettaglioMacro === macroTEST}">
+                                                        <span data-ng-show="!(visibilitaMacroMOD && dettaglioMacro === macroSOTTOMODIFICA)">{{dettaglioMacro.valore}}</span>
+                                                        <input style="background: white;color: black;" data-ng-model="macroSOTTOMODIFICA.valore" type="number"  data-ng-show="visibilitaMacroMOD && dettaglioMacro === macroSOTTOMODIFICA && !modalitaProfilo" /> 
+                                                        <input data-ng-show="visibilitaMacroMOD && dettaglioMacro === macroSOTTOMODIFICA && !modalitaProfilo" style="width: 20px;margin-left: 1px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="S" data-ng-click="salvaMacroMOD();" />
+                                                        <input data-ng-show="visibilitaMacroMOD && dettaglioMacro === macroSOTTOMODIFICA && !modalitaProfilo" style="width: 20px;margin-left: 1px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="C" data-ng-click="cancellaMacroMOD();" />
+                                                    </td>  
+                                                    <td ng-class="{macroSelezionataClass: dettaglioMacro === macroTEST}">
+                                                        <span data-ng-show="!(visibilitaMacroMOD && dettaglioMacro === macroSOTTOMODIFICA)">{{dettaglioMacro.classeProfilo.descrizione}}</span>
+                                                        <select 
+                                                            data-ng-show="visibilitaMacroMOD && dettaglioMacro === macroSOTTOMODIFICA && modalitaProfilo" 
+                                                            style="width: 165px;background: white; color: black"  
+                                                            class="form-control" 
+                                                            name="macro-select" 
+                                                            data-ng-model="classeMacroMOD_select.selectedOption"
+                                                            data-ng-options="option.descrizione for option in classeMacroMOD_select.availableOptions track by option.id">
+                                                            <!--  <option value="classeDaModificare.valore.classeProfilo.descrizione" selected="selected"></option> -->
+                                                        </select>  
+
+                                                        <input data-ng-show="visibilitaMacroMOD && dettaglioMacro === macroSOTTOMODIFICA && modalitaProfilo" style="width: 20px;margin-left: 1px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="S" data-ng-click="salvaMacroMOD();" />
+                                                        <input data-ng-show="visibilitaMacroMOD && dettaglioMacro === macroSOTTOMODIFICA && modalitaProfilo" style="width: 20px;margin-left: 1px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="C" data-ng-click="cancellaMacroMOD();" />
+
+                                                    </td>
+                                                    <td ng-class="{macroSelezionataClass: dettaglioMacro === macroTEST}">
+                                                        <span>{{dettaglioMacro.uoAssociataDDO.descrizioneComposta}}</span>
+                                                    </td>
                                                 </tr>
                                             </table>
 
-                                            <button  id="ok2" data-ng-click="backToUnitaMOD();" style="width: 90px;margin-left: 2px" >
+
+
+                                            <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  id="ok2" data-ng-click="backToUnitaMOD();" style="width: 90px;margin-left: 2px" >
                                                 OK
-                                            </button> 
+                                            </button> <br>
+
+                                            <input data-ng-show="!visibilitaMacroMOD" style="width: 90px;margin-left: 2px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Modifica" data-ng-click="macroMOD(dettaglioMacro);" /><br>
+                                            <input data-ng-show="!visibilitaMacroMOD" style="width: 90px;margin-left: 2px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Elimina" data-ng-click="utenteElimina(utente);" /><br>
+                                            <input data-ng-show="!visibilitaMacroMOD" style="width: 90px;margin-left: 2px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Inserisci" data-ng-click="utenteInserisci();" />
 
 
                                         </div>   
@@ -1185,65 +1264,8 @@
                     </div>
                     <h3 id="hResults">Processo DO- TEST</h3>
                     <div>
-
-
-                        <table id="macro" style="width: 65%; float: left"><br>
-                            <tr>
-
-                                <th>id</th>
-                                <th>Nome</th>
-                                <th>cognome</th>
-                            </tr>
-                            <tr data-ng-repeat="utente in testProcessi" data-ng-click="getUtenteMOD(utente);" ng-class="{macroSelezionataClass: utente === utenteTEST">
-                                <td ng-class="{macroSelezionataClass: utente === utenteTEST}">
-                                    <span data-ng-show="!(visibilitaMOD && utente === utenteSOTTOMODIFICA)" data-ng-bind="utente.id"></span>
-                                    <select 
-                                       
-                                        data-ng-show="visibilitaMOD && utente === utenteSOTTOMODIFICA" 
-                                        style="width: 165px;background: white; color: black"  
-                                        class="form-control" 
-                                        name="is-sel" 
-                                        data-ng-model="id_select.selectedOption"
-                                        data-ng-options="option.id for option in id_select.availableOptions track by option.id">
-                                        <!--  <option value="classeDaModificare.valore.classeProfilo.descrizione" selected="selected"></option> -->
-                                    </select>  
-
-                                </td>
-                                <td ng-class="{macroSelezionataClass: utente === utenteTEST}">
-                                    <span>{{utente.nome}}</span>
-                                </td>  
-                                <td ng-class="{macroSelezionataClass: utente === utenteTEST}">
-                                    <span data-ng-show="!(visibilitaMOD && utente === utenteSOTTOMODIFICA)" data-ng-bind="utente.cognome"></span>
-                                    <input style="background: white;color: black" data-ng-model="utenteSOTTOMODIFICA.cognome" type="text" data-ng-show="visibilitaMOD && utente === utenteSOTTOMODIFICA" /> 
-                                    <input data-ng-show="visibilitaMOD && utente === utenteSOTTOMODIFICA" style="width: 70px;margin-left: 1px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Salva" data-ng-click="salvaMOD();" />
-                                    <input data-ng-show="visibilitaMOD && utente === utenteSOTTOMODIFICA" style="width: 70px;margin-left: 1px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Cancel" data-ng-click="cancellaMOD();" />
-
-                                </td>  
-                            </tr>
-                            <tr data-ng-show="inserimentoMOD">
-                                <td>
-                                    <input type="text" data-ng-model="utenteInserimento.id" />
-                                </td>
-                                <td>
-                                    <input type="text" data-ng-model="utenteInserimento.nome" />
-                                </td>  
-                                <td>
-                                    <input type="text" data-ng-model="utenteInserimento.cognome" />
-                                    <input style="width: 70px;margin-left: 1px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Cancel" data-ng-click="cancellaMOD();" />
-                                    <input style="width: 70px;margin-left: 1px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Conferma" data-ng-click="utenteConfInserisci();" />
-
-                                </td>
-
-                            </tr>
-                        </table>
-                        <table  id="ins" style="width: 65%; float: left">
-
-                        </table>
-                        <input data-ng-show="!visibilitaMOD" style="width: 90px;margin-left: 2px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Modifica" data-ng-click="utenteMOD(utente);" /><br>
-                        <input data-ng-show="!visibilitaMOD" style="width: 90px;margin-left: 2px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Elimina" data-ng-click="utenteElimina(utente);" /><br>
-                        <input data-ng-show="!visibilitaMOD" style="width: 90px;margin-left: 2px" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type="button" value="Inserisci" data-ng-click="utenteInserisci();" />
-
-
+                        <input type="button" value="Test" data-ng-click="cl();" />
+                        <p>{{listaPERSONE}}</p>
                     </div>
 
                     <!-- 

@@ -1,0 +1,59 @@
+[
+    {
+        "id": 222,
+        "tipo": {
+            "id": 9,
+            "codice": "GGTRE01",
+            "descrizione": "Indicare i giorni totali di apertura del reparto nel periodo di riferimento",
+            "tipoValore": "N",
+            "dataInizioValidita": "1900-01-01 00:00:00"
+        },
+        "classeProfilo": {
+            "id": 7,
+            "descrizione": "Tecnici sanitari",
+            "dataInizioValidita": "1900-01-01 00:00:00"
+        },
+        "valore": 19,
+        "uoAssociataDDO": {
+            "id": 6657,
+            "tipoUnitaOrganizzativa": null,
+            "descrizione": null,
+            "numSequenza": 0,
+            "dataInizioValidita": null,
+            "idUOMadre": 0,
+            "idProcessoDDO": 0,
+            "descrizioneComposta": null
+        },
+        "dataInizioValidita": "2016-04-08 16:42:22",
+        "idMacroAttivita": 11006,
+        "idProcessoDDO": 86
+    }, {
+        "id": 18661,
+        "tipo": {
+            "id": 9,
+            "codice": "GGTRE01",
+            "descrizione": "Indicare i giorni totali di apertura del reparto nel periodo di riferimento",
+            "tipoValore": "N",
+            "dataInizioValidita": "1900-01-01 00:00:00"
+        },
+        "classeProfilo": {
+            "id": 9,
+            "descrizione": "Tecnici sanitari",
+            "dataInizioValidita": "1900-01-01 00:00:00"
+        },
+        "valore": 89,
+        "uoAssociataDDO": {
+            "id": 6667,
+            "tipoUnitaOrganizzativa": null,
+            "descrizione": null,
+            "numSequenza": 0,
+            "dataInizioValidita": null,
+            "idUOMadre": 0,
+            "idProcessoDDO": 0,
+            "descrizioneComposta": null
+        },
+        "dataInizioValidita": "2016-04-08 16:42:22",
+        "idMacroAttivita": 11006,
+        "idProcessoDDO": 86
+    }
+]
